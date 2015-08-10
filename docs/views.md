@@ -3,4 +3,4 @@
 ## New Session
 ![new-session]
 
-[new-session]: ./wireframes/login.svg
+[new-session]: ./wireframes/login.png
