@@ -19,6 +19,13 @@ Rails and Backbone. Users can:
 - [ ] Create "smart" lists that update dynamically
 - [ ] Custom list URLs / Share link button
 
+## Design Docs
+* [View Wireframes][views]
+* [DB schema][schema]
+
+[views]: ./docs/views.md
+[schema]: ./docs/schema.md
+
 ## Implementation Timeline
 
 ### Phase 1: User Authentication, List Creation (~1 day)
