@@ -5,8 +5,12 @@
 [new-session]: ./wireframes/login.png
 
 ## Restaurant List Index View
-![lists]
-[lists]: ./wireframes/my-lists.png
+![list-index]
+[list-index]: ./wireframes/my-lists.png
+
+## Restaurant List Show View
+![list-show]
+[list-show]: ./wireframes/list-show.png
 
 ## Notification List (nice-to-have)
 ![notifications]
