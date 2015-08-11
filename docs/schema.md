@@ -33,6 +33,7 @@ list_id       | integer   | not null, foreign key (references lists)
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
+author_id   | integer   | not null, foreign key (references user)
 list_id     | integer   | not null, foreign key (references lists)
 body        | text      | not null
 
@@ -43,5 +44,3 @@ id              | integer   | not null, primary key
 email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, unique
-
-##
