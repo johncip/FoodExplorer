@@ -32,7 +32,7 @@ Rails and Backbone. Users can:
 I will implement user authentication using the pattern we learned at App
 Academy. I will also create seed data and push the app to Heroku. At this
 point, users will be able to log in and create and update named list of
-restaurants. All of the front end will still be Rails views.
+restaurants.
 
 [Details][phase-one]
 
