@@ -25,6 +25,10 @@ class User < ActiveRecord::Base
     self.password_digest = BCrypt::Password.create(password)
   end
 
+  def password?(password)
+    BCrypt::Password.new(password_digest) == password
+  end
+
   private
 
   def ensure_session_token
@@ -33,9 +37,5 @@ class User < ActiveRecord::Base
 
   def generate_session_token
     SecureRandom.urlsafe_base64
-  end
-
-  def password?(password)
-    BCrypt::Password.new(password_digest) == password
   end
 end
