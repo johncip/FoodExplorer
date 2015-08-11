@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811171115) do
+ActiveRecord::Schema.define(version: 20150811183156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lists", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title",      null: false
+    t.boolean  "favorite",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "lists", ["title"], name: "index_lists_on_title", using: :btree
+  add_index "lists", ["user_id"], name: "index_lists_on_user_id", using: :btree
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "yelp_id",    null: false
@@ -39,4 +50,5 @@ ActiveRecord::Schema.define(version: 20150811171115) do
   add_index "users", ["session_token"], name: "index_users_on_session_token", using: :btree
   add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
+  add_foreign_key "lists", "users"
 end
