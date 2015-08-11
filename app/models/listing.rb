@@ -5,4 +5,5 @@ class Listing < ActiveRecord::Base
 
   validates :restaurant, :list, :user, presence: true
   validates :favorite, inclusion: { in: [true, false] }
+  validates :restaurant, uniqueness: { scope: :list }
 end
