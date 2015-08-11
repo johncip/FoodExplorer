@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/draggable
+//= require underscore
+//= require backbone
+//= require serialize_json
 //= require_tree .

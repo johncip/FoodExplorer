@@ -1,0 +1,20 @@
+<form action="<%= action %>" method="post">
+  <%= csrf_tag %>
+  <%= render "shared/errors" %>
+
+  <label for="user_username">User Name</label>
+  <input type="text"
+         name="user[username]"
+         id="user_username"
+         value="<%= user.username %>">
+  <br>
+
+  <label for="user_password">Password</label>
+  <input type="password"
+         name="user[password]"
+         id="user_password"
+         value="<%= user.password %>">
+  <br>
+
+  <input type="submit" value="<%= submit_caption %>">
+</form>

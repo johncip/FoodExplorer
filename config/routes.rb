@@ -53,4 +53,14 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  root 'root#root'
+  resources :users, only: [:new, :create]
+  resource :session, only: [:new, :create, :destroy]
+
+  namespace :api do
+    resources :restaurants, except: [:new, :edit]
+    resources :lists, except: [:new, :edit]
+    resources :listings, except: [:new, :edit]
+  end
 end
