@@ -6,6 +6,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 owner_id    | integer   | not null, foreign key (references users)
 title       | string    | not null
+favorite    | boolean   | not null, default false
 
 ## restaurants
 column name | data type | details
@@ -23,11 +24,15 @@ NB: Restuarants have an author_id because it's planned to have lists that are
 shared among and authored by multiple users.
 
 ## listings
+
+Listings are a join table where per-user/per-list restaurant information (like a review) is stored.
+
 column name   | data type | details
 --------------|-----------|-----------------------
 id            | integer   | not null, primary key
 restuarant_id | integer   | not null, foreign key (references restaurants)
 list_id       | integer   | not null, foreign key (references lists)
+TBD           | TBD       | TBD
 
 ## list_comments
 column name | data type | details
