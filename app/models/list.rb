@@ -3,6 +3,6 @@ class List < ActiveRecord::Base
   has_many :listings, dependent: :destroy
   has_many :restaurants, through: :listings
 
-  validates :user, :title, presence: true
+  validates :author, :title, presence: true
   validates :favorite, inclusion: { in: [true, false] }
 end
