@@ -5,4 +5,13 @@ class List < ActiveRecord::Base
 
   validates :author, :title, presence: true
   validates :favorite, inclusion: { in: [true, false] }
+
+  def new_listing_by_author(opts = {})
+    opts.merge!({
+      list: self,
+      contributor: author
+    })
+
+    Listing.new(opts)
+  end
 end
