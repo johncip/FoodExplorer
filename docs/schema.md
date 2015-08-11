@@ -22,8 +22,9 @@ favorite    | boolean   | not null, default false
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
+yelp_id     | string    | not null
 name        | string    | not null
-address     | string    |
+address     | string    | not null
 city        | string    | not null
 state       | string    | not null
 zip         | string    | not null
