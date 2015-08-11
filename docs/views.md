@@ -4,6 +4,6 @@
 ![new-session]
 [new-session]: ./wireframes/login.png
 
-## Activity List (nice-to-have)
-![activity]
-[activity]: ./wireframes/activity.png
+## Notification List (nice-to-have)
+![notifications]
+[notifications]: ./wireframes/notifications.png
