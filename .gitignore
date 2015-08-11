@@ -1,5 +1,5 @@
 .DS_Store
-current_task.txt
+todo.txt
 
 *.rbc
 capybara-*.html
