@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_reader :password
 
-  has_many :boards
+  has_many :lists
 
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :username, :password_digest, :session_token, presence: true, uniqueness: true
