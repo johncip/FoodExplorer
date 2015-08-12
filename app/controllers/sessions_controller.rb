@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       log_in!(user)
       redirect_to root_url
     else
-      fail
+      # TODO better login (display errors, etc)
+      redirect_to new_session_url
     end
   end
 
