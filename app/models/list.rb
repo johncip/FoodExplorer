@@ -7,11 +7,18 @@ class List < ActiveRecord::Base
   validates :favorite, inclusion: { in: [true, false] }
 
   def new_listing_by_author(opts = {})
-    opts.merge!({
-      list: self,
-      contributor: author
-    })
+    opts.merge!(contributor: author)
+    self.listings.new(opts)
+  end
 
-    Listing.new(opts)
+  def add(yelp_id)
+    rest = Restaurant.find_or_create_by_yelp_id(yelp_id)
+    listing = new_listing_by_author(restaurant: rest)
+    listing.save!
+    listing
+  end
+
+  def size
+    listings.size
   end
 end
