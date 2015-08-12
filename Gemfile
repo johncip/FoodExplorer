@@ -9,6 +9,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'figaro'
 gem 'rails_12factor'
 gem 'newrelic_rpm'
+gem 'puma'
 
 # Javascript Gems
 gem 'uglifier', '>= 1.3.0'
