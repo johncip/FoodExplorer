@@ -30,7 +30,7 @@
  - [x] db: username & session token should be unique
  - [x] enforce session before controller actions
 
-### push to Heroku
+### Deploy
  - [x] push to Heroku
  - [x] use rails_12factor & increase logging
 

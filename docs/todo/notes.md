@@ -1,8 +1,22 @@
-# Notes & Questions
+# Notes
+
+### Questions
 * what should I do with a user's list contributions when they're destroyed?
   * probably delete if it's their list and change the contributor if it's not
-* https://devcenter.heroku.com/articles/rails-integration-gems
-* https://github.com/bbatsov/rails-style-guide#macro-style-methods
+
+### Commands
 * rake secret
+* \\list (in postgres)
+* pg_dump -U john FoodExplorer_development -f backup.sql
+
+### Reading
+* https://github.com/bbatsov/rails-style-guide#macro-style-methods
+* https://devcenter.heroku.com/articles/rails-integration-gems
+* https://devcenter.heroku.com/articles/ruby-default-web-server
 * http://help.papertrailapp.com/kb/configuration/controlling-verbosity/
 * http://movingfast.io/articles/environment-variables-considered-harmful/
+* https://bearmetal.eu/theden/how-do-i-know-whether-my-rails-app-is-thread-safe-or-not/
+#### Wakefulness
+* https://coderwall.com/p/u0x3nw/avoid-heroku-idling-with-new-relic-pings
+* http://www.crowdco.de/tutorials/19
+* http://albertogrespan.com/blog/heroku-scheduler-and-rails-rake-tasks/
