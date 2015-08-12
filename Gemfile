@@ -4,6 +4,7 @@ gem 'rails', '4.2.1'
 gem 'backbone-on-rails'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
+gem 'figaro'
 
 # Javascript Gems
 gem 'uglifier', '>= 1.3.0'
