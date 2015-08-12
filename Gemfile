@@ -4,8 +4,11 @@ gem 'rails', '4.2.1'
 gem 'backbone-on-rails'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
+
+# Deployment
 gem 'figaro'
 gem 'rails_12factor'
+gem 'newrelic_rpm'
 
 # Javascript Gems
 gem 'uglifier', '>= 1.3.0'
