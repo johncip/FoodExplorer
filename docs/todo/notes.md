@@ -8,6 +8,11 @@
 * rake secret
 * \\list (in postgres)
 * pg_dump -U john FoodExplorer_development -f backup.sql
+* figaro heroku:set -e production
+
+### Yelp
+* https://www.yelp.com/developers/api_console
+* https://www.yelp.com/developers/documentation/v2/overview
 
 ### Reading
 * https://github.com/bbatsov/rails-style-guide#macro-style-methods

@@ -11,6 +11,9 @@ gem 'rails_12factor'
 gem 'newrelic_rpm'
 gem 'puma'
 
+# gimme data
+gem 'yelp'
+
 # Javascript Gems
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
