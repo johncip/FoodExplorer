@@ -21,4 +21,8 @@ class List < ActiveRecord::Base
   def size
     listings.size
   end
+
+  def image_url
+    restaurants.first.image_url
+  end
 end
