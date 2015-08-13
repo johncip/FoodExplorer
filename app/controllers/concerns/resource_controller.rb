@@ -19,5 +19,4 @@ module ResourceController
   def ivar_name
     '@' + self.class.model.to_s.to_s.underscore
   end
-
 end
