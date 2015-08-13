@@ -1,0 +1,53 @@
+nav {
+  display: block;
+  background-color: $green;
+  color: white;
+  padding: 0px 6px;
+  height: 40px;
+
+  ul {
+    position: relative;
+    line-height: 40px;
+    float: left;
+    padding: 2px;
+  }
+
+  li {
+    margin-right: 10px;
+    float: left;
+  }
+
+  a {
+    padding: 0 1em;
+    color: white;
+    background-color: $green * 0.8;
+    display: block;
+    border-radius: 6px;
+    margin: 0 2px;
+    height: 34px;
+    position: relative;
+  }
+
+  .logo {
+    position: relative;
+    font-size: 125%;
+  }
+}
+
+button.logout {
+  display: inline-block;
+  padding: 4px 6px;
+  font-size: 90%;
+  border: 0;
+  border-radius: 3px;
+  background-color: $green * 0.8;
+  color: white;
+  font-weight: bold;
+  float: right;
+  top: 6px;
+  position: relative;
+
+  &:active {
+    background-color: #8BBDD9 * 0.9;
+  }
+}

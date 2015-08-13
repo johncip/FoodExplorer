@@ -1,6 +1,12 @@
 @import url("http://fonts.googleapis.com/css?family=Courgette");
 @import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,900,900italic,700italic,700");
 
+$green: #588c7e;
+$yellow: #f2e39f;
+$orange: #f2ae72;
+$red: #d96459;
+$darkred: #8c4646;
+
 * {
   box-sizing: border-box;
 }
@@ -14,6 +20,9 @@ body {
   font-size: 12pt;
 }
 
+a {
+  text-decoration: none;
+}
 
 h1 {
   font-size: 150%;
@@ -30,7 +39,7 @@ input {
   border-radius: 2px;
 }
 
-.logo {
+.logo, .logo * {
   font-family: 'Courgette', cursive;
 }
 

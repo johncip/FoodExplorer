@@ -43,12 +43,12 @@
     margin: 0 auto;
     height: 2em;
     padding: 10px;
-    background-color: #d96459;
-    box-shadow: 0 2px #8c4646;
+    background-color: $red;
+    box-shadow: 0 2px $darkred;
     margin-top: .50em;
 
     &:active {
-      background-color: #d96459 * 0.9;
+      background-color: $red * 0.9;
     }
   }
 }
