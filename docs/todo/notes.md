@@ -6,9 +6,10 @@
 
 ### Commands
 * rake secret
-* \\list (in postgres)
+* list databases in psql: \\list
 * pg_dump -U john FoodExplorer_development -f backup.sql
 * figaro heroku:set -e production
+* heroku pg:reset
 
 ### Yelp
 * https://www.yelp.com/developers/api_console
