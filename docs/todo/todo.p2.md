@@ -13,7 +13,8 @@
 - [x] add a reload method for Restaurants (batch Yelp requests?)
 - [x] Restaurant.find_or_create_by_yelp_id
 - [x] List.new_listing_from_yelp_id
-- [ ] Cache the image url
+- [x] Alter restaurant schema
+- [x] Ensure db uniqueness for yelp_id
 - [ ] Don't allow signed-in user to see login page
 
 ### JSON Templates
@@ -44,19 +45,20 @@
 - [ ] add associations
 
 ### Small changes
-- [ ] Add rating to restaurants
 - [x] refactor: generic index action -> concern
 
-### Slate for later phases
+### Later phases
  - use badges for notifications
  - understand 12 factor app rationale
- - get city and state by ZIP code
  - "Invitations" / sharing model
- - Lists can be private or public
- - cool splash page
- - ensure db uniqueness for yelp_id
- - attribute map pattern for Restaurants
- - favorite restaurants
+ - cool splash page (bubbles?)
+
+#### Back end
+- get city and state by ZIP code
+- Lists can be private or public
+- attribute map pattern for Restaurants?
+- move "favorite" to a (user x restaurant) table
+
 
 ### Questions
  - what's a good way to cache the yelp images?

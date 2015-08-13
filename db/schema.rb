@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811224837) do
+ActiveRecord::Schema.define(version: 20150813223320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,16 +42,24 @@ ActiveRecord::Schema.define(version: 20150811224837) do
   add_index "lists", ["user_id"], name: "index_lists_on_user_id", using: :btree
 
   create_table "restaurants", force: :cascade do |t|
-    t.string   "yelp_id",    null: false
-    t.string   "name",       null: false
-    t.string   "city",       null: false
-    t.string   "state",      null: false
+    t.string   "yelp_id",        null: false
+    t.string   "name",           null: false
+    t.string   "city",           null: false
+    t.string   "state",          null: false
     t.string   "zip"
     t.string   "address"
     t.string   "hood"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "url"
+    t.string   "image_url"
+    t.float    "rating"
+    t.string   "rating_img_url"
+    t.boolean  "is_closed"
   end
+
+  add_index "restaurants", ["rating"], name: "index_restaurants_on_rating", using: :btree
+  add_index "restaurants", ["yelp_id"], name: "index_restaurants_on_yelp_id", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false

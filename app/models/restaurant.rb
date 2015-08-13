@@ -22,16 +22,21 @@ class Restaurant < ActiveRecord::Base
   end
 
   def furnish!
-    yelp = Yelp.client.business(yelp_id)
+    fail unless yelp_id
 
     self.attributes = {
-      yelp_id: yelp.id,
-      name: yelp.name,
-      state: yelp.location.state_code,
-      city: yelp.location.city,
-      zip: yelp.location.postal_code,
-      hood: yelp.location.neighborhoods[0],
-      address: yelp.location.address.join(' ')
+      yelp_id: yelp_data.id,
+      name: yelp_data.name,
+      state: yelp_data.location.state_code,
+      city: yelp_data.location.city,
+      zip: yelp_data.location.postal_code,
+      hood: yelp_data.location.neighborhoods[0],
+      address: yelp_data.location.address.join(' '),
+      url: yelp_data.url,
+      image_url: yelp_data.image_url,
+      rating: yelp_data.rating,
+      rating_img_url: yelp_data.rating_img_url,
+      is_closed: yelp_data.is_closed
     }
     self.save! if persisted?
     self
@@ -45,14 +50,14 @@ class Restaurant < ActiveRecord::Base
   # Dynamic attrs
   # -------------------------------------------------------------------------
 
-  YELP_ATTRS = %w(url rating geo image_url rating_img closed? categories)
+  YELP_ATTRS = ['categories', 'geo', 'neighborhoods']
 
-  def url
-    yelp_data.url
+  def categories
+    yelp_data.categories
   end
 
-  def rating
-    yelp_data.rating
+  def neighborhoods
+    yelp_data.location.neighborhoods
   end
 
   def geo
@@ -60,19 +65,4 @@ class Restaurant < ActiveRecord::Base
      yelp_data.location.coordinate.longitude]
   end
 
-  def image_url
-    yelp_data.image_url
-  end
-
-  def rating_img
-    yelp_data.rating_img_url_small
-  end
-
-  def closed?
-    yelp_data.is_closed
-  end
-
-  def categories
-    yelp_data.categories
-  end
 end
