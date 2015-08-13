@@ -1,0 +1,54 @@
+.sign-in {
+  background: url("https://unsplash.it/1280/800/?random");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-size: 150%;
+  color: white;
+  text-align: center;
+
+  .center {
+    background-color:rgba(0, 0, 0, 0.15);
+    padding: 30px;
+  }
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  label {
+    display: inline-block;
+    width: 6em;
+    font-weight: lighter;
+  }
+
+  input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: solid 1px white;
+    transition: box-shadow 0.3s, border 0.3s;
+    width: 14em;
+    font-size: 80%;
+    margin-bottom: .25em;
+
+    &:focus {
+      border: solid 1px #707070;
+      box-shadow: 0 0 5px 1px #969696;
+    }
+  }
+
+  input[type="submit"] {
+    display: block;
+    width: 12em;
+    margin: 0 auto;
+    height: 2em;
+    padding: 10px;
+    background-color: #d96459;
+    box-shadow: 0 2px #8c4646;
+    margin-top: .50em;
+
+    &:active {
+      background-color: #d96459 * 0.9;
+    }
+  }
+}

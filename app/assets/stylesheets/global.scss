@@ -1,0 +1,48 @@
+@import url("http://fonts.googleapis.com/css?family=Courgette");
+@import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,900,900italic,700italic,700");
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', helvetica, sans-serif;
+  font-size: 12pt;
+}
+
+
+h1 {
+  font-size: 150%;
+  font-weight: lighter;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border-radius: 2px;
+}
+
+.logo {
+  font-family: 'Courgette', cursive;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}

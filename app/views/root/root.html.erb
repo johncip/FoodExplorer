@@ -1,5 +1,9 @@
 <div id='root'>
-  <nav></nav>
+  <nav>
+
+    <%= button_to 'Sign Out', session_url, method: :delete %>
+
+  </nav>
 
   <section id='content'></section>
 </div>

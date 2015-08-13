@@ -1,5 +1,9 @@
-<h1>Sign in!</h1>
-<%= render 'shared/login_form',
-           user: @user,
-           submit_caption: 'Sign in',
-           action: session_url %>
+<div class="sign-in">
+  <div class="center">
+    <h1>Sign in to <em class="logo">FoodExplorer</em></h1>
+    <%= render 'shared/login_form',
+               user: @user,
+               submit_caption: 'Sign in',
+               action: session_url %>
+  </div>
+</div>
