@@ -1,6 +1,6 @@
 class Api::RestaurantsController < ApplicationController
-  before_action :redirect_unless_logged_in
-  
+  include ResourceController
+
   def self.model
     Restaurant
   end
