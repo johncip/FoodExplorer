@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  def redirect_unless_logged_in
-    redirect_to new_session_url unless logged_in?
+  def redirect_if_logged_in
+    redirect_to root_url if logged_in?
   end
 end
