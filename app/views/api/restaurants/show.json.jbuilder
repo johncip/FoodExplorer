@@ -1,5 +1,1 @@
-json.(
-  @restaurant,
-  *@restaurant.attribute_names,
-  *Restaurant::YELP_ATTRS
-)
+json.partial! partial: 'restaurant', locals: { restaurant: @restaurant }
