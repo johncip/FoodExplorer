@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
 
-  namespace :api do
+  namespace :api, defaults: {format: :json} do
     resources :restaurants, except: [:new, :edit]
     resources :lists, except: [:new, :edit]
     resources :listings, except: [:new, :edit]
