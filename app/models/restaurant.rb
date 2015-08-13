@@ -45,6 +45,8 @@ class Restaurant < ActiveRecord::Base
   # Dynamic attrs
   # -------------------------------------------------------------------------
 
+  YELP_ATTRS = %w(url rating geo image_url rating_img closed? categories)
+
   def url
     yelp_data.url
   end
@@ -58,8 +60,8 @@ class Restaurant < ActiveRecord::Base
      yelp_data.location.coordinate.longitude]
   end
 
-  def image
-    yelp_data.image
+  def image_url
+    yelp_data.image_url
   end
 
   def rating_img
@@ -74,6 +76,3 @@ class Restaurant < ActiveRecord::Base
     yelp_data.categories
   end
 end
-
-
-# get hours from google places API
