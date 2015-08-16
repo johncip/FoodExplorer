@@ -1,5 +1,7 @@
 .sign-in {
-  background: url("https://unsplash.it/1280/800/?random");
+  // background: url("https://unsplash.it/1280/800/?random");
+  // background: url("http://media.giphy.com/media/NVOPGjeB5O0og/giphy.gif");
+  background: url("eating3.gif");
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -8,8 +10,8 @@
   color: white;
   text-align: center;
 
-  .center {
-    background-color:rgba(0, 0, 0, 0.15);
+  .center { // fix this
+    background-color:rgba(0, 0, 0, .2);
     padding: 30px;
   }
 

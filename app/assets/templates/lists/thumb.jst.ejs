@@ -1,0 +1,8 @@
+<a href="javascript:void(0)"
+  <% if (list.attributes.favorite) { %>
+    class="favorite"
+  <% } %>
+>
+  <img src='list.escape("image_url")'>
+  <%= list.escape("title") %>
+</a>

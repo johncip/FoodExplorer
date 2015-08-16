@@ -19,6 +19,7 @@
 //= require underscore
 //= require backbone
 //= require food_explorer
+//= require_tree ./util
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

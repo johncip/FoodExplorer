@@ -4,7 +4,12 @@ window.FoodEx = {
   Views: {},
   Routers: {},
   initialize: function() {
-    // TODO add collection
-    FoodEx.router = new FoodEx.Routers.Router($('#root'));
+    FoodEx.lists = new FoodEx.Collections.Lists();
+    FoodEx.router = new FoodEx.Routers.Router({
+      $rootEl: $('#root'),
+      lists: FoodEx.lists
+    });
+
+    FoodEx.lists.fetch();
   }
 };

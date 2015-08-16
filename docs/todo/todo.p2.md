@@ -15,7 +15,8 @@
 - [x] List.new_listing_from_yelp_id
 - [x] Alter restaurant schema
 - [x] Ensure db uniqueness for yelp_id
-- [ ] Don't allow signed-in user to see login page
+- [x] Don't allow signed-in user to see login page
+- [ ] Make offline seed db
 
 ### JSON Templates
 - [x] restaurant (index, show)
@@ -24,7 +25,7 @@
 
 ### List Views
 - [x] Navbar (rough)
-- [ ] Lists Index (include count)
+- [x] Lists Index (include count)
 - [ ] List Show (include restaurants & listings)
 - [ ] List Edit (be able to add & remove listings)
 
@@ -59,6 +60,9 @@
 - attribute map pattern for Restaurants?
 - move "favorite" to a (user x restaurant) table
 
-
 ### Questions
  - what's a good way to cache the yelp images?
+
+### Ideas
+- configurable start page
+- compositeView.placeSubview

@@ -3,15 +3,24 @@ FoodEx.Routers.Router = Backbone.Router.extend ({
     '': 'index',
   },
 
-  initialize: function ($rootEl) {
-    this.$rootEl = $rootEl;
-    this.$content = $rootEl.find('#content');
-    this.$nav = $rootEl.find('nav');
-    // this.lists = new FoodEx.Collections.Lists();
-    // this.lists.fetch();
+  initialize: function (options) {
+    this.$rootEl = options.$rootEl;
+    this.lists = options.lists;
+
+    this.$content = this.$rootEl.find('#content');
+    this.$nav = this.$rootEl.find('nav');
+
     this.showNav();
 
     Backbone.history.start();
+  },
+
+  index: function () {
+    view = new FoodEx.Views.ListsIndex({
+      collection: this.lists
+    });
+
+    this._swapContent(view);
   },
 
   showNav: function () {
