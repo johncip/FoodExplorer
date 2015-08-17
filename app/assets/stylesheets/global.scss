@@ -26,7 +26,7 @@ body,
 }
 body {
   font-family: 'Lato';
-  font-size: 14pt;
+  font-size: 13pt;
 }
 a {
   text-decoration: none;
@@ -51,14 +51,12 @@ input {
 .logo * {
   font-family: 'Courgette', cursive;
 }
-
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .clearfix::after {
   content: "";
   display: block;
