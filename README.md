@@ -10,7 +10,7 @@ Rails and Backbone. Users can:
 
 - [x] Create accounts
 - [x] Create sessions (log in)
-- [ ] Create lists of restaurants
+- [x] Create lists of restaurants
 - [ ] Find restaurants (using Yelp API) to add to lists
 - [ ] Attach notes to restaurants
 - [ ] View own lists + others' shared lists

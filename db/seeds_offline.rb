@@ -1,7 +1,8 @@
 List.create!([
-  {user_id: 1, title: "Bernal faves", favorite: false},
-  {user_id: 1, title: "Bahn mi near a/A", favorite: false},
-  {user_id: 1, title: "Best taco trucks", favorite: false}
+  {user_id: 1, title: "Red Hill Favorites", favorite: false},
+  {user_id: 1, title: "Bahn Mi Near a/A", favorite: false},
+  {user_id: 1, title: "Best SF Taco Trucks", favorite: false},
+  {user_id: 1, title: "Bib Gourmand 2015", favorite: false}
 ])
 Listing.create!([
   {restaurant_id: 1, list_id: 1, user_id: 1, favorite: false},
@@ -15,7 +16,16 @@ Listing.create!([
   {restaurant_id: 9, list_id: 3, user_id: 1, favorite: false},
   {restaurant_id: 10, list_id: 3, user_id: 1, favorite: false},
   {restaurant_id: 11, list_id: 3, user_id: 1, favorite: false},
-  {restaurant_id: 12, list_id: 3, user_id: 1, favorite: false}
+  {restaurant_id: 12, list_id: 3, user_id: 1, favorite: false},
+  {restaurant_id: 13, list_id: 4, user_id: 1, favorite: false},
+  {restaurant_id: 14, list_id: 4, user_id: 1, favorite: false},
+  {restaurant_id: 15, list_id: 4, user_id: 1, favorite: false},
+  {restaurant_id: 16, list_id: 4, user_id: 1, favorite: false},
+  {restaurant_id: 17, list_id: 4, user_id: 1, favorite: false},
+  {restaurant_id: 18, list_id: 4, user_id: 1, favorite: false},
+  {restaurant_id: 19, list_id: 4, user_id: 1, favorite: false},
+  {restaurant_id: 20, list_id: 4, user_id: 1, favorite: false},
+  {restaurant_id: 21, list_id: 4, user_id: 1, favorite: false}
 ])
 Restaurant.create!([
   {yelp_id: "precita-park-cafe-san-francisco", name: "Precita Park Cafe", city: "San Francisco", state: "CA", zip: "94110", address: "500 Precita Ave", hood: "Bernal Heights", url: "http://www.yelp.com/biz/precita-park-cafe-san-francisco", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/95sJrIg-lVKATMbUEdn_xw/ms.jpg", rating: 3.5, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png", is_closed: false},
@@ -29,8 +39,17 @@ Restaurant.create!([
   {yelp_id: "el-gallo-giro-taco-truck-san-francisco-2", name: "El Gallo Giro Taco Truck", city: "San Francisco", state: "CA", zip: "94110", address: "23rd St & Treat Ave", hood: "Mission", url: "http://www.yelp.com/biz/el-gallo-giro-taco-truck-san-francisco-2", image_url: "http://s3-media1.fl.yelpcdn.com/bphoto/-asTPgyektr_OBxoiT4dDA/ms.jpg", rating: 4.5, rating_img_url: "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png", is_closed: false},
   {yelp_id: "los-compadres-taco-truck-san-francisco-2", name: "Los Compadres Taco Truck", city: "San Francisco", state: "CA", zip: "94105", address: "Spear St & Folsom St", hood: "Financial District", url: "http://www.yelp.com/biz/los-compadres-taco-truck-san-francisco-2", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/ENGm6EO9Z0tN6BgVO4t33w/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
   {yelp_id: "el-tonayense-taco-truck-san-francisco-4", name: "El Tonayense Taco Truck", city: "San Francisco", state: "CA", zip: "94103", address: "", hood: "SoMa", url: "http://www.yelp.com/biz/el-tonayense-taco-truck-san-francisco-4", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/zy1V1Lwq6ejyXcQOiXpinA/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
-  {yelp_id: "el-norteno-taco-truck-san-francisco", name: "El Norteno Taco Truck", city: "San Francisco", state: "CA", zip: "94103", address: "801 Bryant St", hood: "SoMa", url: "http://www.yelp.com/biz/el-norteno-taco-truck-san-francisco", image_url: "http://s3-media1.fl.yelpcdn.com/bphoto/l8-SeEVosiw7zb3jWAnqJQ/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false}
+  {yelp_id: "el-norteno-taco-truck-san-francisco", name: "El Norteno Taco Truck", city: "San Francisco", state: "CA", zip: "94103", address: "801 Bryant St", hood: "SoMa", url: "http://www.yelp.com/biz/el-norteno-taco-truck-san-francisco", image_url: "http://s3-media1.fl.yelpcdn.com/bphoto/l8-SeEVosiw7zb3jWAnqJQ/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "bar-tartine-san-francisco", name: "Bar Tartine", city: "San Francisco", state: "CA", zip: "94110", address: "561 Valencia St", hood: "Mission", url: "http://www.yelp.com/biz/bar-tartine-san-francisco", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/iSO1jeHsJVBj3LkgN5toAg/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "chino-san-francisco-3", name: "Chino", city: "San Francisco", state: "CA", zip: "94103", address: "3198 16th St", hood: "Mission", url: "http://www.yelp.com/biz/chino-san-francisco-3", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/D9ZRVE1G3nsE7fIb1rUhGQ/ms.jpg", rating: 3.5, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png", is_closed: false},
+  {yelp_id: "delfina-san-francisco", name: "Delfina", city: "San Francisco", state: "CA", zip: "94110", address: "3621 18th St", hood: "Mission", url: "http://www.yelp.com/biz/delfina-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/g__DxNgTSOUcCPhAJwzSMw/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "dosa-on-fillmore-san-francisco-3", name: "Dosa on Fillmore", city: "San Francisco", state: "CA", zip: "94115", address: "1700 Fillmore St", hood: "Japantown", url: "http://www.yelp.com/biz/dosa-on-fillmore-san-francisco-3", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/kwuJnHpQQFU90qrqCKEmcQ/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "dosa-on-valencia-san-francisco", name: "Dosa on Valencia", city: "San Francisco", state: "CA", zip: "94110", address: "995 Valencia St", hood: "Mission", url: "http://www.yelp.com/biz/dosa-on-valencia-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/YOddDN4OGPGaQ7Sioz1KtA/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "flour-water-san-francisco", name: "Flour + Water", city: "San Francisco", state: "CA", zip: "94110", address: "2401 Harrison St", hood: "Mission", url: "http://www.yelp.com/biz/flour-water-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/TncWKf9mHyebS2m5BIFEgg/ms.jpg", rating: 3.5, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png", is_closed: false},
+  {yelp_id: "perbacco-san-francisco", name: "Perbacco", city: "San Francisco", state: "CA", zip: "94111", address: "230 California St", hood: "Financial District", url: "http://www.yelp.com/biz/perbacco-san-francisco", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/mfbIJwcqn1K9AmOxuVzkOg/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "m-y-china-san-francisco-2", name: "M.Y. China", city: "San Francisco", state: "CA", zip: "94103", address: "Westfield San Francisco Centre 845 Market St, 4th Fl", hood: "Union Square", url: "http://www.yelp.com/biz/m-y-china-san-francisco-2", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/MfD1on4bCDopxim2NBMNtg/ms.jpg", rating: 3.5, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png", is_closed: false},
+  {yelp_id: "yank-sing-san-francisco-2", name: "Yank Sing", city: "San Francisco", state: "CA", zip: "94105", address: "101 Spear St", hood: "Financial District", url: "http://www.yelp.com/biz/yank-sing-san-francisco-2", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/QUtKfiScmdw_1zUWAwT1qA/ms.jpg", rating: 3.5, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png", is_closed: false}
 ])
 User.create!([
-  {username: "admin", password_digest: "$2a$10$z9LKUaaN0P5Z9z4mJdjpn.KfK7ahCUtivnfmb/2/imtrXlQBqm7Ym", session_token: "47ItgwdAO5-g_EhUyuxuhQ"}
+  {username: "admin", password_digest: "$2a$10$gT61P3Aojn2s8RVqyFOrReoL9RHeH3bYfHMAH.HzbWz01LfNK.VNq", session_token: "nqtai18ufFPalVEtEDJYEA"}
 ])

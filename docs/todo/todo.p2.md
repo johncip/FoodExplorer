@@ -16,7 +16,7 @@
 - [x] Alter restaurant schema
 - [x] Ensure db uniqueness for yelp_id
 - [x] Don't allow signed-in user to see login page
-- [ ] Make offline seed db
+- [x] Make offline seed db
 
 ### JSON Templates
 - [x] restaurant (index, show)
@@ -26,8 +26,12 @@
 ### List Views
 - [x] Navbar (rough)
 - [x] Lists Index (include count)
-- [ ] List Show (include restaurants & listings)
+- [x] List Show (include restaurants & listings)
 - [ ] List Edit (be able to add & remove listings)
+- [ ] Mark favorites
+  [ ] Show Yelp ratings / reviews
+  [ ] Have fixed img size & placeholder
+  [ ] Draggable
 
 ### Comments
  - [ ] generate model & migration
@@ -36,6 +40,10 @@
  - [ ] migrate
  - [ ] add model validations
  - [ ] add associations
+ - [ ] create backbone model & collection
+ - [ ] add to API & parse method
+ - [ ] add to templates
+ - [ ] style
 
 ### Notes
 - [ ] generate model & migration
@@ -44,11 +52,18 @@
 - [ ] migrate
 - [ ] add model validations
 - [ ] add associations
+- [ ] create backbone model & collection
+- [ ] add to API & parse method
+- [ ] add to templates
+- [ ] style
 
 ### Small changes
 - [x] refactor: generic index action -> concern
+- [ ] remove reliance on internet
+- [ ] clean up nav bar
 
 ### Later phases
+ - list view vs thumbs view
  - use badges for notifications
  - understand 12 factor app rationale
  - "Invitations" / sharing model

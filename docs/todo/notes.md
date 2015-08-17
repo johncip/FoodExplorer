@@ -26,3 +26,6 @@
 * https://coderwall.com/p/u0x3nw/avoid-heroku-idling-with-new-relic-pings
 * http://www.crowdco.de/tutorials/19
 * http://albertogrespan.com/blog/heroku-scheduler-and-rails-rake-tasks/
+
+
+// $green: #588c7e;
