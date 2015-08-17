@@ -1,8 +1,10 @@
 # FoodExplorer
+http://explore.cafe
 
-[Heroku link][heroku]
+## Monday Trade & Grade Notes
+All I have implemented on the front end right now is auth (with guest log in) and index and show for restaurant lists. Editing will use drag-and-drop, but I'm not done yet.
 
-[heroku]: http://food-explorer.herokuapp.com/
+Restaurant icons should be draggable right now, but not sortable, and dropping them in the sidebar doesn't do anything (it should move them into a new list).
 
 ## Minimum Viable Product
 FoodExplorer is a restaurant-themed blend of Pinterest and Goodreads built on
@@ -10,7 +12,7 @@ Rails and Backbone. Users can:
 
 - [x] Create accounts
 - [x] Create sessions (log in)
-- [x] Create lists of restaurants
+- [ ] Create lists of restaurants
 - [ ] Find restaurants (using Yelp API) to add to lists
 - [ ] Attach notes to restaurants
 - [ ] View own lists + others' shared lists

@@ -7,3 +7,6 @@
 ### Draggable
 
 ### Filter box
+
+### Users
+- [ ] Proper guest user
