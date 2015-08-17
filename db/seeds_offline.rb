@@ -1,8 +1,8 @@
 List.create!([
-  {user_id: 1, title: "Red Hill Favorites", favorite: false},
   {user_id: 1, title: "Bahn Mi Near a/A", favorite: false},
   {user_id: 1, title: "Best SF Taco Trucks", favorite: false},
-  {user_id: 1, title: "Bib Gourmand 2015", favorite: false}
+  {user_id: 1, title: "Bib Gourmand 2015", favorite: false},
+  {user_id: 1, title: "Red Hill Favorites", favorite: true}
 ])
 Listing.create!([
   {restaurant_id: 1, list_id: 1, user_id: 1, favorite: false},
@@ -51,5 +51,5 @@ Restaurant.create!([
   {yelp_id: "yank-sing-san-francisco-2", name: "Yank Sing", city: "San Francisco", state: "CA", zip: "94105", address: "101 Spear St", hood: "Financial District", url: "http://www.yelp.com/biz/yank-sing-san-francisco-2", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/QUtKfiScmdw_1zUWAwT1qA/ms.jpg", rating: 3.5, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png", is_closed: false}
 ])
 User.create!([
-  {username: "admin", password_digest: "$2a$10$gT61P3Aojn2s8RVqyFOrReoL9RHeH3bYfHMAH.HzbWz01LfNK.VNq", session_token: "nqtai18ufFPalVEtEDJYEA"}
+  {username: "admin", password_digest: "$2a$10$WylLP/7h.qb9Mf8okWGuseNPkjmwYHgsOCMa3CuK4emfVAMr6Zsue", session_token: "5ID1xliPzE_EJyEDysJnyg"}
 ])

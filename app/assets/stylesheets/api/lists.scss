@@ -1,99 +1,79 @@
-$spc: 1.25em;
-$seafoam: #EDF1E7;
-
-@mixin spacing($size) {
-  margin: $size 0 $size $size;
-  padding-top: $size;
-}
-
-.lists-index {
-  // width: 800px;
-}
-
-.lists-index, .list-index > div, .sidebar {
+.lists-index,
+.list-index > div,
+.sidebar {
   height: 100%;
-  min-height: 250px;
 }
-
-.lists-index h2 {
-  margin-bottom: 1em;
-  margin-left: 12px;
-  font-size: 125%;
-  font-weight: 800;
-  color: $green;
+.lists-index {
+  p {
+    margin-bottom: $spc;
+  }
+  h2 {
+    margin-bottom: $spc;
+    font-size: 125%;
+    font-weight: 800;
+    color: $green;
+  }
 }
-
 .thumb-box {
   @include spacing($spc);
-  // float: right;
-
+  float: left;
+  width: calc(100% - 300px);
   li {
     display: block;
     float: left;
-    width: 120px;
+    height: 190px;
+    width: 140px;
     margin: 0 2em 2em 0;
     text-align: center;
   }
-
-  .thumb {
-    clear: both;
-    width: 100%;
+  img.thumb {
+    width: 80%;
     display: block;
     margin-bottom: 0.5em;
     border-radius: 4px 16px;
     box-shadow: 1px 1px 1px lightgray;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .rating {
+  img.rating {
     clear: both;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 0.25em;
+    margin: 0 auto 0.25em;
   }
-
   a {
     color: #333;
   }
 }
-
 .sidebar {
-  @include spacing($spc);
-  border-radius: 4px;
   background-color: $seafoam;
   color: $green;
-  width: 12em;
   float: left;
-
-  ul li:first-child a {
-    border-top: thin solid ($seafoam * 0.9);
+  .active {
+    background-color: $selected;
   }
-
   a {
     display: block;
     float: left;
-    width: 12em;
-    padding: 12px;
+    width: 100%;
+    padding: 0.75em;
     vertical-align: baseline;
     color: $green;
     line-height: 1.5em;
     border-bottom: thin solid ($seafoam * 0.9);
-
     &:hover {
       background-color: $yellow;
     }
   }
-
   mark {
     background-color: $seafoam * 0.95;
     color: $seafoam * 1.1;
-    padding: .25em;
+    padding: 0.25em;
     border-radius: 4px;
     font-weight: bold;
   }
-
-  .favorite::after {
+  .favorite::before {
     content: "♥";
-    color: red;
+    color: hsl(10, 220, 60);
     font-size: 125%;
   }
 }

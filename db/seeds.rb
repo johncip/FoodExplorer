@@ -40,3 +40,5 @@ rest_ids.each do |group, yelp_ids|
     lst.new_listing_by_author(restaurant: rest).save
   end
 end
+
+List.first.update!(favorite: true)

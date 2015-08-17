@@ -1,9 +1,4 @@
-<a href="<%= '/#/restaurants/' + restaurant.id %>"
-
-  <% if (restaurant.attributes.favorite) { %>
-    class="favorite"
-  <% } %>
->
+<a href="<%= '/api/restaurants/' + restaurant.id %>">
   <img src='<%= restaurant.escape("image_url") %>' class="thumb">
   <img src='<%= restaurant.escape("rating_img_url") %>' class="rating">
   <%= restaurant.escape("name") %>

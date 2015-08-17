@@ -8,7 +8,8 @@ FoodEx.Views.Sidebar = Backbone.CompositeView.extend ({
 
   addSidebarItem: function (list) {
     var sidebarItem = new FoodEx.Views.SidebarItem({
-      model: list
+      model: list,
+      isActive: list === this.model
     });
     this.addSubview('ul', sidebarItem);
   },
@@ -16,6 +17,7 @@ FoodEx.Views.Sidebar = Backbone.CompositeView.extend ({
   render: function() {
     this.$el.html(this.template());
     this.collection.each(this.addSidebarItem.bind(this));
+    this.onRender();
     return this;
   }
 });

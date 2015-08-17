@@ -27,11 +27,25 @@
 - [x] Navbar (rough)
 - [x] Lists Index (include count)
 - [x] List Show (include restaurants & listings)
+- [ ] Add summary to list, make it easily editable
+- [ ] Make the current list active in the index
 - [ ] List Edit (be able to add & remove listings)
-- [ ] Mark favorites
-  [ ] Show Yelp ratings / reviews
-  [ ] Have fixed img size & placeholder
-  [ ] Draggable
+- [ ] Show Yelp ratings / reviews
+- [ ] Have image placeholder for offline
+- [ ] *** Draggable
+- [ ] Visited badge
+- [ ] Favorite badge
+- [ ] Display restaurants in order
+
+### Eventually
+- [ ] Split index items & thumbs into favorites, non-favorites
+
+### More back end
+- [ ] UserRestaurant table/model
+- [ ] + Visited field
+- [ ] + Favorited field
+- [ ] Remove Listing.favorite from schema, model, templates
+- [ ] Listing ord field
 
 ### Comments
  - [ ] generate model & migration
