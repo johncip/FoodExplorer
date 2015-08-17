@@ -1,8 +1,8 @@
-<a href="javascript:void(0)"
+<a href="<%= '/#/lists/' + list.id %>"
   <% if (list.attributes.favorite) { %>
     class="favorite"
   <% } %>
 >
   <%= list.escape("title") %>
-  [<%= list.escape("size") %>]
+  <mark><%= list.escape("size") %></mark>
 </a>

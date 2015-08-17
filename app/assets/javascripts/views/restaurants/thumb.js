@@ -1,5 +1,7 @@
 FoodEx.Views.RestThumb = Backbone.View.extend ({
-  template: JST['restaurants/thumb.js'],
+  template: JST['restaurants/thumb'],
+  tagName: 'li',
+
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
   },

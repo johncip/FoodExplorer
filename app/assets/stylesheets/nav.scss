@@ -2,47 +2,52 @@ nav {
   display: block;
   background-color: $green;
   color: white;
-  padding: 0px 6px;
+  padding: 0;
+  padding-right: 1em;
   height: 40px;
 
   ul {
     position: relative;
-    line-height: 40px;
     float: left;
-    padding: 2px;
   }
 
   li {
-    margin-right: 10px;
     float: left;
   }
 
   a {
     padding: 0 1em;
     color: white;
-    background-color: $green * 0.8;
     display: block;
-    border-radius: 6px;
-    margin: 0 2px;
-    height: 34px;
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
     position: relative;
+
+    &:hover {
+      background-color: $darkgreen;
+    }
   }
 
   .logo {
     position: relative;
-    font-size: 125%;
+    font-size: 110%;
   }
 }
 
 button.logout {
-  display: inline-block;
-  padding: 4px 6px;
   font-size: 90%;
-  border: 0;
-  border-radius: 3px;
-  background-color: $green * 0.8;
-  color: white;
   font-weight: bold;
+
+  border-right: thin solid ($darkgreen * 0.8);
+  border-bottom: thin solid ($darkgreen * 0.8);
+  border-top: thin solid ($darkgreen * 1.5);
+  border-left: thin solid ($darkgreen * 1.5);
+
+  border-radius: 3px;
+  background-color: $darkgreen;
+  // border: 1px;
+  color: white;
   float: right;
   top: 6px;
   position: relative;

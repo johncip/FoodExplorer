@@ -1,1 +1,10 @@
-<li><%= restaurant.escape("name") %></li>
+<a href="<%= '/#/restaurants/' + restaurant.id %>"
+
+  <% if (restaurant.attributes.favorite) { %>
+    class="favorite"
+  <% } %>
+>
+  <img src='<%= restaurant.escape("image_url") %>' class="thumb">
+  <img src='<%= restaurant.escape("rating_img_url") %>' class="rating">
+  <%= restaurant.escape("name") %>
+</a>

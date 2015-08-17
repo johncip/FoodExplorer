@@ -1,6 +1,8 @@
 FoodEx.Routers.Router = Backbone.Router.extend ({
   routes: {
     '': 'index',
+    'lists': 'index',
+    'lists/:id': 'show',
   },
 
   initialize: function (options) {
@@ -16,8 +18,16 @@ FoodEx.Routers.Router = Backbone.Router.extend ({
   },
 
   index: function () {
-    view = new FoodEx.Views.ListsIndex({
+    var view = new FoodEx.Views.ListsIndex({
       collection: this.lists
+    });
+
+    this._swapContent(view);
+  },
+
+  show: function (id) {
+    var view = new FoodEx.Views.ListShow({
+      model: this.lists.getOrFetch(id)
     });
 
     this._swapContent(view);

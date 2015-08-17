@@ -1,7 +1,8 @@
 @import url("http://fonts.googleapis.com/css?family=Courgette");
 @import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,900,900italic,700italic,700");
 
-$green: #588c7e;
+$green: #588cae;
+$darkgreen: $green * 0.8;
 $yellow: #f2e39f;
 $orange: #f2ae72;
 $red: #d96459;
@@ -11,13 +12,13 @@ $darkred: #8c4646;
   box-sizing: border-box;
 }
 
-html, body {
+html, body, #content, #root {
   height: 100%;
 }
 
 body {
   font-family: 'Lato', 'Helvetica Neue', helvetica, sans-serif;
-  font-size: 12pt;
+  font-size: 14pt;
 }
 
 a {
