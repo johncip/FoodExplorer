@@ -4,6 +4,7 @@ FoodEx.Views.ListThumbBox = Backbone.CompositeView.extend ({
   initialize: function () {
     this.listenTo(this.collection, 'sync', this.render);
     this.listenTo(this.collection, 'add', this.addThumb);
+    this.collection.each(this.addThumb.bind(this));
   },
 
   addThumb: function (list) {
@@ -15,7 +16,7 @@ FoodEx.Views.ListThumbBox = Backbone.CompositeView.extend ({
 
   render: function() {
     this.$el.html(this.template());
-    this.collection.each(this.addThumb.bind(this));
+    this.attachSubviews();
     return this;
   }
 });

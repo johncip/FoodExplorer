@@ -2,6 +2,11 @@ FoodEx.Views.ListsIndex = Backbone.CompositeView.extend ({
   template: JST['lists/index'],
   className: 'lists-index clearfix',
 
+  initialize: function () {
+    this.addSidebar();
+    this.addThumbBox();
+  },
+
   addSidebar: function (list) {
     var sidebar = new FoodEx.Views.Sidebar({
       collection: this.collection
@@ -19,8 +24,7 @@ FoodEx.Views.ListsIndex = Backbone.CompositeView.extend ({
   render: function() {
     var content = this.template();
     this.$el.html(content);
-    this.addSidebar();
-    this.addThumbBox();
+    this.attachSubviews();
     return this;
   },
 });
