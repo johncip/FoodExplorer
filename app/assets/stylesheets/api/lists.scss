@@ -18,6 +18,7 @@
   @include spacing($spc);
   float: left;
   width: calc(100% - 300px);
+
   li {
     display: block;
     float: left;

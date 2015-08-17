@@ -6,13 +6,16 @@ All I have implemented on the front end right now is auth (with guest log in) an
 
 Restaurant icons should be draggable right now, but not sortable, and dropping them in the sidebar doesn't do anything (it should move them into a new list).
 
+Restaurant entries will have their own show views, but for now the icons just link the respective Yelp page.
+
 ## Minimum Viable Product
 FoodExplorer is a restaurant-themed blend of Pinterest and Goodreads built on
 Rails and Backbone. Users can:
 
 - [x] Create accounts
 - [x] Create sessions (log in)
-- [ ] Create lists of restaurants
+- [x] View lists of restaurants
+- [ ] Create/edit/delete lists
 - [ ] Find restaurants (using Yelp API) to add to lists
 - [ ] Attach notes to restaurants
 - [ ] View own lists + others' shared lists
