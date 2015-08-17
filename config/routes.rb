@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
 
+  get '/guest', to: 'sessions#guest'
+
   namespace :api, defaults: {format: :json} do
     resources :restaurants, except: [:new, :edit]
     resources :lists, except: [:new, :edit]

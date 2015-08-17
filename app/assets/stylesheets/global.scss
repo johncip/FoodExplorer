@@ -1,3 +1,4 @@
+// @import url("http://openfontlibrary.org/face/montreal");
 @import url("http://fonts.googleapis.com/css?family=Courgette");
 @import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,900,900italic,700italic,700");
 @mixin spacing($size) {
@@ -24,8 +25,8 @@ body,
   height: 100%;
 }
 body {
-  font-family: 'Gotham HTF';
-  font-size: 12pt;
+  font-family: 'Lato';
+  font-size: 14pt;
 }
 a {
   text-decoration: none;

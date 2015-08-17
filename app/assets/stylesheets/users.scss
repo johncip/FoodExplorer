@@ -1,5 +1,6 @@
 .sign-in {
   background: url("eating4.gif");
+
   // background: url("https://unsplash.it/1280/800/?random");
   background-size: cover;
   height: 100%;
@@ -8,48 +9,60 @@
   font-size: 150%;
   color: white;
   text-align: center;
+  .center {
 
-  .center { // fix this
-    background-color:rgba(0, 0, 0, .2);
+    // fix this
+    background-color: rgba(0, 0, 0, .2);
     padding: 30px;
   }
-
   h1 {
     margin-bottom: 0.5em;
   }
-
   label {
     display: inline-block;
     width: 6em;
     font-weight: lighter;
   }
-
-  input[type="text"], input[type="password"] {
+  input[type="text"],
+  input[type="password"] {
     padding: 10px;
     border: solid 1px white;
     transition: box-shadow 0.3s, border 0.3s;
     width: 14em;
     font-size: 80%;
-    margin-bottom: .25em;
-
+    margin-bottom: 0.25em;
     &:focus {
       border: solid 1px #707070;
       box-shadow: 0 0 5px 1px #969696;
     }
   }
-
-  input[type="submit"] {
-    display: block;
-    width: 12em;
+  .enter {
+    border: 0;
+    border-radius: 4px;
+    display: inline-block;
+    width: 9em;
     margin: 0 auto;
     height: 2em;
     padding: 10px;
+    margin-top: 0.50em;
+  }
+  .with-creds {
     background-color: $red;
     box-shadow: 0 2px $darkred;
-    margin-top: .50em;
-
     &:active {
+      box-shadow: 0 2px $red * 1.1;
       background-color: $red * 0.9;
     }
+  }
+  .as-guest {
+    background-color: $green;
+    box-shadow: 0 2px $green * 0.8;
+    &:active {
+      background-color: $green * 0.8;
+      box-shadow: 0 2px $green * 1.1;
+    }
+  }
+  button {
+    font: inherit;
   }
 }

@@ -20,4 +20,10 @@ class SessionsController < ApplicationController
     log_out!
     render json: {}
   end
+
+  def guest
+    user = User.find_by_username!('admin')
+    log_in!(user)
+    render json: {'as': 'if'}
+  end
 end

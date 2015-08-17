@@ -16,5 +16,22 @@
          value="<%= user.password %>">
   <br>
 
-  <input type="submit" value="<%= submit_caption %>">
+  <input type="submit" class="enter with-creds" value="<%= submit_caption %>">
+
+
+  <button class="enter as-guest">Enter as Guest</button>
 </form>
+
+<script>
+  $(function() {
+    $('.as-guest').click(function(event) {
+      event.preventDefault();
+      $.ajax({
+        url: '/guest',
+        success: function (result) {
+          window.location.replace('/');
+        },
+      });
+    });
+  });
+</script>
