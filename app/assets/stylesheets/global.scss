@@ -50,12 +50,14 @@ input {
 .logo * {
   font-family: 'Courgette', cursive;
 }
+
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .clearfix::after {
   content: "";
   display: block;

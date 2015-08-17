@@ -5,6 +5,7 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend ({
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.collection, 'sync', this.render);
     this.listenTo(this.collection, 'add', this.addThumb);
+    this.on('render', this.onRender);
   },
 
   addThumb: function (restaurant) {
@@ -19,7 +20,7 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend ({
       list: this.model
     }));
     this.collection.each(this.addThumb.bind(this));
-    FoodEx.thisguy = this.collection;
+    this.trigger('render');
     return this;
   }
 });
