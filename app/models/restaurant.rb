@@ -35,7 +35,7 @@ class Restaurant < ActiveRecord::Base
       hood: yelp_data.location.neighborhoods[0],
       address: yelp_data.location.address.join(' '),
       url: yelp_data.url,
-      image_url: yelp_data.image_url,
+      image_url: yelp_data.image_url.sub(/ms.jpg$/, 'l.jpg'),
       rating: yelp_data.rating,
       rating_img_url: yelp_data.rating_img_url,
       is_closed: yelp_data.is_closed
@@ -77,5 +77,4 @@ class Restaurant < ActiveRecord::Base
     [yelp_data.location.coordinate.latitude,
      yelp_data.location.coordinate.longitude]
   end
-
 end

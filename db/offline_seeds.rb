@@ -1,10 +1,10 @@
 List.create!([
-  {user_id: 1, title: "Bahn Mi Near a/A", favorite: false, description: nil, private: false, ord: 0},
-  {user_id: 1, title: "Cool Food Trucks", favorite: false, description: nil, private: false, ord: 0},
-  {user_id: 1, title: "Bib Gourmand 2015", favorite: false, description: nil, private: false, ord: 0},
-  {user_id: 1, title: "Good Coffee", favorite: false, description: nil, private: false, ord: 0},
-  {user_id: 1, title: "Red Hill Favorites", favorite: true, description: nil, private: false, ord: 0},
-  {user_id: 1, title: "Ice Cream", favorite: true, description: nil, private: false, ord: 0}
+  {user_id: 1, title: "Bahn Mi Near a/A", favorite: false, description: "App Academy students love their bahn mi. Make sure to start with Saigon.", private: false, ord: 0},
+  {user_id: 1, title: "Cool Food Trucks", favorite: false, description: "Meals on wheels.", private: false, ord: 0},
+  {user_id: 1, title: "Bib Gourmand 2015", favorite: false, description: "The best restaurants that won't break the bank. Maybe.", private: false, ord: 0},
+  {user_id: 1, title: "Good Coffee", favorite: false, description: "The best brews around SF.", private: false, ord: 0},
+  {user_id: 1, title: "Red Hill Favorites", favorite: true, description: "The best around Bernal.", private: false, ord: 0},
+  {user_id: 1, title: "Ice Cream", favorite: true, description: "Almost as important as food.", private: false, ord: 0}
 ])
 Listing.create!([
   {restaurant_id: 1, list_id: 1, user_id: 1, ord: 0},
@@ -15,19 +15,19 @@ Listing.create!([
   {restaurant_id: 6, list_id: 1, user_id: 1, ord: 0},
   {restaurant_id: 7, list_id: 1, user_id: 1, ord: 0},
   {restaurant_id: 8, list_id: 1, user_id: 1, ord: 0},
-  {restaurant_id: 9, list_id: 2, user_id: 1, ord: 0},
-  {restaurant_id: 10, list_id: 2, user_id: 1, ord: 0},
+  {restaurant_id: 9, list_id: 1, user_id: 1, ord: 0},
+  {restaurant_id: 10, list_id: 1, user_id: 1, ord: 0},
   {restaurant_id: 11, list_id: 2, user_id: 1, ord: 0},
   {restaurant_id: 12, list_id: 2, user_id: 1, ord: 0},
-  {restaurant_id: 13, list_id: 3, user_id: 1, ord: 0},
-  {restaurant_id: 14, list_id: 3, user_id: 1, ord: 0},
+  {restaurant_id: 13, list_id: 2, user_id: 1, ord: 0},
+  {restaurant_id: 14, list_id: 2, user_id: 1, ord: 0},
   {restaurant_id: 15, list_id: 3, user_id: 1, ord: 0},
   {restaurant_id: 16, list_id: 3, user_id: 1, ord: 0},
   {restaurant_id: 17, list_id: 3, user_id: 1, ord: 0},
   {restaurant_id: 18, list_id: 3, user_id: 1, ord: 0},
   {restaurant_id: 19, list_id: 3, user_id: 1, ord: 0},
-  {restaurant_id: 20, list_id: 4, user_id: 1, ord: 0},
-  {restaurant_id: 21, list_id: 4, user_id: 1, ord: 0},
+  {restaurant_id: 20, list_id: 3, user_id: 1, ord: 0},
+  {restaurant_id: 21, list_id: 3, user_id: 1, ord: 0},
   {restaurant_id: 22, list_id: 4, user_id: 1, ord: 0},
   {restaurant_id: 23, list_id: 4, user_id: 1, ord: 0},
   {restaurant_id: 24, list_id: 4, user_id: 1, ord: 0},
@@ -40,17 +40,24 @@ Listing.create!([
   {restaurant_id: 31, list_id: 4, user_id: 1, ord: 0},
   {restaurant_id: 32, list_id: 4, user_id: 1, ord: 0},
   {restaurant_id: 33, list_id: 4, user_id: 1, ord: 0},
-  {restaurant_id: 34, list_id: 5, user_id: 1, ord: 0},
-  {restaurant_id: 35, list_id: 5, user_id: 1, ord: 0},
+  {restaurant_id: 34, list_id: 4, user_id: 1, ord: 0},
+  {restaurant_id: 35, list_id: 4, user_id: 1, ord: 0},
   {restaurant_id: 36, list_id: 5, user_id: 1, ord: 0},
   {restaurant_id: 37, list_id: 5, user_id: 1, ord: 0},
-  {restaurant_id: 38, list_id: 6, user_id: 1, ord: 0},
-  {restaurant_id: 39, list_id: 6, user_id: 1, ord: 0},
-  {restaurant_id: 40, list_id: 6, user_id: 1, ord: 0},
-  {restaurant_id: 41, list_id: 6, user_id: 1, ord: 0},
-  {restaurant_id: 42, list_id: 6, user_id: 1, ord: 0},
+  {restaurant_id: 38, list_id: 5, user_id: 1, ord: 0},
+  {restaurant_id: 39, list_id: 5, user_id: 1, ord: 0},
+  {restaurant_id: 40, list_id: 5, user_id: 1, ord: 0},
+  {restaurant_id: 41, list_id: 5, user_id: 1, ord: 0},
+  {restaurant_id: 6, list_id: 5, user_id: 1, ord: 0},
+  {restaurant_id: 10, list_id: 5, user_id: 1, ord: 0},
+  {restaurant_id: 42, list_id: 5, user_id: 1, ord: 0},
   {restaurant_id: 43, list_id: 6, user_id: 1, ord: 0},
-  {restaurant_id: 44, list_id: 6, user_id: 1, ord: 0}
+  {restaurant_id: 44, list_id: 6, user_id: 1, ord: 0},
+  {restaurant_id: 45, list_id: 6, user_id: 1, ord: 0},
+  {restaurant_id: 46, list_id: 6, user_id: 1, ord: 0},
+  {restaurant_id: 47, list_id: 6, user_id: 1, ord: 0},
+  {restaurant_id: 48, list_id: 6, user_id: 1, ord: 0},
+  {restaurant_id: 49, list_id: 6, user_id: 1, ord: 0}
 ])
 Restaurant.create!([
   {yelp_id: "precita-park-cafe-san-francisco", name: "Precita Park Cafe", city: "San Francisco", state: "CA", zip: "94110", address: "500 Precita Ave", hood: "Bernal Heights", url: "http://www.yelp.com/biz/precita-park-cafe-san-francisco", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/95sJrIg-lVKATMbUEdn_xw/ms.jpg", rating: 3.5, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png", is_closed: false},
@@ -61,6 +68,8 @@ Restaurant.create!([
   {yelp_id: "progressive-grounds-san-francisco", name: "Progressive Grounds", city: "San Francisco", state: "CA", zip: "94110", address: "400 Cortland Ave", hood: "Bernal Heights", url: "http://www.yelp.com/biz/progressive-grounds-san-francisco", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/c5yPKDV4cjnrjxIfTpzBNA/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
   {yelp_id: "sweet-basil-thai-cuisine-san-francisco-2", name: "Sweet Basil Thai Cuisine", city: "San Francisco", state: "CA", zip: "94110", address: "3221 Mission St", hood: "Bernal Heights", url: "http://www.yelp.com/biz/sweet-basil-thai-cuisine-san-francisco-2", image_url: "http://s3-media1.fl.yelpcdn.com/bphoto/Uzslq3BSfT073n8cjtGNlQ/ms.jpg", rating: 3.5, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png", is_closed: false},
   {yelp_id: "harvest-hills-market-san-francisco", name: "Harvest Hills Market", city: "San Francisco", state: "CA", zip: "94110", address: "3216 Folsom St", hood: "Bernal Heights", url: "http://www.yelp.com/biz/harvest-hills-market-san-francisco", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/8Fj0e6IQpf-sdUqYZdxjdA/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "the-epicurean-trader-san-francisco", name: "The Epicurean Trader", city: "San Francisco", state: "CA", zip: "94110", address: "401 Cortland Ave", hood: "Bernal Heights", url: "http://www.yelp.com/biz/the-epicurean-trader-san-francisco", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/TnkvJswJH44qi9gr6dH-Xw/ms.jpg", rating: 5.0, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/f1def11e4e79/ico/stars/v1/stars_5.png", is_closed: false},
+  {yelp_id: "coffeeshop-san-francisco", name: "CoffeeShop", city: "San Francisco", state: "CA", zip: "94110", address: "3139 Mission St", hood: "Bernal Heights", url: "http://www.yelp.com/biz/coffeeshop-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/HTeV9JJNEQoiUsSDfAzRGA/ms.jpg", rating: 5.0, rating_img_url: "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/f1def11e4e79/ico/stars/v1/stars_5.png", is_closed: false},
   {yelp_id: "saigon-sandwich-san-francisco", name: "Saigon Sandwich", city: "San Francisco", state: "CA", zip: "94102", address: "560 Larkin St", hood: "Tenderloin", url: "http://www.yelp.com/biz/saigon-sandwich-san-francisco", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/6MA4v5VI6FDPpjOBAfvJbw/ms.jpg", rating: 4.5, rating_img_url: "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png", is_closed: false},
   {yelp_id: "sing-sing-sandwich-shop-san-francisco", name: "Sing Sing Sandwich Shop", city: "San Francisco", state: "CA", zip: "94109", address: "309 Hyde St", hood: "Tenderloin", url: "http://www.yelp.com/biz/sing-sing-sandwich-shop-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/hvZECVt8WjumW4xQZRZGyg/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
   {yelp_id: "balo-vietnamese-eatery-san-francisco", name: "Balo Vietnamese Eatery", city: "San Francisco", state: "CA", zip: "94102", address: "426 Larkin St", hood: "Civic Center", url: "http://www.yelp.com/biz/balo-vietnamese-eatery-san-francisco", image_url: "http://s3-media1.fl.yelpcdn.com/bphoto/nqEtGD6DmZObaELX3OkaBQ/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
@@ -90,6 +99,9 @@ Restaurant.create!([
   {yelp_id: "blue-bottle-coffee-san-francisco-9", name: "Blue Bottle Coffee", city: "San Francisco", state: "CA", zip: "94110", address: "Heath Ceramics 2900 18th St", hood: "Mission", url: "http://www.yelp.com/biz/blue-bottle-coffee-san-francisco-9", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/703jVorm6gDQE_0Kdz1yNw/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
   {yelp_id: "ritual-coffee-roasters-san-francisco-5", name: "Ritual Coffee Roasters", city: "San Francisco", state: "CA", zip: "94102", address: "432b Octavia St", hood: "Hayes Valley", url: "http://www.yelp.com/biz/ritual-coffee-roasters-san-francisco-5", image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/u6-TRJZHJWiKvw1jRRnNMA/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
   {yelp_id: "four-barrel-coffee-san-francisco", name: "Four Barrel Coffee", city: "San Francisco", state: "CA", zip: "94103", address: "375 Valencia St", hood: "Mission", url: "http://www.yelp.com/biz/four-barrel-coffee-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/mSxpbsrpvHCQUFIVReGzxw/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "sightglass-coffee-san-francisco", name: "Sightglass Coffee", city: "San Francisco", state: "CA", zip: "94103", address: "270 7th St", hood: "SoMa", url: "http://www.yelp.com/biz/sightglass-coffee-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/NIcP2dFwZ2WhbjXE96e9WA/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "equator-coffees-and-teas-san-francisco", name: "Equator Coffees & Teas", city: "San Francisco", state: "CA", zip: "94102", address: "986 Market St", hood: "Union Square", url: "http://www.yelp.com/biz/equator-coffees-and-teas-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/Cna8yccYFNsUvuKso2r2EQ/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
+  {yelp_id: "philz-coffee-san-francisco", name: "Philz Coffee", city: "San Francisco", state: "CA", zip: "94110", address: "3101 24th St", hood: "Mission", url: "http://www.yelp.com/biz/philz-coffee-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/n-oSziRhsVRHHUE5pT-rJA/ms.jpg", rating: 4.5, rating_img_url: "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png", is_closed: false},
   {yelp_id: "humphry-slocombe-ice-cream-san-francisco", name: "Humphry Slocombe Ice Cream", city: "San Francisco", state: "CA", zip: "94110", address: "2790A Harrison St", hood: "Mission", url: "http://www.yelp.com/biz/humphry-slocombe-ice-cream-san-francisco", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/b29oDqhzWrK-IIVcmf0F0g/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false},
   {yelp_id: "easy-breezy-frozen-yogurt-san-francisco", name: "Easy Breezy Frozen Yogurt", city: "San Francisco", state: "CA", zip: "94114", address: "4028 24th St", hood: "Noe Valley", url: "http://www.yelp.com/biz/easy-breezy-frozen-yogurt-san-francisco", image_url: "http://s3-media1.fl.yelpcdn.com/bphoto/WMxD2Rv8yJsEmLxCJsBLyw/ms.jpg", rating: 4.5, rating_img_url: "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png", is_closed: false},
   {yelp_id: "mitchells-ice-cream-san-francisco", name: "Mitchell's Ice Cream", city: "San Francisco", state: "CA", zip: "94110", address: "688 San Jose Ave", hood: "Bernal Heights", url: "http://www.yelp.com/biz/mitchells-ice-cream-san-francisco", image_url: "http://s3-media3.fl.yelpcdn.com/bphoto/4-CJAD0mb-BMYEYV-AVAiQ/ms.jpg", rating: 4.5, rating_img_url: "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png", is_closed: false},
@@ -99,5 +111,5 @@ Restaurant.create!([
   {yelp_id: "st-francis-fountain-san-francisco", name: "St. Francis Fountain", city: "San Francisco", state: "CA", zip: "94110", address: "2801 24th St", hood: "Mission", url: "http://www.yelp.com/biz/st-francis-fountain-san-francisco", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/hdD9lXl3CJpu-AdR1mfhRw/ms.jpg", rating: 4.0, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png", is_closed: false}
 ])
 User.create!([
-  {username: "admin", password_digest: "$2a$10$m5m.A/O6vaib.VdeJTBen.tEXjA/v5m1andu3q3CV0d276ebY4GVK", session_token: "L9rw0Ps3RFPH178pNCGBEg", description: nil, location: nil, image_url: nil, guest: false}
+  {username: "admin", password_digest: "$2a$10$/7O7i.P.iU5I/Qmg1MdurekvTTLAeHrf.Dvmfh.gTrlo3o4Z.U4m6", session_token: "FR71ql4Dm3aZUK34I7CGFA", description: nil, location: nil, image_url: nil, guest: false}
 ])

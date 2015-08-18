@@ -1,4 +1,19 @@
-admin = User.create!(username: 'admin', password: 'admin123')
+def favorite_list(title)
+  List.find_by_title(title).update!(favorite: true)
+end
+
+def dine_at(yelp_id, favorite, visited)
+  Dining.create!(
+    user_id: 1,
+    restaurant: Restaurant.find_by_yelp_id(yelp_id),
+    favorite: favorite,
+    visited: visited
+  )
+end
+
+# ----------------------------------------------------------------------------
+# Data definitions
+# ----------------------------------------------------------------------------
 
 rest_ids = {
   'Red Hill Favorites': [
@@ -10,6 +25,9 @@ rest_ids = {
     'progressive-grounds-san-francisco',
     'sweet-basil-thai-cuisine-san-francisco-2',
     'harvest-hills-market-san-francisco',
+    'the-epicurean-trader-san-francisco',
+    'coffeeshop-san-francisco',
+    'red-hill-station-san-francisco',
   ],
   'Bahn Mi Near a/A': [
     'saigon-sandwich-san-francisco',
@@ -47,6 +65,11 @@ rest_ids = {
     'blue-bottle-coffee-san-francisco-9',
     'ritual-coffee-roasters-san-francisco-5',
     'four-barrel-coffee-san-francisco',
+    'sightglass-coffee-san-francisco',
+    'equator-coffees-and-teas-san-francisco',
+    'progressive-grounds-san-francisco',
+    'coffeeshop-san-francisco',
+    'philz-coffee-san-francisco',
   ],
   'Ice Cream': [
     'humphry-slocombe-ice-cream-san-francisco',
@@ -59,14 +82,39 @@ rest_ids = {
   ]
 }
 
+list_descriptions = {
+  'Red Hill Favorites': 'The best around Bernal.',
+  'Bahn Mi Near a/A': 'App Academy students love their bahn mi. Make sure to start with Saigon.',
+  'Cool Food Trucks': 'Meals on wheels.',
+  'Bib Gourmand 2015': "The best restaurants that won't break the bank. Maybe.",
+  'Good Coffee': 'The best brews around SF.',
+  'Ice Cream': "Almost as important as food.",
+}
+
+admin = User.create!(username: 'admin', password: 'admin123')
+
+# ----------------------------------------------------------------------------
+# Load data
+# ----------------------------------------------------------------------------
+
 rest_ids.each do |group, yelp_ids|
   lst = admin.lists.create!(title: group)
 
   yelp_ids.each do |yelp_id|
-    rest = Restaurant.create_by_yelp_id!(yelp_id)
+    rest = Restaurant.find_or_create_by_yelp_id(yelp_id)
     lst.new_listing_by_author(restaurant: rest).save
   end
 end
 
-List.find_by_title!('Red Hill Favorites').update!(favorite: true)
-List.find_by_title!('Ice Cream').update!(favorite: true)
+list_descriptions.each do |title, description|
+  List.find_by_title!(title).update!(description: description)
+end
+
+favorite_list 'Red Hill Favorites'
+favorite_list 'Ice Cream'
+
+dine_at('easy-breezy-frozen-yogurt-san-francisco', true, true)
+dine_at('precita-park-cafe-san-francisco', true, true)
+dine_at('little-bee-baking-san-francisco', false, true)
+dine_at('progressive-grounds-san-francisco', true, false)
+dine_at('dosa-on-valencia-san-francisco', false, true)
