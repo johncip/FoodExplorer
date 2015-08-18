@@ -39,22 +39,31 @@
 - [ ] Show Yelp ratings / reviews
 
 ### More Back End
-- [ ] Create Dining
-  - [ ] visited field
-  - [ ] favorited field
-    - [ ] Remove Listing.favorite from schema, model, templates
-  - [ ] Notes field
-- [ ] Change List
-  - [ ] add private field
-  - [ ] add description
-  - [ ] add ord
-- [ ] Change Listing
-  - [ ] add ord
-- [ ] Change User
-  - [ ] add hometown
-  - [ ] add guest
-  - [ ] add avatar
-  - [ ] add description
+- [x] Change List
+  - [x] add private field
+  - [x] add description
+  - [x] add ord
+  - [ ] add model validations & #private?
+- [x] Change Listing
+  - [x] add ord
+  - [ ] add model validations
+- [x] Change User
+  - [x] add hometown
+  - [x] add guest
+  - [x] add avatar
+  - [x] add description
+  - [ ] add model validations & #guest?
+#### Dining Table
+- [x] Generate model & migration
+  - [ ] fields: user, restaurant, visited, favorited, notes 
+  - [x] remove Listing.favorite: schema, model, templates
+  - [ ] fix seed data
+- [x] Migrate
+- [ ] Add model validations
+- [ ] Add associations
+- [ ] Add to API
+
+
 
 ### Refactor
 - [x] generic index action -> concern

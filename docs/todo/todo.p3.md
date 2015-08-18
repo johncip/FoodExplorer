@@ -1,5 +1,6 @@
-### Bootstrap
+### Bootstrap & UI
 - [ ] Bootstrap
+- [ ] Random background for sign-in
 
 ### Restaurant search & results
 - [ ] Play with Yelp search API

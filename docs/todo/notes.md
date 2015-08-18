@@ -6,6 +6,7 @@
 
 ### Commands
 * rake secret
+* rake -T
 * list databases in psql: \\list
 * pg_dump -U john FoodExplorer_development -f backup.sql
 * figaro heroku:set -e production
