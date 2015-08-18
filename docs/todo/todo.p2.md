@@ -33,22 +33,28 @@
 - [ ] Have image placeholder for offline
 - [ ] Visited badge
 - [ ] Favorite badge
+- [ ] Split index items & thumbs into favorites, non-favorites?
 
 ### Restaurant View
 - [ ] Show Yelp ratings / reviews
 
-### Eventually
-- [ ] Split index items & thumbs into favorites, non-favorites
-
 ### More Back End
-- [ ] UserRestaurant table/model
-  - [ ] Visited field
-  - [ ] Favorited field
-- [ ] List.private
-- [ ] List.summary/description
-- [ ] User/Restaurant favorite
-  - [ ] Remove Listing.favorite from schema, model, templates
-- [ ] Listing.ord
+- [ ] Create Dining
+  - [ ] visited field
+  - [ ] favorited field
+    - [ ] Remove Listing.favorite from schema, model, templates
+  - [ ] Notes field
+- [ ] Change List
+  - [ ] add private field
+  - [ ] add description
+  - [ ] add ord
+- [ ] Change Listing
+  - [ ] add ord
+- [ ] Change User
+  - [ ] add hometown
+  - [ ] add guest
+  - [ ] add avatar
+  - [ ] add description
 
 ### Refactor
 - [x] generic index action -> concern

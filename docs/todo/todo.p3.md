@@ -11,7 +11,9 @@
 
 ### Users
 - [ ] Proper guest user
-- [ ] get city and state by ZIP code?
+- [ ] Util: get city and state by ZIP code?
+- [ ] New user seed data
+- [ ] User View with profile pic
 
 ### Comments
  - [ ] generate model & migration
