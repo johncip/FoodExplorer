@@ -1,4 +1,5 @@
-<a href="<%= 'http://yelp.com/biz/' + restaurant.escape('yelp_id') %>">
+<a href="<%= 'http://yelp.com/biz/' + restaurant.escape('yelp_id') %>"
+  class="clearfix">
   <img src='<%= restaurant.escape("image_url") %>' class="thumb">
   <img src='<%= restaurant.escape("rating_img_url") %>' class="rating">
   <%= restaurant.escape("name") %>
