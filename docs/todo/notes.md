@@ -27,5 +27,11 @@
 * http://www.crowdco.de/tutorials/19
 * http://albertogrespan.com/blog/heroku-scheduler-and-rails-rake-tasks/
 
-
-// $green: #588c7e;
+### Ideas & Later phases
+ - list view vs thumbs view
+ - use badges for notifications
+ - understand 12 factor app rationale
+ - "Invitations" / sharing model
+ - cool splash page (bubbles?)
+ - configurable start page (or use last viewed list)
+ - compositeView.placeSubview (or search from parent)

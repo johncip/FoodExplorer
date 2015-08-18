@@ -1,11 +1,10 @@
 # Phase II Todo
 
-### Deployment Continued
+### Deployment
 - [x] use Puma
-- [x] keep dyno running
-- [ ] replace new relic with heroku job
+- [ ] keep dyno awake
 
-### Seed data & more back end
+### Seed Data & Back End
 - [x] get the Yelp gem
 - [x] set up Yelp API (get key, etc.)
 - [x] experiment with yelp gem in console
@@ -25,74 +24,42 @@
 
 ### List Views
 - [x] Navbar (rough)
-- [x] Lists Index (include count)
-- [x] List Show (include restaurants & listings)
-- [x] Make the current list active in the sidebar
-- [ ] Favorite badge
-- [ ] *** Draggable
-- [ ] Add summary to list, make it editable
-- [ ] List Edit (be able to add & remove listings)
-- [ ] Show Yelp ratings / reviews
+- [x] Index (include count)
+- [x] Show (include restaurants & listings)
+  - [x] Make the current list active in the index
+  - [ ] Display summary
+- [ ] Edit (be able to add & remove listings)
+  - [ ] Edit summary
 - [ ] Have image placeholder for offline
 - [ ] Visited badge
-- [ ] Display restaurants in order
+- [ ] Favorite badge
+
+### Restaurant View
+- [ ] Show Yelp ratings / reviews
 
 ### Eventually
 - [ ] Split index items & thumbs into favorites, non-favorites
 
-### More back end
+### More Back End
 - [ ] UserRestaurant table/model
-- [ ] + Visited field
-- [ ] + Favorited field
-- [ ] Remove Listing.favorite from schema, model, templates
-- [ ] Listing ord field
-- [ ] Real guest users
+  - [ ] Visited field
+  - [ ] Favorited field
+- [ ] List.private
+- [ ] List.summary/description
+- [ ] User/Restaurant favorite
+  - [ ] Remove Listing.favorite from schema, model, templates
+- [ ] Listing.ord
 
-### Comments
- - [ ] generate model & migration
- - [ ] fix migration
- - [ ] generate api controller
- - [ ] migrate
- - [ ] add model validations
- - [ ] add associations
- - [ ] create backbone model & collection
- - [ ] add to API & parse method
- - [ ] add to templates
- - [ ] style
+### Refactor
+- [x] generic index action -> concern
+- [ ] all views
 
-### Notes
-- [ ] generate model & migration
-- [ ] fix migration
-- [ ] generate api controller
-- [ ] migrate
-- [ ] add model validations
-- [ ] add associations
-- [ ] create backbone model & collection
-- [ ] add to API & parse method
-- [ ] add to templates
-- [ ] style
+#### Drag and Drop / Ordering
+- [ ] Change ordering
+- [ ] Change membership
+- [ ] Sort lists & restaurants in views
+- [ ] Put favorites first??
 
-### Small changes
-- [x] refactor: generic index action -> concern
-- [ ] remove reliance on internet
-- [ ] clean up nav bar
-
-### Later phases
- - list view vs thumbs view
- - use badges for notifications
- - understand 12 factor app rationale
- - "Invitations" / sharing model
- - cool splash page (bubbles?)
-
-#### Back end
-- get city and state by ZIP code
-- Lists can be private or public
-- attribute map pattern for Restaurants?
-- move "favorite" to a (user x restaurant) table
-
-### Questions
- - what's a good way to cache the yelp images?
-
-### Ideas
-- configurable start page
-- compositeView.placeSubview
+### Next
+- [ ] Favorite badge
+- [ ] Refactor: all views

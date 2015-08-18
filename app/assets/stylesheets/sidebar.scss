@@ -1,0 +1,47 @@
+$marksize: 1.75em;
+
+.sidebar {
+  background-color: $seafoam;
+  color: $green;
+  float: left;
+  .active {
+    background-color: $selected;
+  }
+  a {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 0.75em;
+    vertical-align: baseline;
+    color: $green;
+    line-height: 1.5em;
+    border-bottom: thin solid ($seafoam * 0.9);
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+  mark {
+    display: inline-block;
+    width: $marksize;
+    height: $marksize;
+    line-height: $marksize;
+    text-align: center;
+    padding: auto;
+    background-color: inherit;
+    border-right: thin solid $green;
+    border-bottom: thin solid $green;
+    color: $green;
+    margin-right: 0.5em;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 75%;
+    opacity: 0.4;
+    position: relative;
+    top: -1px;
+  }
+  .favorite::after {
+    content: "♥";
+    color: $red;
+    font-size: 125%;
+  }
+}

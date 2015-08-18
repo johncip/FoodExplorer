@@ -1,0 +1,16 @@
+.lists-index,
+.list-index > div,
+.sidebar {
+  height: 100%;
+}
+.lists-index {
+  p {
+    margin-bottom: $spc;
+  }
+  h2 {
+    margin-bottom: $spc;
+    font-size: 125%;
+    font-weight: 800;
+    color: $green;
+  }
+}

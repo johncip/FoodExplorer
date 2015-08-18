@@ -17,12 +17,14 @@ rest_ids = {
     'balo-vietnamese-eatery-san-francisco',
     'lees-sandwiches-san-francisco',
   ],
-  'Best SF Taco Trucks': [
-    'el-tonayense-taco-truck-san-francisco-8',
-    'el-gallo-giro-taco-truck-san-francisco-2',
-    'los-compadres-taco-truck-san-francisco-2',
-    'el-tonayense-taco-truck-san-francisco-4',
-    'el-norteno-taco-truck-san-francisco',
+  'Cool Food Trucks': [
+    'the-chairman-truck-san-francisco',
+    'waffle-mania-truck-san-francisco',
+    'voodoo-van-san-francisco',
+    'el-sur-san-francisco',
+    'curry-up-now-san-francisco-6',
+    'el-porte%C3%B1o-empanadas-san-francisco-4',
+    'me-so-hungry-san-francisco',
   ],
   'Bib Gourmand 2015': [
     'bar-tartine-san-francisco',

@@ -1,0 +1,42 @@
+
+.thumb-box {
+  @include spacing($spc);
+  float: left;
+  width: calc(100% - 300px);
+  li {
+    display: block;
+    float: left;
+    height: 190px;
+    width: 140px;
+    margin: 0 2em 2em 0;
+    text-align: center;
+  }
+  .favorite::after {
+    content: "♥";
+    color: $red;
+    font-size: 42px;
+    position: absolute;
+    top: -8px;
+    left: 16px;
+    text-shadow: 2px 3px 0 ($darkred * 0.4);
+    font-family: courier;
+  }
+  a {
+    color: #333;
+    display: block;
+    position: relative;
+  }
+  img.thumb {
+    width: 80%;
+    display: block;
+    margin-bottom: 0.5em;
+    border-radius: 4px 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img.rating {
+    clear: both;
+    display: block;
+    margin: 0 auto 0.25em;
+  }
+}
