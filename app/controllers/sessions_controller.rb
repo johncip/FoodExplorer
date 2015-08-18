@@ -22,8 +22,8 @@ class SessionsController < ApplicationController
   end
 
   def guest
-    user = User.find_by_username!('admin')
+    user = User.find_by_username!('admin') # TODO create new user    
     log_in!(user)
-    render json: {'as': 'if'}
+    render json: {}
   end
 end

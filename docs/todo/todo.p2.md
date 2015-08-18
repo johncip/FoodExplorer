@@ -27,14 +27,14 @@
 - [x] Navbar (rough)
 - [x] Lists Index (include count)
 - [x] List Show (include restaurants & listings)
-- [ ] Add summary to list, make it easily editable
-- [ ] Make the current list active in the index
+- [x] Make the current list active in the sidebar
+- [ ] Favorite badge
+- [ ] *** Draggable
+- [ ] Add summary to list, make it editable
 - [ ] List Edit (be able to add & remove listings)
 - [ ] Show Yelp ratings / reviews
 - [ ] Have image placeholder for offline
-- [ ] *** Draggable
 - [ ] Visited badge
-- [ ] Favorite badge
 - [ ] Display restaurants in order
 
 ### Eventually
@@ -46,6 +46,7 @@
 - [ ] + Favorited field
 - [ ] Remove Listing.favorite from schema, model, templates
 - [ ] Listing ord field
+- [ ] Real guest users
 
 ### Comments
  - [ ] generate model & migration
