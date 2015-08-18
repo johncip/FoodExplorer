@@ -1,5 +1,6 @@
 .thumb-box {
-  @include spacing($spc);
+  padding-top: $spc;
+  padding-left: $spc;
   float: left;
   width: calc(100% - 300px);
   li {
@@ -25,12 +26,12 @@
   .visited::before {
     content: "✓";
     color: $green;
-    top: 0;
+    top: 30px;
   }
   .favorite::after {
     content: "♥";
     color: $red;
-    top: 1em;
+    top: 0;
   }
   a {
     color: #333;
@@ -38,10 +39,12 @@
     position: relative;
   }
   img.thumb {
-    width: 80%;
+    width: 120px;
+    height: 120px;
     display: block;
     margin-bottom: 0.5em;
-    border-radius: 4px 16px;
+    border: thin solid #bbc;
+    border-radius: 3px 12px;
     margin-left: auto;
     margin-right: auto;
   }

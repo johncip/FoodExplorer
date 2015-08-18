@@ -34,9 +34,10 @@
 - [ ] Show (include restaurants & listings)
   - [x] Make the current list active in the index
   - [x] Rest. favorite badge
-  - [x] Rest. visited badge 
-  - [ ] Display description
+  - [x] Rest. visited badge
+  - [x] Display description
   - [ ] Use ordering
+  - [ ] Fix thumb image to use cover
 - [ ] Edit (be able to add & remove listings)
   - [ ] Edit summary
 
@@ -58,7 +59,7 @@
   - [x] add avatar
   - [x] add description
   - [x] add model validations & #guest?
-- [ ] Move User auth code into concern
+- [x] Move User auth code into concern
 #### Dining Table
 - [x] Generate model & migration
   - [x] fields: user, restaurant, visited, favorited, notes
@@ -78,9 +79,7 @@
 - [ ] Put favorites first?
 
 ### Next
-- [ ] Move User auth code into concern
-- [ ] Rest. visited badge
-- [ ] Display description
 - [ ] Factor out common code in Backbone views
 - [ ] keep dyno awake
 - [ ] make sure login pic is working
+- [ ] Fix thumb image to use cover

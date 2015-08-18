@@ -3,6 +3,9 @@
 - [ ] Random background for sign-in
 - [ ] Google maps
 
+### Back End
+- [ ] Default empty string for list description
+
 ### Restaurant search & results
 - [ ] Play with Yelp search API
 - [ ] Search view

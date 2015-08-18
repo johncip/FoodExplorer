@@ -1,17 +1,13 @@
 // @import url("http://openfontlibrary.org/face/montreal");
 @import url("http://fonts.googleapis.com/css?family=Courgette");
 @import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,900,900italic,700italic,700");
-@mixin spacing($size) {
-  margin: $size 0 $size $size;
-  padding-top: $size;
-}
-$green: #588cae;
+$spc: 20px;
+$green: #486c9e;
 $darkgreen: $green * 0.8;
 $yellow: #f2e39f;
 $orange: #f2ae72;
 $red: #d96459;
 $darkred: #8c4646;
-$spc: 1.25em;
 $seafoam: hsl(220, 40, 96);
 $selected: hsl(220, 40, 86);
 $black: #555;
