@@ -11,18 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813223320) do
+ActiveRecord::Schema.define(version: 20150818165859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dinings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "restaurant_id"
+    t.boolean  "visited",       default: false, null: false
+    t.boolean  "favorite",      default: false, null: false
+    t.text     "notes",         default: "",    null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "dinings", ["restaurant_id"], name: "index_dinings_on_restaurant_id", using: :btree
+  add_index "dinings", ["user_id"], name: "index_dinings_on_user_id", using: :btree
 
   create_table "listings", force: :cascade do |t|
     t.integer  "restaurant_id"
     t.integer  "list_id"
     t.integer  "user_id"
-    t.boolean  "favorite",      default: false, null: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "ord",           default: 0, null: false
   end
 
   add_index "listings", ["list_id"], name: "index_listings_on_list_id", using: :btree
@@ -32,10 +45,13 @@ ActiveRecord::Schema.define(version: 20150813223320) do
 
   create_table "lists", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "title",                      null: false
-    t.boolean  "favorite",   default: false, null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "title",                       null: false
+    t.boolean  "favorite",    default: false, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.text     "description"
+    t.boolean  "private",     default: false, null: false
+    t.integer  "ord",         default: 0,     null: false
   end
 
   add_index "lists", ["title"], name: "index_lists_on_title", using: :btree
@@ -62,16 +78,22 @@ ActiveRecord::Schema.define(version: 20150813223320) do
   add_index "restaurants", ["yelp_id"], name: "index_restaurants_on_yelp_id", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",        null: false
-    t.string   "password_digest", null: false
-    t.string   "session_token",   null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "username",                        null: false
+    t.string   "password_digest",                 null: false
+    t.string   "session_token",                   null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "description"
+    t.string   "location"
+    t.string   "image_url"
+    t.boolean  "guest",           default: false, null: false
   end
 
   add_index "users", ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
+  add_foreign_key "dinings", "restaurants"
+  add_foreign_key "dinings", "users"
   add_foreign_key "listings", "lists"
   add_foreign_key "listings", "restaurants"
   add_foreign_key "listings", "users"
