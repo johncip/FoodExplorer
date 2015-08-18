@@ -3,8 +3,11 @@ class List < ActiveRecord::Base
   has_many :listings, dependent: :destroy
   has_many :restaurants, through: :listings
 
-  validates :author, :title, presence: true
-  validates :favorite, inclusion: { in: [true, false] }
+  validates :author, :title, :ord, presence: true
+  validates :favorite, :private, inclusion: { in: [true, false] }
+
+  alias_attribute :private?, :private
+  alias_attribute :favorite?, :favorite
 
   def new_listing_by_author(opts = {})
     opts.merge!(contributor: author)

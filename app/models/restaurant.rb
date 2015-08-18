@@ -1,5 +1,7 @@
 class Restaurant < ActiveRecord::Base
   has_many :listings, dependent: :destroy
+  has_many :dinings, dependent: :destroy
+  has_many :diners, through: :dinings, source: :diner
 
   validates :yelp_id, :name, :city, presence: true
   validates :state, inclusion: { in: US_STATES }
@@ -45,6 +47,17 @@ class Restaurant < ActiveRecord::Base
   def yelp_data
     @yelp_data ||= Yelp.client.business(yelp_id)
   end
+
+  def user_favorite?(user)
+    dining = dinings.where(diner: user).first
+    return !!dining && dining.favorite?
+  end
+
+  def user_visited?(user)
+    dining = dinings.where(diner: user).first
+    return !!dining && dining.visited?
+  end
+
 
   # -------------------------------------------------------------------------
   # Dynamic attrs
