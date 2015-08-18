@@ -1,6 +1,7 @@
 ### Bootstrap & UI
 - [ ] Bootstrap
 - [ ] Random background for sign-in
+- [ ] Google maps
 
 ### Restaurant search & results
 - [ ] Play with Yelp search API
@@ -39,3 +40,7 @@
 - [ ] add to API & parse method
 - [ ] add to templates
 - [ ] style
+
+### Punt
+- [ ] Split index items & thumbs into favorites, non-favorites?
+- [ ] Have image placeholder for offline

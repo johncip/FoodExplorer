@@ -13,6 +13,14 @@ FoodEx.Views.RestThumb = Backbone.View.extend ({
   },
 
   onRender: function () {
+    if (this.model.attributes.favorite) {
+      this.$el.addClass("favorite");
+    }
+
+    if (this.model.attributes.visited) {
+      this.$el.addClass("visited");
+    }
+
     var that = this;
     this.$el.draggable({
       scroll: true,

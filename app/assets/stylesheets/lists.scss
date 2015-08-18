@@ -7,10 +7,16 @@
   p {
     margin-bottom: $spc;
   }
-  h2 {
+  h2,
+  h3 {
     margin-bottom: $spc;
-    font-size: 125%;
     font-weight: 800;
     color: $green;
+  }
+  h2 {
+    font-size: 150%;
+  }
+  h3 {
+    font-size: 125%;
   }
 }

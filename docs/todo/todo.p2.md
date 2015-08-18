@@ -1,8 +1,14 @@
 # Phase II Todo
 
+### Code Quality
+- [x] Factor out common controller code -> concern
+- [x] Document ResourceController
+- [ ] Factor out common code in Backbone views
+
 ### Deployment
 - [x] use Puma
 - [ ] keep dyno awake
+- [ ] make sure login pic is working
 
 ### Seed Data & Back End
 - [x] get the Yelp gem
@@ -25,15 +31,14 @@
 ### List Views
 - [x] Navbar (rough)
 - [x] Index (include count)
-- [x] Show (include restaurants & listings)
+- [ ] Show (include restaurants & listings)
   - [x] Make the current list active in the index
-  - [ ] Display summary
+  - [x] Rest. favorite badge
+  - [x] Rest. visited badge 
+  - [ ] Display description
+  - [ ] Use ordering
 - [ ] Edit (be able to add & remove listings)
   - [ ] Edit summary
-- [ ] Have image placeholder for offline
-- [ ] Visited badge
-- [ ] Favorite badge
-- [ ] Split index items & thumbs into favorites, non-favorites?
 
 ### Restaurant View
 - [ ] Show Yelp ratings / reviews
@@ -43,38 +48,39 @@
   - [x] add private field
   - [x] add description
   - [x] add ord
-  - [ ] add model validations & #private?
+  - [x] add model validations & #private?
 - [x] Change Listing
   - [x] add ord
-  - [ ] add model validations
+  - [x] add model validations
 - [x] Change User
   - [x] add hometown
   - [x] add guest
   - [x] add avatar
   - [x] add description
-  - [ ] add model validations & #guest?
+  - [x] add model validations & #guest?
+- [ ] Move User auth code into concern
 #### Dining Table
 - [x] Generate model & migration
-  - [ ] fields: user, restaurant, visited, favorited, notes 
+  - [x] fields: user, restaurant, visited, favorited, notes
   - [x] remove Listing.favorite: schema, model, templates
-  - [ ] fix seed data
+  - [x] fix seed data
 - [x] Migrate
-- [ ] Add model validations
-- [ ] Add associations
-- [ ] Add to API
-
-
-
-### Refactor
-- [x] generic index action -> concern
-- [ ] all views
+- [x] Add model validations
+- [x] Add associations & conv. methods
+- [x] Test in console
+- [x] Add to API
+- [x] Add index & uniqueness constraint
 
 #### Drag and Drop / Ordering
 - [ ] Change ordering
 - [ ] Change membership
 - [ ] Sort lists & restaurants in views
-- [ ] Put favorites first??
+- [ ] Put favorites first?
 
 ### Next
-- [ ] Favorite badge
-- [ ] Refactor: all views
+- [ ] Move User auth code into concern
+- [ ] Rest. visited badge
+- [ ] Display description
+- [ ] Factor out common code in Backbone views
+- [ ] keep dyno awake
+- [ ] make sure login pic is working

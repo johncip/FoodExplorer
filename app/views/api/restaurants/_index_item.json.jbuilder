@@ -1,2 +1,4 @@
 json.extract!(restaurant, *restaurant.attribute_names)
-json.image_url restaurant.image_url # TODO move to db
+
+json.favorite current_user.favorite?(restaurant)
+json.visited current_user.visited?(restaurant)
