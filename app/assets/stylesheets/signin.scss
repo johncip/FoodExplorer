@@ -1,5 +1,5 @@
 .sign-in {
-  background: image-url("eating4.gif");
+  background: url("images/eating4.gif");
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -8,8 +8,6 @@
   color: white;
   text-align: center;
   .center {
-
-    // fix this
     background-color: rgba(0, 0, 0, .2);
     padding: 30px;
   }

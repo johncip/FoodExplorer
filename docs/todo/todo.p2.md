@@ -8,7 +8,7 @@
 ### Deployment
 - [x] use Puma
 - [ ] keep dyno awake
-- [ ] make sure login pic is working
+- [ ] fix login pic & production seed data
 
 ### Seed Data & Back End
 - [x] get the Yelp gem
@@ -36,8 +36,9 @@
   - [x] Rest. favorite badge
   - [x] Rest. visited badge
   - [x] Display description
+  - [x] Hi-def thumb image (use cover)
+  - [x] Hi-def rating image
   - [ ] Use ordering
-  - [ ] Fix thumb image to use cover
 - [ ] Edit (be able to add & remove listings)
   - [ ] Edit summary
 
@@ -79,7 +80,5 @@
 - [ ] Put favorites first?
 
 ### Next
-- [ ] Factor out common code in Backbone views
-- [ ] keep dyno awake
-- [ ] make sure login pic is working
-- [ ] Fix thumb image to use cover
+- [ ] Use ordering
+- [ ] fix login pic & production seed data

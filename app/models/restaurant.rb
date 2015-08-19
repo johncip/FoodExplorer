@@ -37,7 +37,7 @@ class Restaurant < ActiveRecord::Base
       url: yelp_data.url,
       image_url: yelp_data.image_url.sub(/ms.jpg$/, 'l.jpg'),
       rating: yelp_data.rating,
-      rating_img_url: yelp_data.rating_img_url,
+      rating_img_url: yelp_data.rating_img_url_large,
       is_closed: yelp_data.is_closed
     }
     self.save! if persisted?

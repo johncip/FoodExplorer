@@ -47,10 +47,14 @@
     border-radius: 3px 12px;
     margin-left: auto;
     margin-right: auto;
+    background-position: center;
+    background-size: cover;
   }
   img.rating {
     clear: both;
     display: block;
     margin: 0 auto 0.25em;
+    width: 88px;
+    height: 15px;
   }
 }
