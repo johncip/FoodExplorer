@@ -32,8 +32,10 @@ nav {
   }
 
   .logo {
+    text-transform: lowercase;
     position: relative;
-    font-size: 110%;
+    bottom: 1px;
+    font-size: 125%;
   }
 }
 
