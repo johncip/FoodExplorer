@@ -1,3 +1,4 @@
+# Users are authenticated but also have lists, favorite restaurants, etc.
 class User < ActiveRecord::Base
   include Authenticatable
 
@@ -11,11 +12,11 @@ class User < ActiveRecord::Base
 
   def favorite?(restaurant)
     dining = dinings.where(restaurant: restaurant).first
-    return !!dining && dining.favorite?
+    dining && dining.favorite?
   end
 
   def visited?(restaurant)
     dining = dinings.where(restaurant: restaurant).first
-    return !!dining && dining.visited?
+    dining && dining.visited?
   end
 end

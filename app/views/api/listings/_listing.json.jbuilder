@@ -7,5 +7,6 @@ json.contributor do
 end
 
 json.restaurant do
-  json.partial! partial: 'api/restaurants/index_item', locals: { restaurant: listing.restaurant }
+  json.partial! partial: 'api/restaurants/index_item',
+                locals: { restaurant: listing.restaurant }
 end

@@ -1,3 +1,4 @@
+# Controllers with this concern won't serve users without a valid session.
 module LoginRequired
   extend ActiveSupport::Concern
 

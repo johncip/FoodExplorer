@@ -1,5 +1,6 @@
+# Controller actions for restaurants. Just a regular resource.
 class Api::RestaurantsController < ApplicationController
-  include ResourceController
+  include Resourceful
 
   def self.model
     Restaurant

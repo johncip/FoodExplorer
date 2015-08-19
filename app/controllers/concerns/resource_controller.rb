@@ -1,19 +1,19 @@
 # Common code for a generic resource controller.
-module ResourceController
+module Resourceful
   extend ActiveSupport::Concern
 
   include LoginRequired
 
   included do
     before_action :find_model, only: [:show]
-    before_action :get_collection, only: [:index]
+    before_action :assign_collection, only: [:index]
   end
 
   # Creates an ivar for a collection of the controller's associated model
   # instances.
   #
   # e.g. @restaurants = Restaurant.all
-  def get_collection
+  def assign_collection
     instance_variable_set(ivar_name.pluralize, self.class.model.all)
   end
 

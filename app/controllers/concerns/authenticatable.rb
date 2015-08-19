@@ -1,3 +1,4 @@
+# Authentication logic. Only intended for inclusion in User.
 module Authenticatable
   extend ActiveSupport::Concern
 

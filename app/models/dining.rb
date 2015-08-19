@@ -1,3 +1,4 @@
+# Joins users to restaurants.
 class Dining < ActiveRecord::Base
   belongs_to :restaurant
   belongs_to :diner, class_name: :User, foreign_key: :user_id, primary_key: :id

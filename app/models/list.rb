@@ -1,3 +1,4 @@
+# A user-created list of restaurants.
 class List < ActiveRecord::Base
   belongs_to :author, class_name: :User, foreign_key: :user_id
   has_many :listings, dependent: :destroy
@@ -11,7 +12,7 @@ class List < ActiveRecord::Base
 
   def new_listing_by_author(opts = {})
     opts.merge!(contributor: author)
-    self.listings.new(opts)
+    listings.new(opts)
   end
 
   def add(yelp_id)

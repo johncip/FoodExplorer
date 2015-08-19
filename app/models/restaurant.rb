@@ -1,3 +1,4 @@
+# A single restaurant entry. Most attributes are dependent on the yelp_id.
 class Restaurant < ActiveRecord::Base
   has_many :listings, dependent: :destroy
   has_many :dinings, dependent: :destroy
@@ -23,6 +24,7 @@ class Restaurant < ActiveRecord::Base
     find_by_yelp_id(yelp_id) || create_by_yelp_id!(yelp_id)
   end
 
+  # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
   def furnish!
     fail unless yelp_id
 
@@ -50,20 +52,19 @@ class Restaurant < ActiveRecord::Base
 
   def user_favorite?(user)
     dining = dinings.where(diner: user).first
-    return !!dining && dining.favorite?
+    dining && dining.favorite?
   end
 
   def user_visited?(user)
     dining = dinings.where(diner: user).first
-    return !!dining && dining.visited?
+    dining && dining.visited?
   end
-
 
   # -------------------------------------------------------------------------
   # Dynamic attrs
   # -------------------------------------------------------------------------
 
-  YELP_ATTRS = ['categories', 'geo', 'neighborhoods']
+  YELP_ATTRS = %(categories geo neighborhoods)
 
   def categories
     yelp_data.categories
