@@ -31,14 +31,14 @@
 ### List Views
 - [x] Navbar (rough)
 - [x] Index (include count)
-- [ ] Show (include restaurants & listings)
+- [x] Show (include restaurants & listings)
   - [x] Make the current list active in the index
   - [x] Rest. favorite badge
   - [x] Rest. visited badge
   - [x] Display description
   - [x] Hi-def thumb image (use cover)
   - [x] Hi-def rating image
-  - [ ] Use ordering
+  - [x] Use ordering
 - [ ] Edit (be able to add & remove listings)
   - [ ] Edit summary
 

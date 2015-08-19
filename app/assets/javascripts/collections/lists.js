@@ -1,6 +1,7 @@
 FoodEx.Collections.Lists = Backbone.Collection.extend ({
   url: 'api/lists',
   model: FoodEx.Models.List,
+  comparator: 'ord',
 
   getOrFetch: function (id) {
     var list = this.get(id),

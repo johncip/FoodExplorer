@@ -3,5 +3,6 @@ json.model do
 end
 
 json.restaurants do
-  json.partial! partial: 'api/restaurants/index_item', collection: @list.restaurants, as: :restaurant
+  json.partial! partial: 'api/restaurants/from_listing',
+                collection: @list.listings, as: :listing
 end
