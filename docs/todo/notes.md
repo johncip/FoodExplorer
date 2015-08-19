@@ -10,6 +10,8 @@
 * list databases in psql: \\list
 * pg_dump -U john FoodExplorer_development -f backup.sql
 * figaro heroku:set -e production
+* rubocop -FD (fail fast & show cop name)
+* rubocop --auto-gen-config
 
 ### Yelp
 * https://www.yelp.com/developers/api_console

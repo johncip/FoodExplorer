@@ -11,6 +11,7 @@
 - [ ] style
 
 ### Users
+- [ ] Display errors in form
 - [ ] Proper guest user
 - [ ] Util: get city and state by ZIP code?
 - [ ] New user seed data

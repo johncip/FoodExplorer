@@ -2,7 +2,7 @@
 
 ### Code Quality
 - [x] Factor out common controller code -> concern
-- [x] Document ResourceController
+- [x] Document Resourceful
 
 ### Deployment
 - [x] use Puma

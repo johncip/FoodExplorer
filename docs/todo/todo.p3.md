@@ -1,5 +1,6 @@
 ### Fix & Refactor
 - [ ] Factor out common code in Backbone views
+- [ ] has_dining_with_field
 
 ### Feature: Restaurant Notes
 - [ ] generate model & migration
