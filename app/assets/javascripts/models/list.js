@@ -13,7 +13,9 @@ FoodEx.Models.List = Backbone.Model.extend ({
       // debugger;
       this.set(payload.model);
     }
-    this.restaurants().set(payload.restaurants, { parse: true });
+    if (payload.restaurants) {
+      this.restaurants().set(payload.restaurants, { parse: true });
+    }
     // debugger;
     return payload;
   }

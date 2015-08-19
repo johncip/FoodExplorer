@@ -41,6 +41,7 @@ FoodEx.Routers.Router = Backbone.Router.extend ({
   _swapContent: function (view) {
     if (this._contentView) this._contentView.remove();
     this._contentView = view;
-    this.$content.html(view.render().$el);
+    this.$content.html(view.$el);
+    view.render();
   }
 });

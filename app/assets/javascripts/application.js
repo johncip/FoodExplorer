@@ -13,11 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui/draggable
+//= require jquery-ui/sortable
+
 //= require underscore
 //= require backbone
 //= require serialize_json
-//= require underscore
-//= require backbone
+
 //= require food_explorer
 //= require_tree ./util
 //= require_tree ../templates

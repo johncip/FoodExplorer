@@ -1,4 +1,4 @@
-FoodEx.Views.RestThumb = Backbone.View.extend ({
+FoodEx.Views.RestThumb = Backbone.CompositeView.extend ({
   template: JST['restaurants/thumb'],
   tagName: 'li',
 
@@ -9,10 +9,11 @@ FoodEx.Views.RestThumb = Backbone.View.extend ({
   render: function() {
     var content = this.template({ restaurant: this.model });
     this.$el.html(content);
+    this.onRender();
     return this;
   },
 
-  onRender: function () {
+  addBadges: function () {
     if (this.model.attributes.favorite) {
       this.$el.addClass("favorite");
     }
@@ -20,16 +21,10 @@ FoodEx.Views.RestThumb = Backbone.View.extend ({
     if (this.model.attributes.visited) {
       this.$el.addClass("visited");
     }
+  },
 
-    var that = this;
-    this.$el.draggable({
-      scroll: true,
-      revert: true,
-      stack: 'li',
-
-      drag: function(event) {
-        console.log(event);
-      }
-    });
+  onRender: function () {
+    this.$el.attr('data-restaurant-id', this.model.id);
+    this.addBadges();
   }
 });

@@ -27,6 +27,7 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
     var content = this.template();
     this.$el.html(content);
     this.attachSubviews();
+    this.onRender();
     return this;
   },
 });

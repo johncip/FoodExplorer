@@ -3,12 +3,11 @@
 ### Code Quality
 - [x] Factor out common controller code -> concern
 - [x] Document ResourceController
-- [ ] Factor out common code in Backbone views
 
 ### Deployment
 - [x] use Puma
-- [ ] keep dyno awake
-- [ ] fix login pic & production seed data
+- [x] keep dyno awake
+- [x] fix login pic & production seed data
 
 ### Seed Data & Back End
 - [x] get the Yelp gem
@@ -31,6 +30,7 @@
 ### List Views
 - [x] Navbar (rough)
 - [x] Index (include count)
+  - [x] Use cover for thumb image
 - [x] Show (include restaurants & listings)
   - [x] Make the current list active in the index
   - [x] Rest. favorite badge
@@ -61,7 +61,8 @@
   - [x] add description
   - [x] add model validations & #guest?
 - [x] Move User auth code into concern
-#### Dining Table
+
+##### Dining Table
 - [x] Generate model & migration
   - [x] fields: user, restaurant, visited, favorited, notes
   - [x] remove Listing.favorite: schema, model, templates
@@ -72,13 +73,3 @@
 - [x] Test in console
 - [x] Add to API
 - [x] Add index & uniqueness constraint
-
-#### Drag and Drop / Ordering
-- [ ] Change ordering
-- [ ] Change membership
-- [ ] Sort lists & restaurants in views
-- [ ] Put favorites first?
-
-### Next
-- [ ] Use ordering
-- [ ] fix login pic & production seed data
