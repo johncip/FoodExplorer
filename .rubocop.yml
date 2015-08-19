@@ -1,19 +1,19 @@
-Style/ClassAndModuleChildren:
-  Enabled: false
-
-Style/TrailingComma:
-  Enabled: false
-
 AllCops:
-  Include:
-    - '**/Rakefile'
-    - '**/config.ru'
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
+
+Metrics/LineLength:
+  Exclude:
+    - Gemfile
+    - Rakefile
+    - Procfile
 
 Style/Documentation:
   Exclude:
     - app/controllers/application_controller.rb
     - app/helpers/application_helper.rb
     - app/controllers/concerns/authenticatable.rb
+
+# Style/ClassAndModuleChildren:
+  # Enabled: false
