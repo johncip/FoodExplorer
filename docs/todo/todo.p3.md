@@ -50,3 +50,4 @@
 - [ ] Have image placeholder for offline
 - [ ] Server config: don't expire assets, use gzip
 - [ ] Reduce number of queries
+- [ ] Git hook for rubocop
