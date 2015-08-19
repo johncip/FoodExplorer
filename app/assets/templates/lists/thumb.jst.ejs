@@ -1,9 +1,8 @@
-<a href="<%= '/#/lists/' + list.id %>"
-  <% if (list.attributes.favorite) { %>
-    class="favorite clearfix"
-  <% } %>
-  class="clearfix"
->
-  <img src='<%= list.escape("image_url") %>' class="thumb">
+<a href="<%= '/#/lists/' + list.id %>" class="clearfix">
+
+  <img src='images/clear.png'
+       style="background-image: url(<%= list.escape('image_url') %>)"
+       class="thumb">
+
   <%= list.escape("title") %>
 </a>
