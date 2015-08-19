@@ -26,8 +26,8 @@
 
 ### Feature: Google Maps
 - [ ] {db} Promote latitude & longitude
-- [ ] Incorporate Google Maps
-- [ ] Get Google Maps API key
+- [x] Get Google Maps API key
+- [ ] ... Incorporate Google Maps
 
 ### Add Restaurants
 ###### (depends on drag and drop)
@@ -43,9 +43,10 @@
 - [ ] Different thumbs for lists
 
 ### Back End
-- [ ] Default to empty string for list description
+- [ ] {db} Default to empty string for list description
 
 ### For Later
 - [ ] Split index items & thumbs into favorites, non-favorites?
 - [ ] Have image placeholder for offline
 - [ ] Server config: don't expire assets, use gzip
+- [ ] Reduce number of queries
