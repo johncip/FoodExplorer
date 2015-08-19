@@ -15,5 +15,6 @@ Style/Documentation:
     - app/helpers/application_helper.rb
     - app/controllers/concerns/authenticatable.rb
 
+
 # Style/ClassAndModuleChildren:
   # Enabled: false
