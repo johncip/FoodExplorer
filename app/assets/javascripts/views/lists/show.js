@@ -7,6 +7,7 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
     this.addThumbBox();
     this.addMapShow();
     this.listenTo(this.model, 'sync', this.render);
+    this.isMap = false;
   },
 
   addSidebar: function () {
@@ -22,7 +23,7 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
       collection: this.model.restaurants()
     });
     this.addSubview('.map-container', mapShow);
-    mapShow.initMap();
+    this.mapShow = mapShow;
   },
 
   addThumbBox: function () {
@@ -33,11 +34,23 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
     this.addSubview('.thumb-box', thumbBox);
   },
 
+  onRender: function() {
+    Backbone.CompositeView.prototype.onRender.call(this);
+  },
+
+  doMap: function () {
+    if (!this.hasMap) {
+      this.mapShow.initMap();
+      this.hasMap = true;
+    }
+  },
+
   render: function() {
     var content = this.template({ list: this.model });
     this.$el.html(content);
     this.attachSubviews();
     this.onRender();
+    this.doMap();
     return this;
   },
 });

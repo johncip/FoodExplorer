@@ -5,11 +5,14 @@
 - [ ] Draggable restaurants
 
 ### Feature: Google Maps
-- [ ] {db} Promote latitude & longitude
+- [x] {db} Promote latitude & longitude
 - [x] Get and use API key
 - [x] Add map
-- [ ] Add markers
-- [ ] Fix map re-render bug
+- [x] Add markers
+- [x] Fit map to markers
+- [x] Fix map re-render bug
+- [ ] Refactor
+- [ ] More interaction (jump pins, highlight thumbs, etc.)
 
 ### Fix & Refactor
 - [ ] Factor out common code in Backbone views
@@ -69,3 +72,4 @@
 - [ ] Reduce number of queries
 - [ ] Reduce number of requests
 - [ ] Loading throbber
+- [ ] Show/hide map
