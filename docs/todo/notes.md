@@ -1,5 +1,7 @@
 # Notes
 
+* if you use postgres, rails gives you extra datatypes
+
 ### Questions
 * what should I do with a user's list contributions when they're destroyed?
   * probably delete if it's their list and change the contributor if it's not

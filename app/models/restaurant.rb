@@ -40,7 +40,9 @@ class Restaurant < ActiveRecord::Base
       image_url: yelp_data.image_url.sub(/ms.jpg$/, 'l.jpg'),
       rating: yelp_data.rating,
       rating_img_url: yelp_data.rating_img_url_large,
-      is_closed: yelp_data.is_closed
+      is_closed: yelp_data.is_closed,
+      lat: yelp_data.location.coordinate.latitude,
+      lng: yelp_data.location.coordinate.longitude
     }
     self.save! if persisted?
     self
@@ -64,7 +66,7 @@ class Restaurant < ActiveRecord::Base
   # Dynamic attrs
   # -------------------------------------------------------------------------
 
-  YELP_ATTRS = %w(categories geo neighborhoods)
+  YELP_ATTRS = %w(categories neighborhoods)
 
   def categories
     yelp_data.categories
@@ -72,10 +74,5 @@ class Restaurant < ActiveRecord::Base
 
   def neighborhoods
     yelp_data.location.neighborhoods
-  end
-
-  def geo
-    [yelp_data.location.coordinate.latitude,
-     yelp_data.location.coordinate.longitude]
   end
 end

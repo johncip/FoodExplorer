@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818191424) do
+ActiveRecord::Schema.define(version: 20150820220036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 20150818191424) do
     t.float    "rating"
     t.string   "rating_img_url"
     t.boolean  "is_closed"
+    t.float    "lat"
+    t.float    "lng"
   end
 
   add_index "restaurants", ["rating"], name: "index_restaurants_on_rating", using: :btree

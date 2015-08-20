@@ -6,9 +6,10 @@
 
 ### Feature: Google Maps
 - [ ] {db} Promote latitude & longitude
-- [x] Get Google Maps API key
-- [ ] Add map
+- [x] Get and use API key
+- [x] Add map
 - [ ] Add markers
+- [ ] Fix map re-render bug
 
 ### Fix & Refactor
 - [ ] Factor out common code in Backbone views
@@ -58,7 +59,6 @@
 
 ### Back End
 - [x] Fix url-encoding issue (store yid unencoded & change lookup)
-- [ ] {db} Default to empty string for list description
 
 ### For Later
 - [x] Git hook for Rubocop
