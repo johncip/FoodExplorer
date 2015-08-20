@@ -1,11 +1,22 @@
 <div class="sidebar"></div>
 
 <div class="show-panel clearfix">
+
   <h2><%= list.escape("title") %></h2>
-  <p><%= list.escape("description") %></p>
+  <div class="map-container"></div>
+
+  <% if (list.escape("description")) { %>
+    <section class="description">
+      <p>
+        <%= list.escape("description") %>
+      </p>
+    </section>
+  <% } %>
 
   <div class="thumb-box clearfix"></div>
 
-  <h2>Comments</h2>
-  <p>Sham comment.</p>
+  <section class="comments">
+    <h3>Comments</h3>
+    <p>Sham comment.</p>
+  </section>
 </div>

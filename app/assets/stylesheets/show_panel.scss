@@ -3,4 +3,40 @@
   padding-left: $spc;
   float: left;
   width: calc(100% - 200px);
+  padding-right: $spc;
+}
+
+.description {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  z-index: 0;
+  vertical-align: bottom;
+
+  p {
+    position: relative;
+    top: 0.75em;
+    left: 2em;
+    z-index: 1;
+  }
+
+  p:before {
+    content: '“';
+    font-family: Georgia, serif;
+    color: #ddd;
+    position: absolute;
+    font-size: 500%;
+    z-index: -1;
+    top: -0.2em;
+    left: -0.4em;
+  }
+}
+
+.map-container {
+  margin-bottom: $spc;
+}
+
+#map-canvas {
+  height: 200px;
 }

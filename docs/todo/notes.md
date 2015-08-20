@@ -12,6 +12,7 @@
 * figaro heroku:set -e production
 * rubocop -FD (fail fast & show cop name)
 * rubocop --auto-gen-config
+* git stash show -p stash@{0}
 
 ### Yelp
 * https://www.yelp.com/developers/api_console

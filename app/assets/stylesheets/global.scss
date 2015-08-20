@@ -1,6 +1,7 @@
 // @import url("http://openfontlibrary.org/face/montreal");
 @import url("http://fonts.googleapis.com/css?family=Courgette");
 @import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,900,900italic,700italic,700");
+
 $spc: 20px;
 $green: #486c9e;
 $darkgreen: $green * 0.8;
@@ -12,30 +13,34 @@ $seafoam: hsl(220, 40, 96);
 $selected: hsl(220, 40, 86);
 $black: #555;
 $sidebarwidth: 200px;
+
 * {
   box-sizing: border-box;
 }
-html,
-body,
-#root,
-#content {
+
+html, body, #root, #content, #map-canvas {
   height: 100%;
 }
+
 body {
   font-family: 'Lato';
   font-size: 12pt;
 }
+
 a {
   text-decoration: none;
   transition: all 0.15s ease-out;
 }
+
 h1 {
   font-size: 150%;
   font-weight: lighter;
 }
+
 p {
   color: $black;
 }
+
 input {
   margin: 0;
   padding: 0;
@@ -45,16 +50,18 @@ input {
   vertical-align: baseline;
   border-radius: 2px;
 }
-.logo,
-.logo * {
+
+.logo, .logo * {
   font-family: 'Courgette', cursive;
 }
+
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .clearfix::after {
   content: "";
   display: block;

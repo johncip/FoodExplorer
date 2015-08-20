@@ -24,7 +24,7 @@ FoodEx.Views.RestThumb = Backbone.CompositeView.extend ({
   },
 
   onRender: function () {
-    this.$el.attr('data-restaurant-id', this.model.id);
+    this.$el.attr('data-restaurant-id', this.model.id); // TODO: use attributes hash
     this.addBadges();
   }
 });

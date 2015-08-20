@@ -5,11 +5,11 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
   initialize: function () {
     this.addSidebar();
     this.addThumbBox();
-
+    this.addMapShow();
     this.listenTo(this.model, 'sync', this.render);
   },
 
-  addSidebar: function (list) {
+  addSidebar: function () {
     var sidebar = new FoodEx.Views.Sidebar({
       collection: FoodEx.lists,
       model: this.model
@@ -17,7 +17,15 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
     this.addSubview('.sidebar', sidebar);
   },
 
-  addThumbBox: function (list) {
+  addMapShow: function () {
+    var mapShow = new FoodEx.Views.MapShow({
+      collection: this.model.restaurants()
+    });
+    this.addSubview('.map-container', mapShow);
+    mapShow.initMap();
+  },
+
+  addThumbBox: function () {
     var thumbBox = new FoodEx.Views.RestThumbBox({
       collection: this.model.restaurants(),
       model: this.model
@@ -29,6 +37,7 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
     var content = this.template({ list: this.model });
     this.$el.html(content);
     this.attachSubviews();
+    this.onRender();
     return this;
   },
 });
