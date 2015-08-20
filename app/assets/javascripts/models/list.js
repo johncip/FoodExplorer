@@ -8,15 +8,12 @@ FoodEx.Models.List = Backbone.Model.extend ({
   },
 
   parse: function (payload) {
-    // debugger;
     if (payload.model) {
-      // debugger;
       this.set(payload.model);
     }
     if (payload.restaurants) {
       this.restaurants().set(payload.restaurants, { parse: true });
     }
-    // debugger;
     return payload;
   }
 });
