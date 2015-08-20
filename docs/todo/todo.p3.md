@@ -15,10 +15,14 @@
 - [ ] style
 
 ### Feature: Drag-and-drop
-- [x] Sortable
+- [x] Sortable Restaurant thumbs
   - [x] Fix bug: why is the restaurant collection emptying?
   - [x] Fix bug: sortable + rendering race condition
-  - [x] Persist ordering changes
+  - [x] Controller update action
+  - [x] Include listing in restaurant JSON
+  - [x] Default scope needs to be sorted
+  - [ ] Don't make unnecessary PUT requests
+- [ ] Sortable List thumbs
 - [ ] Draggable
   - [ ] Change membership
   - [ ] Sort lists & restaurants in views
@@ -37,17 +41,28 @@
 - [ ] Pagination
 
 ### Front End
+- [x] Fix thumb-box margin
+- [ ] Remove extra div around thumb box ul
 - [ ] Use Bootstrap
 - [ ] Random background for sign-in
-- [ ] Google maps
 - [ ] Different thumbs for lists
 
 ### Back End
 - [ ] {db} Default to empty string for list description
 
 ### For Later
+- [x] Git hook for Rubocop
 - [ ] Split index items & thumbs into favorites, non-favorites?
 - [ ] Have image placeholder for offline
 - [ ] Server config: don't expire assets, use gzip
 - [ ] Reduce number of queries
-- [ ] Git hook for rubocop
+- [ ] Reduce number of requests
+- [ ] Loading throbber
+
+### Next
+- [ ] Un break lists
+- [ ] Google maps
+- [ ] Sortable lists
+- [ ] Draggable restaurants
+- [ ]
+- [x] Fix url-encoding issue (store yid unencoded & change lookup)

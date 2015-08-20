@@ -41,7 +41,7 @@ rest_ids = {
     'voodoo-van-san-francisco',
     'el-sur-san-francisco',
     'curry-up-now-san-francisco-6',
-    'el-porte%C3%B1o-empanadas-san-francisco-4',
+    'el-porteño-empanadas-san-francisco-4',
     'me-so-hungry-san-francisco',
   ],
   'Bib Gourmand 2015': [

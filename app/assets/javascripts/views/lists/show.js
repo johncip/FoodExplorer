@@ -5,6 +5,8 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
   initialize: function () {
     this.addSidebar();
     this.addThumbBox();
+
+    this.listenTo(this.model, 'sync', this.render);
   },
 
   addSidebar: function (list) {
@@ -24,10 +26,9 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
   },
 
   render: function() {
-    var content = this.template();
+    var content = this.template({ list: this.model });
     this.$el.html(content);
     this.attachSubviews();
-    this.onRender();
     return this;
   },
 });

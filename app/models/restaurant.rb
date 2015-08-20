@@ -47,7 +47,7 @@ class Restaurant < ActiveRecord::Base
   end
 
   def yelp_data
-    @yelp_data ||= Yelp.client.business(yelp_id)
+    @yelp_data ||= Yelp.client.business(ERB::Util.url_encode(yelp_id))
   end
 
   def user_favorite?(user)

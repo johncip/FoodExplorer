@@ -1,5 +1,5 @@
 FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend({
-  template: JST['restaurants/thumb_box'],
+  template: JST['shared/thumb_box'],
 
   events: {
     'sortstop': 'saveOrds'
@@ -27,6 +27,7 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend({
     var content = this.template({
       list: this.model
     });
+
     this.$el.html(content);
     this.attachSubviews();
 
@@ -42,14 +43,15 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend({
     var els = this.$('li');
 
     els.each(function(idx, el) {
-
       var $el = $(el);
       var id = $el.data('restaurant-id');
-      var rest = this.collection.getOrFetch(id);
+      var listing = this.collection.getOrFetch(id).listing();
 
-      rest.listing().save({
-        ord: idx
-      });
+      if (listing.ord !== idx) {
+        listing.save({
+          ord: idx
+        });
+      }
     }.bind(this));
   }
 });

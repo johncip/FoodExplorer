@@ -1,5 +1,5 @@
 FoodEx.Views.ListThumbBox = Backbone.CompositeView.extend ({
-  template: JST['lists/thumb_box'],
+  template: JST['shared/thumb_box'],
 
   initialize: function () {
     this.listenTo(this.collection, 'sync', this.render);
