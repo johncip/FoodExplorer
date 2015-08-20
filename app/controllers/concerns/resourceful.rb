@@ -5,7 +5,7 @@ module Resourceful
   include LoginRequired
 
   included do
-    before_action :find_model, only: [:show]
+    before_action :find_model, only: [:show, :update]
     before_action :assign_collection, only: [:index]
   end
 

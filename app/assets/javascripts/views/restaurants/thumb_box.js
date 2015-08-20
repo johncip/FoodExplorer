@@ -42,11 +42,12 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend({
     var els = this.$('li');
 
     els.each(function(idx, el) {
+
       var $el = $(el);
       var id = $el.data('restaurant-id');
-      var item = this.collection.getOrFetch(id);
+      var rest = this.collection.getOrFetch(id);
 
-      item.save({
+      rest.listing().save({
         ord: idx
       });
     }.bind(this));

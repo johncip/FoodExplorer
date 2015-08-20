@@ -15,10 +15,10 @@
 - [ ] style
 
 ### Feature: Drag-and-drop
-- [ ] Sortable
+- [x] Sortable
   - [x] Fix bug: why is the restaurant collection emptying?
   - [x] Fix bug: sortable + rendering race condition
-  - [ ] Persist ordering changes
+  - [x] Persist ordering changes
 - [ ] Draggable
   - [ ] Change membership
   - [ ] Sort lists & restaurants in views

@@ -6,4 +6,6 @@ class Listing < ActiveRecord::Base
 
   validates :restaurant, :list, :contributor, :ord, presence: true
   validates :restaurant, uniqueness: { scope: :list }
+
+  default_scope { order('ord') }
 end
