@@ -64,7 +64,7 @@ class Restaurant < ActiveRecord::Base
   # Dynamic attrs
   # -------------------------------------------------------------------------
 
-  YELP_ATTRS = %(categories geo neighborhoods)
+  YELP_ATTRS = %w(categories geo neighborhoods)
 
   def categories
     yelp_data.categories
