@@ -1,64 +1,54 @@
-FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend({
-  template: JST['shared/thumb_box'],
+FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend(
+  _.extend({}, FoodEx.Mixins.Orderable, {
+    template: JST['shared/thumb_box'],
 
-  events: {
-    'sortstop': 'saveOrds'
-  },
+    orderableOpts: {
+      dataAttr: 'listing-id', // listings have ordering, not restaurants
+      selector: 'li'
+    },
 
-  initialize: function() {
-    this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(this.collection, 'add', this.addThumb);
-    this.listenTo(this.collection, 'remove', this.removeThumb);
-    this.collection.each(this.addThumb.bind(this));
-  },
+    orderableModel: function(id) {
+      return this.collection.getOrFetch(id).listing();
+    },
 
-  highlightThumb: function (restaurant) {
-    var thumbView = this.subviews('ul').find(function (subview) {
-      return subview.model.id === restaurant.id;
-    });
+    initialize: function() {
+      this.listenTo(this.model, 'sync', this.render);
+      this.listenTo(this.collection, 'add', this.addThumb);
+      this.listenTo(this.collection, 'remove', this.removeThumb);
+      this.collection.each(this.addThumb.bind(this));
+    },
 
-    thumbView.highlight();
-  },
+    highlightThumb: function(restaurant) {
+      var thumbView = this.subviews('ul').find(function(subview) {
+        return subview.model.id === restaurant.id;
+      });
 
-  removeThumb: function(restaurant) {
-    this.removeModelSubview('ul', restaurant);
-  },
+      thumbView.highlight();
+    },
 
-  addThumb: function(restaurant) {
-    var thumb = new FoodEx.Views.RestThumb({
-      model: restaurant
-    });
-    this.addSubview('ul', thumb);
-  },
+    removeThumb: function(restaurant) {
+      this.removeModelSubview('ul', restaurant);
+    },
 
-  render: function() {
-    var content = this.template({
-      list: this.model
-    });
+    addThumb: function(restaurant) {
+      var thumb = new FoodEx.Views.RestThumb({
+        model: restaurant
+      });
+      this.addSubview('ul', thumb);
+    },
 
-    this.$el.html(content);
-    this.attachSubviews();
-    return this;
-  },
+    render: function() {
+      var content = this.template({
+        list: this.model
+      });
 
-  onRender: function() {
-    Backbone.CompositeView.prototype.onRender.call(this);
-    this.$('ul').sortable();
-  },
+      this.$el.html(content);
+      this.attachSubviews();
+      return this;
+    },
 
-  saveOrds: function() {
-    var els = this.$('li');
-
-    els.each(function(idx, el) {
-      var $el = $(el);
-      var id = $el.data('restaurant-id');
-      var listing = this.collection.getOrFetch(id).listing();
-
-      if (listing.ord !== idx) {
-        listing.save({
-          ord: idx
-        });
-      }
-    }.bind(this));
-  }
-});
+    onRender: function() {
+      Backbone.CompositeView.prototype.onRender.call(this);
+      this.$('ul').sortable();
+    }
+  }));

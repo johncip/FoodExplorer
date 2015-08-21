@@ -3,7 +3,7 @@ FoodEx.Views.RestThumb = Backbone.View.extend ({
   tagName: 'li',
 
   initialize: function () {
-    this.$el.attr('data-restaurant-id', this.model.id);
+    this.$el.attr('data-listing-id', this.model.id);
     this.listenTo(this.model, 'sync', this.render);
   },
 

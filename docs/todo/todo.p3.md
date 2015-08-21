@@ -1,5 +1,4 @@
 ### Next
-- [ ] Use generic sortable mixin
 - [ ] Draggable restaurants
 
 ### Feature: Google Maps
@@ -19,6 +18,14 @@
 - [ ] has_dining_with_field
 - [ ] use attributes hash in views
 - [ ] be explicit about containers
+
+### Feature: Restaurant show page
+- [ ] Backbone view
+- [ ] Backbone template
+- [ ] Display visited & favorited
+- [ ] Include map & add marker
+- [ ] Fix thumbnail links to point to show page
+- [ ] Make visited & favorited actions ("like" buttons)
 
 ### Feature: Restaurant Notes
 - [ ] generate model & migration
@@ -41,7 +48,7 @@
   - [x] Default scope needs to be sorted
   - [x] Don't make unnecessary PUT requests
 - [x] Sortable List thumbs
-  - [ ] Use generic sortable mixin
+  - [x] Use generic sortable mixin
 - [ ] Draggable
   - [ ] Change membership
   - [ ] Sort lists & restaurants in views
@@ -76,3 +83,4 @@
 - [ ] Loading throbber
 - [ ] Show/hide map
 - [ ] Fork marker icon (with shadows & proper z-index!)
+- [ ] redo border/padding on thumbs
