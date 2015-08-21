@@ -1,18 +1,17 @@
-# A user-created list of restaurants.
+# A user-created list of restaurants. Ordered.
 class List < ActiveRecord::Base
+  default_scope { order('ord') }
+
+  alias_attribute :private?, :private
+  alias_attribute :favorite?, :favorite
+  delegate :size, to: :listings
+
   belongs_to :author, class_name: :User, foreign_key: :user_id
   has_many :listings, dependent: :destroy
   has_many :restaurants, through: :listings
 
   validates :author, :title, :ord, presence: true
   validates :favorite, :private, inclusion: { in: [true, false] }
-
-  alias_attribute :private?, :private
-  alias_attribute :favorite?, :favorite
-
-  default_scope { order('ord') }
-
-  delegate :size, to: :listings
 
   def new_listing_by_author(opts = {})
     opts.merge!(contributor: author)

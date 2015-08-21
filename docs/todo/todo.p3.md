@@ -1,5 +1,4 @@
 ### Next
-- [ ] Use rails cops
 - [ ] Use generic sortable mixin
 - [ ] Draggable restaurants
 
@@ -66,6 +65,7 @@
 
 ### Deployment
 - [x] Git hook for Rubocop
+- [x] Use rails cops
 
 ### Later
 - [ ] Split index items & thumbs into favorites, non-favorites?
