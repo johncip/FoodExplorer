@@ -38,7 +38,6 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend({
 
     this.$el.html(content);
     this.attachSubviews();
-
     return this;
   },
 

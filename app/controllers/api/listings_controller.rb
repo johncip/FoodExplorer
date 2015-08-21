@@ -10,7 +10,7 @@ class Api::ListingsController < ApplicationController
     if @listing.update(listing_params)
       render json: @listing
     else
-      render json: @item.errors.full_messages, status: :unprocessable_entity
+      render json: @listing.errors.full_messages, status: :unprocessable_entity
     end
   end
 

@@ -53,12 +53,12 @@ class Restaurant < ActiveRecord::Base
   end
 
   def user_favorite?(user)
-    dining = dinings.where(diner: user).first
+    dining = dinings.find_by(diner: user)
     dining && dining.favorite?
   end
 
   def user_visited?(user)
-    dining = dinings.where(diner: user).first
+    dining = dinings.find_by(diner: user)
     dining && dining.visited?
   end
 
@@ -68,9 +68,7 @@ class Restaurant < ActiveRecord::Base
 
   YELP_ATTRS = %w(categories neighborhoods)
 
-  def categories
-    yelp_data.categories
-  end
+  delegate :categories, to: :yelp_data
 
   def neighborhoods
     yelp_data.location.neighborhoods

@@ -10,6 +10,10 @@ class List < ActiveRecord::Base
   alias_attribute :private?, :private
   alias_attribute :favorite?, :favorite
 
+  default_scope { order('ord') }
+
+  delegate :size, to: :listings
+
   def new_listing_by_author(opts = {})
     opts.merge!(contributor: author)
     listings.new(opts)
@@ -20,10 +24,6 @@ class List < ActiveRecord::Base
     listing = new_listing_by_author(restaurant: rest)
     listing.save!
     listing
-  end
-
-  def size
-    listings.size
   end
 
   def image_url

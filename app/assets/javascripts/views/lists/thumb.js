@@ -3,6 +3,7 @@ FoodEx.Views.ListThumb = Backbone.View.extend ({
   tagName: 'li',
 
   initialize: function () {
+    this.$el.attr('data-list-id', this.model.id);
     this.listenTo(this.model, 'sync', this.render);
   },
 

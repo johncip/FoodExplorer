@@ -3,6 +3,7 @@ FoodEx.Views.RestThumb = Backbone.View.extend ({
   tagName: 'li',
 
   initialize: function () {
+    this.$el.attr('data-restaurant-id', this.model.id);
     this.listenTo(this.model, 'sync', this.render);
   },
 
@@ -31,7 +32,6 @@ FoodEx.Views.RestThumb = Backbone.View.extend ({
   },
 
   onRender: function () {
-    this.$el.attr('data-restaurant-id', this.model.id); // TODO: use attributes hash
     this.addBadges();
   }
 });

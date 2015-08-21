@@ -2,6 +2,8 @@ AllCops:
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
+    - 'bin/setup'
+  RunRailsCops: true
 
 Metrics/LineLength:
   Exclude:

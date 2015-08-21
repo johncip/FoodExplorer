@@ -1,5 +1,6 @@
 ### Next
-- [ ] Sortable lists
+- [ ] Use rails cops
+- [ ] Use generic sortable mixin
 - [ ] Draggable restaurants
 
 ### Feature: Google Maps
@@ -40,7 +41,8 @@
   - [x] Include listing in restaurant JSON
   - [x] Default scope needs to be sorted
   - [x] Don't make unnecessary PUT requests
-- [ ] Sortable List thumbs
+- [x] Sortable List thumbs
+  - [ ] Use generic sortable mixin
 - [ ] Draggable
   - [ ] Change membership
   - [ ] Sort lists & restaurants in views
@@ -55,7 +57,6 @@
 
 ### Front End
 - [x] Fix thumb-box margin
-- [ ] Remove extra div around thumb box ul
 - [ ] Use Bootstrap
 - [ ] Random background for sign-in
 - [ ] Different thumbs for lists
