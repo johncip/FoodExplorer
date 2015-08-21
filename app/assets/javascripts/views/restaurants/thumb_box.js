@@ -1,5 +1,5 @@
 FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend(
-  _.extend({}, FoodEx.Mixins.Orderable, {
+  _.extend({}, FoodEx.Mixins.Orderable, FoodEx.Mixins.Renderable, {
     template: JST['shared/thumb_box'],
 
     orderableOpts: {
@@ -35,16 +35,6 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend(
         model: restaurant
       });
       this.addSubview('ul', thumb);
-    },
-
-    render: function() {
-      var content = this.template({
-        list: this.model
-      });
-
-      this.$el.html(content);
-      this.attachSubviews();
-      return this;
     },
 
     onRender: function() {

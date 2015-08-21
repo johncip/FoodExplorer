@@ -40,3 +40,6 @@
  - cool splash page (bubbles?)
  - configurable start page (or use last viewed list)
  - compositeView.placeSubview (or search from parent)
+
+4 Leaf views: sidebar_item, list/thumb, resta/thumb, navbar
+5 Composite views: sidebar, list/index, list/show, list/thumb_box, resta/thumb_box

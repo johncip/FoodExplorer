@@ -38,10 +38,12 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     this._map.fitBounds(this._bounds);
   },
 
-  bounceMarker: function (id) {
+  bounceMarker: function(id) {
     var marker = this._markers[id];
     marker.setAnimation(google.maps.Animation.BOUNCE);
-    setTimeout(function () { marker.setAnimation(null); }, 700);
+    setTimeout(function() {
+      marker.setAnimation(null);
+    }, 700);
   },
 
   removeMarker: function(restaurant) {

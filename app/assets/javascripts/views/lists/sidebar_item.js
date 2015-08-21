@@ -1,24 +1,24 @@
-FoodEx.Views.SidebarItem = Backbone.View.extend ({
-  template: JST['lists/sidebar_item'],
-  tagName: 'li',
-  className: 'clearfix',
+FoodEx.Views.SidebarItem = Backbone.View.extend(
+  _.extend({}, FoodEx.Mixins.Renderable, {
 
-  initialize: function (options) {
-    this.listenTo(this.model, 'sync', this.render);
-    this.isActive = options.isActive;
-  },
+    template: JST['lists/sidebar_item'],
+    tagName: 'li',
+    className: 'clearfix',
 
-  render: function() {
-    var content = this.template({
-      list: this.model
-    });
-    this.$el.html(content);
-    return this;
-  },
+    initialize: function(options) {
+      this.listenTo(this.model, 'sync', this.render);
+      this.isActive = options.isActive;
+    },
 
-  onRender: function () {
-    if (this.isActive) {
-      this.$el.addClass('active');
+    templateOpts: function() {
+      return {
+        list: this.model
+      };
+    },
+
+    onRender: function() {
+      if (this.isActive) {
+        this.$el.addClass('active');
+      }
     }
-  }
-});
+  }));
