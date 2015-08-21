@@ -7,6 +7,7 @@
     margin: 0 2em 2em 0;
     text-align: center;
     position: relative;
+    transition: background-color 0.5s;
   }
   .visited::before,
   .favorite::after {
@@ -54,4 +55,8 @@
     width: 88px;
     height: 15px;
   }
+}
+
+.thumb-box ul li.highlighted {
+  background-color: #ddf;
 }

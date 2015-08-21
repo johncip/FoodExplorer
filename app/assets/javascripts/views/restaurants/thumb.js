@@ -12,6 +12,14 @@ FoodEx.Views.RestThumb = Backbone.View.extend ({
     return this;
   },
 
+  highlight: function() {
+    this.$el.addClass('highlighted');
+
+    setTimeout(function () {
+      this.$el.removeClass('highlighted');
+    }.bind(this), 500);
+  },
+
   addBadges: function () {
     if (this.model.attributes.favorite) {
       this.$el.addClass("favorite");

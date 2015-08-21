@@ -12,8 +12,16 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend({
     this.collection.each(this.addThumb.bind(this));
   },
 
-  removeThumb: function(model) {
-    this.removeModelSubview('ul', model);
+  highlightThumb: function (restaurant) {
+    var thumbView = this.subviews('ul').find(function (subview) {
+      return subview.model.id === restaurant.id;
+    });
+
+    thumbView.highlight();
+  },
+
+  removeThumb: function(restaurant) {
+    this.removeModelSubview('ul', restaurant);
   },
 
   addThumb: function(restaurant) {

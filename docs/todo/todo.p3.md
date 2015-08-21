@@ -9,8 +9,9 @@
 - [x] Add markers
 - [x] Fit map to markers
 - [x] Fix map re-render bug
-- [ ] Listener: change pin color
-- [ ] Listener: highlight thumbnail
+- [x] Fix click-too-fast bug
+- [x] Highlight marker on thumb hover
+- [x] Highlight thumb on marker hover
 
 ### Fix & Refactor
 - [x] Use correct onRender pattern
@@ -18,7 +19,6 @@
 - [ ] has_dining_with_field
 - [ ] use attributes hash in views
 - [ ] be explicit about containers
-- [ ] Fix click-too-fast bug
 
 ### Feature: Restaurant Notes
 - [ ] generate model & migration
@@ -46,7 +46,7 @@
   - [ ] Sort lists & restaurants in views
   - [ ] Put favorites first
 
-### Add Restaurants
+### Feature: Add Restaurants
 ###### (depends on drag and drop)
 - [ ] Play with Yelp search API
 - [ ] Search view
@@ -63,9 +63,10 @@
 ### Back End
 - [x] Fix url-encoding issue (store yid unencoded & change lookup)
 
-### For Later
+### Deployment
 - [x] Git hook for Rubocop
-- [ ] rename phase_one branch
+
+### Later
 - [ ] Split index items & thumbs into favorites, non-favorites?
 - [ ] Have image placeholder for offline
 - [ ] Server config: don't expire assets, use gzip
@@ -73,3 +74,4 @@
 - [ ] Reduce number of requests
 - [ ] Loading throbber
 - [ ] Show/hide map
+- [ ] Fork marker icon (with shadows & proper z-index!)

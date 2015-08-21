@@ -1,15 +1,24 @@
-FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
+FoodEx.Views.ListShow = Backbone.CompositeView.extend({
   template: JST['lists/show'],
   className: 'lists-index clearfix',
 
-  initialize: function () {
+  events: {
+    'mouseenter .thumb-box li': 'onMouseenter',
+  },
+
+  onMouseenter: function() {
+    var $li = $(event.target).parents('li');
+    this.mapShow.bounceMarker($li.data('restaurant-id'));
+  },
+
+  initialize: function() {
     this.addSidebar();
     this.addThumbBox();
     this.addMapShow();
     this.listenTo(this.model, 'sync', this.render);
   },
 
-  addSidebar: function () {
+  addSidebar: function() {
     var sidebar = new FoodEx.Views.Sidebar({
       collection: FoodEx.lists,
       model: this.model
@@ -17,20 +26,22 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
     this.addSubview('.sidebar', sidebar);
   },
 
-  addMapShow: function () {
+  addMapShow: function() {
     var mapShow = new FoodEx.Views.MapShow({
-      collection: this.model.restaurants()
+      collection: this.model.restaurants(),
+      parentView: this
     });
     this.addSubview('.map-container', mapShow);
     this.mapShow = mapShow;
   },
 
-  addThumbBox: function () {
+  addThumbBox: function() {
     var thumbBox = new FoodEx.Views.RestThumbBox({
       collection: this.model.restaurants(),
       model: this.model
     });
     this.addSubview('.thumb-box', thumbBox);
+    this.thumbBox = thumbBox;
   },
 
   onRender: function() {
@@ -39,7 +50,9 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
   },
 
   render: function() {
-    var content = this.template({ list: this.model });
+    var content = this.template({
+      list: this.model
+    });
     this.$el.html(content);
     this.attachSubviews();
     this.onRender();
