@@ -7,7 +7,6 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
     this.addThumbBox();
     this.addMapShow();
     this.listenTo(this.model, 'sync', this.render);
-    this.isMap = false;
   },
 
   addSidebar: function () {
@@ -36,13 +35,7 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
 
   onRender: function() {
     Backbone.CompositeView.prototype.onRender.call(this);
-  },
-
-  doMap: function () {
-    if (!this.hasMap) {
-      this.mapShow.initMap();
-      this.hasMap = true;
-    }
+    this.mapShow.initMap();
   },
 
   render: function() {
@@ -50,7 +43,6 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend ({
     this.$el.html(content);
     this.attachSubviews();
     this.onRender();
-    this.doMap();
     return this;
   },
 });

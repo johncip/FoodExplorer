@@ -1,6 +1,4 @@
 ### Next
-- [ ] Un break lists
-- [ ] Google maps
 - [ ] Sortable lists
 - [ ] Draggable restaurants
 
@@ -11,14 +9,16 @@
 - [x] Add markers
 - [x] Fit map to markers
 - [x] Fix map re-render bug
-- [ ] Refactor
-- [ ] More interaction (jump pins, highlight thumbs, etc.)
+- [ ] Listener: change pin color
+- [ ] Listener: highlight thumbnail
 
 ### Fix & Refactor
-- [ ] Factor out common code in Backbone views
+- [x] Use correct onRender pattern
+- [ ] Factor out common code in Backbone views?
 - [ ] has_dining_with_field
 - [ ] use attributes hash in views
 - [ ] be explicit about containers
+- [ ] Fix click-too-fast bug
 
 ### Feature: Restaurant Notes
 - [ ] generate model & migration

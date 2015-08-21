@@ -1,4 +1,4 @@
-FoodEx.Views.RestThumb = Backbone.CompositeView.extend ({
+FoodEx.Views.RestThumb = Backbone.View.extend ({
   template: JST['restaurants/thumb'],
   tagName: 'li',
 
@@ -9,7 +9,6 @@ FoodEx.Views.RestThumb = Backbone.CompositeView.extend ({
   render: function() {
     var content = this.template({ restaurant: this.model });
     this.$el.html(content);
-    this.onRender();
     return this;
   },
 

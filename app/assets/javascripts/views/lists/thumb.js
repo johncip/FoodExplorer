@@ -9,14 +9,12 @@ FoodEx.Views.ListThumb = Backbone.View.extend ({
   render: function() {
     var content = this.template({ list: this.model });
     this.$el.html(content);
-    this.onRender();
     return this;
   },
 
   onRender: function () {
     this.addBadges();
   },
-
 
   addBadges: function() {
     if (this.model.attributes.favorite) {
