@@ -14,9 +14,9 @@
 
 ### Fix & Refactor
 - [x] Use correct onRender pattern
-- [ ] Factor out common code in Backbone views?
+- [x] Factor out common code in Backbone views
+- [x] Move logout function into navbar view
 - [ ] has_dining_with_field
-- [ ] use attributes hash in views
 - [ ] be explicit about containers
 
 ### Feature: Restaurant show page
