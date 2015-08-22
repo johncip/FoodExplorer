@@ -10,4 +10,9 @@ class Dining < ActiveRecord::Base
 
   alias_attribute :favorite?, :favorite
   alias_attribute :visited?, :visited
+
+  def self.exists_with_flag(user_id, restaurant_id, flag)
+    result = find_by_user_id_and_restaurant_id(user_id, restaurant_id)
+    !result.nil? && result.send(flag)
+  end
 end

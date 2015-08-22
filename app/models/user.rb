@@ -11,12 +11,10 @@ class User < ActiveRecord::Base
   alias_attribute :guest?, :guest
 
   def favorite?(restaurant)
-    dining = dinings.find_by(restaurant: restaurant)
-    dining && dining.favorite?
+    Dining.exists_with_flag(id, restaurant.id, :favorite)
   end
 
   def visited?(restaurant)
-    dining = dinings.find_by(restaurant: restaurant)
-    dining && dining.visited?
+    Dining.exists_with_flag(id, restaurant.id, :visited)
   end
 end

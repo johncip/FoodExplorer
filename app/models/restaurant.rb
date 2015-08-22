@@ -55,13 +55,11 @@ class Restaurant < ActiveRecord::Base
   end
 
   def user_favorite?(user)
-    dining = dinings.find_by(diner: user)
-    dining && dining.favorite?
+    Dining.exists_with_flag(user.id, id, :favorite)
   end
 
   def user_visited?(user)
-    dining = dinings.find_by(diner: user)
-    dining && dining.visited?
+    Dining.exists_with_flag(user.id, id, :visited)
   end
 
   # -------------------------------------------------------------------------
