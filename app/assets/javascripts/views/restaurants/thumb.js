@@ -18,11 +18,11 @@ FoodEx.Views.RestThumb = Backbone.View.extend(
 
     addBadges: function() {
       if (this.model.attributes.favorite) {
-        this.$el.addClass("favorite");
+        this.$el.addClass('favorite');
       }
 
       if (this.model.attributes.visited) {
-        this.$el.addClass("visited");
+        this.$el.addClass('visited');
       }
     },
 

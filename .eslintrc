@@ -3,8 +3,9 @@ rules:
     - 2
     - 2
   quotes:
-    - 2
+    - 1
     - single
+    - avoid-escape
   linebreak-style:
     - 2
     - unix
@@ -30,3 +31,5 @@ globals:
   FoodEx: false
   Backbone: false
   _: false
+  JST: false
+  google: false

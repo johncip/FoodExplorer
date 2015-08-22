@@ -1,4 +1,4 @@
-FoodEx.Models.Restaurant = Backbone.Model.extend ({
+FoodEx.Models.Restaurant = Backbone.Model.extend({
   urlRoot: 'api/restaurants',
 
   listing: function () {

@@ -8,14 +8,14 @@ FoodEx.Views.ListsIndex = Backbone.CompositeView.extend(
       this.addThumbBox();
     },
 
-    addSidebar: function(list) {
+    addSidebar: function() {
       var sidebar = new FoodEx.Views.Sidebar({
         collection: this.collection
       });
       this.addSubview('.sidebar', sidebar);
     },
 
-    addThumbBox: function(list) {
+    addThumbBox: function() {
       var thumbBox = new FoodEx.Views.ListThumbBox({
         collection: this.collection
       });

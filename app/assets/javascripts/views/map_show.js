@@ -1,6 +1,6 @@
 FoodEx.Views.MapShow = Backbone.View.extend({
   attributes: {
-    id: "map-canvas"
+    id: 'map-canvas'
   },
 
   initialize: function(options) {
@@ -21,8 +21,8 @@ FoodEx.Views.MapShow = Backbone.View.extend({
 
     var marker = new google.maps.Marker({
       position: {
-        lat: restaurant.get("lat"),
-        lng: restaurant.get("lng")
+        lat: restaurant.get('lat'),
+        lng: restaurant.get('lng')
       },
       map: this._map,
       title: restaurant.get('name'),
@@ -53,7 +53,7 @@ FoodEx.Views.MapShow = Backbone.View.extend({
   },
 
   initMap: function() {
-    if (this._map) return;
+    if (this._map) { return; }
 
     var mapOptions = {
       center: {

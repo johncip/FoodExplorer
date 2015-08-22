@@ -4,6 +4,7 @@ window.FoodEx = {
   Views: {},
   Routers: {},
   Mixins: {},
+
   initialize: function() {
     FoodEx.lists = new FoodEx.Collections.Lists();
     FoodEx.router = new FoodEx.Routers.Router({

@@ -1,4 +1,4 @@
-FoodEx.Routers.Router = Backbone.Router.extend ({
+FoodEx.Routers.Router = Backbone.Router.extend({
   routes: {
     '': 'index',
     'lists': 'index',
