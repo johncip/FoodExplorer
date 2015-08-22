@@ -7,8 +7,8 @@ FoodEx.Mixins.Renderable = {
     this.$el.html(content);
 
     // compositeView-specific
-    this.attachSubviews && this.attachSubviews();
-    this.onRender && this.onRender();
+    if (this.attachSubviews) { this.attachSubviews(); }
+    if (this.onRender) { this.onRender(); }
 
     return this;
   },

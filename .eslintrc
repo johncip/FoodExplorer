@@ -1,0 +1,32 @@
+rules:
+  indent:
+    - 2
+    - 2
+  quotes:
+    - 2
+    - single
+  linebreak-style:
+    - 2
+    - unix
+  semi:
+    - 2
+    - always
+
+  strict: 0
+  comma-dangle: 0
+  new-cap: 0
+  no-underscore-dangle: 0
+
+  no-debugger: 1
+  no-unused-vars: 1
+  no-console: 1
+  no-spaced-func: 1
+
+env:
+  browser: true
+  jquery: true
+
+globals:
+  FoodEx: false
+  Backbone: false
+  _: false

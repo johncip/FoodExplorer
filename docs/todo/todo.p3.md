@@ -70,9 +70,11 @@
 ### Back End
 - [x] Fix url-encoding issue (store yid unencoded & change lookup)
 
-### Deployment
+### Deployment / Code
 - [x] Git hook for Rubocop
 - [x] Use rails cops
+- [x] Incorporate JS style checking
+- [x] Factor out getOrFetch
 
 ### Later
 - [ ] Split index items & thumbs into favorites, non-favorites?

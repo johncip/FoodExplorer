@@ -1,3 +1,5 @@
+// a/A CompositeView implementation
+
 Backbone.CompositeView = Backbone.View.extend({
   addSubview: function (selector, subview, prepend) {
     if (prepend) {
@@ -56,7 +58,7 @@ Backbone.CompositeView = Backbone.View.extend({
 
   onRender: function() {
     this.eachSubview(function (subview) {
-      subview.onRender && subview.onRender();
+      if (subview.onRender) { subview.onRender(); }
     });
   },
 
