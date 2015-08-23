@@ -1,0 +1,14 @@
+<div class="sidebar"></div>
+
+<div class="content-panel clearfix">
+  <h2><%= restaurant.escape("name") %></h2>
+  <div class="map-container"></div>
+
+  <% if (restaurant.escape("notes")) { %>
+    <section class="description">
+      <p>
+        <%= restaurant.escape("notes") %>
+      </p>
+    </section>
+  <% } %>
+</div>

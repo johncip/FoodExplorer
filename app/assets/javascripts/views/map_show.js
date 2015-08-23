@@ -9,8 +9,17 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     this._markers = {};
     this._lastZ = 0;
 
-    this.listenTo(this.collection, 'add', this.addMarker);
-    this.listenTo(this.collection, 'remove', this.removeMarker);
+    if (this.collection) {
+      this.listenTo(this.collection, 'add', this.addMarker);
+      this.listenTo(this.collection, 'remove', this.removeMarker);
+    }
+
+    if (this.model) {
+      this.listenTo(this.model, 'sync', this.placeMarker);
+    }
+  },
+
+  placeMarker: function () {
   },
 
   addMarker: function(restaurant) {
@@ -65,6 +74,6 @@ FoodEx.Views.MapShow = Backbone.View.extend({
 
     this._map = new google.maps.Map(this.el, mapOptions);
     this._bounds = new google.maps.LatLngBounds();
-    this.collection.each(this.addMarker.bind(this));
+    // this.collection.each(this.addMarker.bind(this));
   }
 });

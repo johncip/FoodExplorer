@@ -3,9 +3,10 @@ FoodEx.Routers.Router = Backbone.Router.extend({
     '': 'index',
     'lists': 'index',
     'lists/:id': 'show',
+    'restaurants/:id': 'restaurant'
   },
 
-  initialize: function (options) {
+  initialize: function(options) {
     this.$rootEl = options.$rootEl;
     this.lists = options.lists;
 
@@ -17,29 +18,40 @@ FoodEx.Routers.Router = Backbone.Router.extend({
     Backbone.history.start();
   },
 
-  index: function () {
-    var view = new FoodEx.Views.ListsIndex({
-      collection: this.lists
-    });
-
-    this._swapContent(view);
+  index: function() {
+    this._swapContent(
+      new FoodEx.Views.ListsIndex({
+        collection: this.lists
+      }));
   },
 
-  show: function (id) {
-    var view = new FoodEx.Views.ListShow({
-      model: this.lists.getOrFetch(id)
-    });
-
-    this._swapContent(view);
+  show: function(id) {
+    this._swapContent(
+      new FoodEx.Views.ListShow({
+        model: this.lists.getOrFetch(id)
+      }));
   },
 
-  showNav: function () {
+  restaurant: function(id) {
+    var resta = new FoodEx.Models.Restaurant({ id: id });
+
+    this._swapContent(
+      new FoodEx.Views.RestaurantShow({
+        model: resta
+      }));
+
+    resta.fetch();
+  },
+
+  showNav: function() {
     var navBar = new FoodEx.Views.NavBar();
     this.$nav.html(navBar.render().$el);
   },
 
-  _swapContent: function (view) {
-    if (this._contentView) this._contentView.remove();
+  _swapContent: function(view) {
+    if (this._contentView) {
+      this._contentView.remove();
+    }
     this._contentView = view;
     this.$content.html(view.$el);
     view.render();
