@@ -92,3 +92,4 @@
 - [ ] Fork marker icon (with shadows & proper z-index!)
 - [ ] redo border/padding on thumbs
 - [ ] be explicit about containers
+- [ ] "be your own"

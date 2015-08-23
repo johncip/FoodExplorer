@@ -1,8 +1,12 @@
 <div class="sidebar"></div>
 
 <div class="content-panel clearfix">
+
   <h2><%= restaurant.escape("name") %></h2>
   <div class="map-container"></div>
+
+  <img src="<%= restaurant.escape('image_url')%>" class="photo">
+
 
   <% if (restaurant.escape("notes")) { %>
     <section class="description">
@@ -11,4 +15,17 @@
       </p>
     </section>
   <% } %>
+
+  <p>Yelp rating: <img src="<%= restaurant.escape('rating_img_url')%>" class="rating"></p>
+
+  <div class="badge">
+    <a href="#" class="favorite">♥</a>
+    <p>I love this place!</p>
+  </div>
+
+  <div class="badge">
+    <a href="#" class="visited">✓</a>
+    <p>I've eaten here!</p>
+  </div>
+
 </div>

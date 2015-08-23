@@ -15,6 +15,7 @@
 * rubocop -FD (fail fast & show cop name)
 * rubocop --auto-gen-config
 * git stash show -p stash@{0}
+* git branch -m old new
 
 ### Yelp
 * https://www.yelp.com/developers/api_console

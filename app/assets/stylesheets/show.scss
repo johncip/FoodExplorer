@@ -25,10 +25,33 @@
   }
 }
 
-.map-container {
-  margin-bottom: $spc;
+.photo {
+  height: 200px;
+  width: 200px;
 }
 
-#map-canvas {
-  height: 200px;
+.badge a {
+  display: block;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  box-shadow: 0 1px 0 #ccc;
+  font-size: 32px;
+  transition: none;
+
+  &.visited {
+    color: $green;
+  }
+  &.favorite {
+    color: $red;
+  }
+  &:hover {
+    background-color: #ddd;
+  }
+  &:active {
+    background-color: #dfdfdf;
+    box-shadow: 0 -1px 0 #ccc;
+  }
 }

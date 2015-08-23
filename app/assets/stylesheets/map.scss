@@ -1,0 +1,14 @@
+.map-container {
+  margin-bottom: $spc;
+}
+
+#map-canvas {
+  height: 200px;
+  border: 2px solid #bbc;
+  border-radius: 3px 12px;
+}
+
+.map-square #map-canvas {
+  height: 400px;
+  width: 400px;
+}
