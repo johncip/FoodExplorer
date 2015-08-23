@@ -1,4 +1,6 @@
 ### Next
+- [ ] Restaurant show page
+- [ ] Reduce number of queries
 - [ ] Draggable restaurants
 
 ### Feature: Google Maps
@@ -16,16 +18,20 @@
 - [x] Use correct onRender pattern
 - [x] Factor out common code in Backbone views
 - [x] Move logout function into navbar view
-- [ ] has_dining_with_field
-- [ ] be explicit about containers
+- [x] Factor out getOrFetch
+- [x] Refactor CSS (make selectors more generic)
+- [x] Factor out Dining + flag pattern
+- [ ] Make sidebar view a mixin (or extend compositeview)
 
 ### Feature: Restaurant show page
-- [ ] Backbone view
-- [ ] Backbone template
-- [ ] Display visited & favorited
+- [x] Backbone view
+- [x] Backbone template
+- [x] Backbone route & action
+- [ ] Fix thumbnail links
 - [ ] Include map & add marker
-- [ ] Fix thumbnail links to point to show page
-- [ ] Make visited & favorited actions ("like" buttons)
+- [ ] Display visited & favorited
+- [ ] Toggle visited & favorited
+- [ ] Include Yelp stuff
 
 ### Feature: Restaurant Notes
 - [ ] generate model & migration
@@ -61,6 +67,11 @@
 - [ ] Results view
 - [ ] Pagination
 
+### Deployment & Code Quality
+- [x] Git hook for Rubocop
+- [x] Use rails cops
+- [x] Incorporate JS style checking
+
 ### Front End
 - [x] Fix thumb-box margin
 - [ ] Use Bootstrap
@@ -69,20 +80,15 @@
 
 ### Back End
 - [x] Fix url-encoding issue (store yid unencoded & change lookup)
-
-### Deployment / Code
-- [x] Git hook for Rubocop
-- [x] Use rails cops
-- [x] Incorporate JS style checking
-- [x] Factor out getOrFetch
+- [ ] Reduce number of queries
 
 ### Later
 - [ ] Split index items & thumbs into favorites, non-favorites?
 - [ ] Have image placeholder for offline
 - [ ] Server config: don't expire assets, use gzip
-- [ ] Reduce number of queries
 - [ ] Reduce number of requests
 - [ ] Loading throbber
 - [ ] Show/hide map
 - [ ] Fork marker icon (with shadows & proper z-index!)
 - [ ] redo border/padding on thumbs
+- [ ] be explicit about containers

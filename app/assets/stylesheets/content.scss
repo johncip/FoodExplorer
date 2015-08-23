@@ -1,9 +1,14 @@
-.lists-index,
-.list-index > div,
-.sidebar {
+.content-panel {
+  padding-top: $spc;
+  padding-left: $spc;
+  float: left;
+  width: calc(100% - 200px);
+  padding-right: $spc;
   height: 100%;
 }
-.lists-index {
+
+.content-container {
+  height: 100%;
   p {
     margin-bottom: $spc;
   }

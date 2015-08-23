@@ -1,7 +1,7 @@
 FoodEx.Views.ListShow = Backbone.CompositeView.extend(
   _.extend({}, FoodEx.Mixins.Renderable, {
     template: JST['lists/show'],
-    className: 'lists-index clearfix',
+    className: 'content-container clearfix',
 
     events: {
       'mouseenter .thumb-box li': 'onMouseenter',
@@ -13,10 +13,10 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend(
     },
 
     initialize: function() {
+      this.listenTo(this.model, 'sync', this.render);
       this.addSidebar();
       this.addThumbBox();
       this.addMapShow();
-      this.listenTo(this.model, 'sync', this.render);
     },
 
     addSidebar: function() {

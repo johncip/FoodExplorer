@@ -1,7 +1,7 @@
 FoodEx.Views.ListsIndex = Backbone.CompositeView.extend(
   _.extend({}, FoodEx.Mixins.Renderable, {
     template: JST['lists/index'],
-    className: 'lists-index clearfix',
+    className: 'content-container clearfix',
 
     initialize: function() {
       this.addSidebar();
