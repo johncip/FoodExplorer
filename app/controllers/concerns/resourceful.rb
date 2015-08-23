@@ -14,7 +14,8 @@ module Resourceful
   #
   # e.g. @restaurants = Restaurant.all
   def assign_collection
-    instance_variable_set(ivar_name.pluralize, self.class.model.all)
+    query = self.class.model.all.includes(self.class.include_assoc)
+    instance_variable_set(ivar_name.pluralize, query)
   end
 
   # Creates an ivar for the model instance corresponding to the controller
@@ -30,5 +31,13 @@ module Resourceful
   # e.g. @restaurant
   def ivar_name
     '@' + self.class.model.to_s.to_s.underscore
+  end
+
+  # assign_collection sometimes needs to include an association in order to
+  # avoid making n queries. The default is to not include one.
+  module ClassMethods
+    def include_assoc
+      nil
+    end
   end
 end

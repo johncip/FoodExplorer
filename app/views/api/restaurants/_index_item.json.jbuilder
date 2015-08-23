@@ -1,6 +1,4 @@
 json.extract!(restaurant, *restaurant.attribute_names)
 
-json.favorite current_user.favorite?(restaurant)
-json.visited current_user.visited?(restaurant)
-
-json.foo listings
+json.favorite restaurant.user_favorite?(current_user)
+json.visited restaurant.user_visited?(current_user)

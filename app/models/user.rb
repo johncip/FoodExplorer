@@ -9,12 +9,4 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
 
   alias_attribute :guest?, :guest
-
-  def favorite?(restaurant)
-    Dining.exists_with_flag(id, restaurant.id, :favorite)
-  end
-
-  def visited?(restaurant)
-    Dining.exists_with_flag(id, restaurant.id, :visited)
-  end
 end

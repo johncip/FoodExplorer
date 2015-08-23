@@ -3,6 +3,11 @@
 */
 FoodEx.Mixins.Renderable = {
   render: function() {
+
+    if (this instanceof Backbone.CompositeView) {
+      console.log(this.className);
+    }
+
     var content = this.template(this.templateOpts());
     this.$el.html(content);
 

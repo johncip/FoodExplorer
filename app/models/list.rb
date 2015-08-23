@@ -9,6 +9,7 @@ class List < ActiveRecord::Base
   belongs_to :author, class_name: :User, foreign_key: :user_id
   has_many :listings, dependent: :destroy
   has_many :restaurants, through: :listings
+  has_many :dinings, through: :restaurants
 
   validates :author, :title, :ord, presence: true
   validates :favorite, :private, inclusion: { in: [true, false] }

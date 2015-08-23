@@ -55,12 +55,22 @@ class Restaurant < ActiveRecord::Base
   end
 
   def user_favorite?(user)
-    Dining.exists_with_flag(user.id, id, :favorite)
+    dining = dinings.find_by(diner: user)
+    dining && dining.favorite?
   end
 
   def user_visited?(user)
-    Dining.exists_with_flag(user.id, id, :visited)
+    dining = dinings.find_by(diner: user)
+    dining && dining.visited?
   end
+
+  # def user_favorite?(user)
+  #   Dining.exists_with_flag(user.id, id, :favorite)
+  # end
+  #
+  # def user_visited?(user)
+  #   Dining.exists_with_flag(user.id, id, :visited)
+  # end
 
   # -------------------------------------------------------------------------
   # Dynamic attrs

@@ -8,8 +8,7 @@ gem 'sass-rails', '~> 5.0'
 
 # Deployment
 gem 'figaro'
-gem 'rails_12factor'
-gem 'newrelic_rpm'
+gem 'rails_12factor', group: :production
 gem 'puma'
 
 # gimme data

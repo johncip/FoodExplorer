@@ -14,6 +14,10 @@ class Api::ListingsController < ApplicationController
     end
   end
 
+  def assign_collection
+    @listings = Listing.all.includes(:contributor, :restaurant)
+  end
+
   private
 
   def listing_params

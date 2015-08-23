@@ -1,10 +1,10 @@
 rest = listing.restaurant
 
 json.extract!(rest, *rest.attribute_names)
-json.yelp_id rest.yelp_id
 
-json.favorite current_user.favorite?(rest)
-json.visited current_user.visited?(rest)
+json.favorite rest.user_favorite?(current_user)
+json.visited rest.user_visited?(current_user)
+
 json.ord listing.ord
 
 json.listing do

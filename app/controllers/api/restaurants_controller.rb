@@ -5,4 +5,16 @@ class Api::RestaurantsController < ApplicationController
   def self.model
     Restaurant
   end
+
+  def self.include_assoc
+    :dinings
+  end
+
+  private
+
+  def assign_collection
+    @restaurants = Restaurant.all.includes(:dinings)
+                   .where('dinings.user_id' => current_user.id)
+                   .references(:dinings).all
+  end
 end

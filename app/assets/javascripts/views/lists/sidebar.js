@@ -1,10 +1,11 @@
 FoodEx.Views.Sidebar = Backbone.CompositeView.extend(
   _.extend({}, FoodEx.Mixins.Renderable, {
     template: JST['lists/sidebar'],
+    className: 'sidebar-container',
 
     initialize: function() {
-      this.listenTo(this.collection, 'sync', this.render);
       this.listenTo(this.collection, 'add', this.addSidebarItem);
+      // TODO: removeSidebarItem
       this.collection.each(this.addSidebarItem.bind(this));
     },
 

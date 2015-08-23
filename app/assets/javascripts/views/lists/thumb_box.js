@@ -1,6 +1,7 @@
 FoodEx.Views.ListThumbBox = Backbone.CompositeView.extend(
   _.extend({}, FoodEx.Mixins.Orderable, FoodEx.Mixins.Renderable, {
     template: JST['shared/thumb_box'],
+    className: 'thumb-box-container',
 
     orderableOpts: {
       dataAttr: 'list-id',

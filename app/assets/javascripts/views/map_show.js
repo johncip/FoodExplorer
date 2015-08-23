@@ -1,9 +1,10 @@
 FoodEx.Views.MapShow = Backbone.View.extend({
+  className: 'map-show-container',
+  maxAutoZoom: 16,
+
   attributes: {
     id: 'map-canvas'
   },
-
-  maxAutoZoom: 16,
 
   initialize: function(options) {
     this.parentView = options.parentView;

@@ -1,6 +1,7 @@
 ### Next
-- [ ] Restaurant show page
-- [ ] Reduce number of queries
+- [x] Fix duplicate logging
+- [x] Reduce number of queries
+- [-] Restaurant show page
 - [ ] Draggable restaurants
 
 ### Feature: Google Maps
@@ -22,16 +23,18 @@
 - [x] Refactor CSS (make selectors more generic)
 - [x] Factor out Dining + flag pattern
 - [ ] Make sidebar view a mixin (or extend compositeview)
+- [ ] Don't use #/ in links
 
 ### Feature: Restaurant show page
 - [x] Backbone view
 - [x] Backbone template
 - [x] Backbone route & action
-- [ ] Fix thumbnail links
-- [ ] Include map & add marker
-- [ ] Display visited & favorited
+- [x] Fix thumbnail links
+- [x] Include map & add marker
+- [x] Display visited & favorited
 - [ ] Toggle visited & favorited
 - [ ] Include Yelp stuff
+- [ ] Style
 
 ### Feature: Restaurant Notes
 - [ ] generate model & migration
@@ -71,6 +74,7 @@
 - [x] Git hook for Rubocop
 - [x] Use rails cops
 - [x] Incorporate JS style checking
+- [x] Fix duplicate logging
 
 ### Front End
 - [x] Fix thumb-box margin
@@ -80,7 +84,14 @@
 
 ### Back End
 - [x] Fix url-encoding issue (store yid unencoded & change lookup)
-- [ ] Reduce number of queries
+- [x] Reduce number of queries
+  - [x] Lists Index
+  - [x] Listings Index
+  - [x] List Show
+  - [x] Restaurants Index
+  - [x] Restaurant Show
+  - [x] Listing Show
+- [ ] Reduce number of renders
 
 ### Later
 - [ ] Split index items & thumbs into favorites, non-favorites?
@@ -93,3 +104,4 @@
 - [ ] redo border/padding on thumbs
 - [ ] be explicit about containers
 - [ ] "be your own"
+- [ ] Reduce queries even more

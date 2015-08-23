@@ -4,5 +4,6 @@ end
 
 json.restaurants do
   json.partial! partial: 'api/restaurants/from_listing',
-                collection: @list.listings, as: :listing
+                collection: @listings, as: :listing,
+                locals: { dinings: @dinings }
 end
