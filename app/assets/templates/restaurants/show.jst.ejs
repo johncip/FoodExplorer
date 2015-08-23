@@ -3,7 +3,7 @@
 <div class="content-panel clearfix">
 
   <h2><%= restaurant.escape("name") %></h2>
-  <div class="map-container"></div>
+  <div class="map-container map-square"></div>
 
   <img src="<%= restaurant.escape('image_url')%>" class="photo">
 
@@ -18,14 +18,15 @@
 
   <p>Yelp rating: <img src="<%= restaurant.escape('rating_img_url')%>" class="rating"></p>
 
+  In your lists: foo
+  <br>
+
   <div class="badge">
-    <a href="#" class="favorite">♥</a>
-    <p>I love this place!</p>
+    <a href="#" class="favorite">♥</a> I love this place!
   </div>
 
   <div class="badge">
-    <a href="#" class="visited">✓</a>
-    <p>I've eaten here!</p>
+    <a href="#" class="visited">✓</a> I've eaten here!
   </div>
 
 </div>

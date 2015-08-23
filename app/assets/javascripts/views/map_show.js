@@ -3,6 +3,8 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     id: 'map-canvas'
   },
 
+  maxAutoZoom: 16,
+
   initialize: function(options) {
     this.parentView = options.parentView;
 
@@ -15,11 +17,8 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     }
 
     if (this.model) {
-      this.listenTo(this.model, 'sync', this.placeMarker);
+      this.listenTo(this.model, 'sync', this.addMarker);
     }
-  },
-
-  placeMarker: function () {
   },
 
   addMarker: function(restaurant) {
@@ -41,10 +40,13 @@ FoodEx.Views.MapShow = Backbone.View.extend({
       view.parentView.thumbBox.highlightThumb(restaurant);
     });
 
-
     this._markers[restaurant.id] = marker;
     this._bounds.extend(marker.getPosition());
     this._map.fitBounds(this._bounds);
+
+    if(this._map.getZoom() > this.maxAutoZoom) {
+      this._map.setZoom(this.maxAutoZoom);
+    }
   },
 
   bounceMarker: function(id) {

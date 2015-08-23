@@ -30,8 +30,13 @@
   width: 200px;
 }
 
+.badge {
+  display: inline-block;
+}
+
 .badge a {
-  display: block;
+  margin: auto;
+  display: inline-block;
   text-align: center;
   background-color: #eee;
   border-radius: 50%;
