@@ -1,5 +1,5 @@
 FoodEx.Views.RestaurantShow = Backbone.CompositeView.extend(
-  _.extend({}, FoodEx.Mixins.Renderable, {
+  _.extend({}, FoodEx.Mixins.Renderable, FoodEx.Mixins.WithSidebar, {
     template: JST['restaurants/show'],
     className: 'content-container clearfix',
 
@@ -11,14 +11,6 @@ FoodEx.Views.RestaurantShow = Backbone.CompositeView.extend(
 
     templateOpts: function() {
       return { restaurant: this.model };
-    },
-
-    addSidebar: function() {
-      var sidebar = new FoodEx.Views.Sidebar({
-        collection: FoodEx.lists,
-        model: this.model
-      });
-      this.addSubview('.sidebar', sidebar);
     },
 
     addMapShow: function() {
