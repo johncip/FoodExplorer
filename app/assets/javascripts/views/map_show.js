@@ -6,9 +6,7 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     id: 'map-canvas'
   },
 
-  initialize: function(options) {
-    this.parentView = options.parentView;
-
+  initialize: function() {
     this._markers = {};
     this._lastZ = 0;
 
@@ -26,7 +24,6 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     if (this._markers[restaurant.id]) {
       return;
     }
-    var view = this;
 
     var marker = new google.maps.Marker({
       position: {
@@ -39,7 +36,7 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     });
 
     google.maps.event.addListener(marker, 'mouseover', function() {
-      view.parentView.thumbBox.highlightThumb(restaurant);
+      FoodEx.pubsub.trigger('marker:hover', restaurant);
     });
 
     this._markers[restaurant.id] = marker;

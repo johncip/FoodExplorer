@@ -4,19 +4,20 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend(
     className: 'restaurant-thumb-box-container',
 
     orderableOpts: {
-      // listings have ordering, not restaurants
-      // but we look them up from the restaurant model instance
+      /* listings have ordering, not restaurants, but
+         we look them up from the restaurant model instance */
       dataAttr: 'restaurant-id',
       selector: 'li'
     },
 
     orderableModel: function(id) {
-      return this.collection.get(id).listing(); // shouldn't need to fetch
+      return this.collection.get(id).listing(); // no fetch
     },
 
     initialize: function() {
       this.listenTo(this.collection, 'add', this.addThumb);
       this.listenTo(this.collection, 'remove', this.removeThumb);
+      this.listenTo(FoodEx.pubsub, 'marker:hover', this.highlightThumb);
       this.collection.each(this.addThumb.bind(this));
     },
 

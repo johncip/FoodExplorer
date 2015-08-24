@@ -8,12 +8,10 @@ FoodEx.Views.ListThumbBox = Backbone.CompositeView.extend(
       selector: 'li'
     },
 
-    initialize: function(options) {
+    initialize: function() {
       this.listenTo(this.collection, 'sync', this.onRender);
       this.listenTo(this.collection, 'add', this.addThumb);
       this.collection.each(this.addThumb.bind(this));
-
-      this.parentView = options.parentView;
     },
 
     addThumb: function(list) {
@@ -21,12 +19,6 @@ FoodEx.Views.ListThumbBox = Backbone.CompositeView.extend(
         model: list
       });
       this.addSubview('ul', thumb);
-
-      // TODO: fixme
-      if (this.parentView instanceof FoodEx.Views.ListsIndex) {
-        this.listenTo(list, 'change:ord',
-          this.parentView.replaceSidebar.bind(this.parentView));
-      }
     },
 
     onRender: function() {

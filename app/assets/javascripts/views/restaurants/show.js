@@ -23,8 +23,7 @@ FoodEx.Views.RestaurantShow = Backbone.CompositeView.extend(
 
     addMapShow: function() {
       var mapShow = new FoodEx.Views.MapShow({
-        model: this.model,
-        parentView: this
+        model: this.model
       });
       this.addSubview('.map-container', mapShow);
       this.mapShow = mapShow;

@@ -6,11 +6,12 @@ FoodEx.Views.ListsIndex = Backbone.CompositeView.extend(
     initialize: function() {
       this.addSidebar();
       this.addThumbBox();
+      this.listenTo(this.collection, 'sort', this.replaceSidebar);
     },
 
     addSidebar: function() {
       var sidebar = new FoodEx.Views.Sidebar({
-        collection: this.collection
+        collection: FoodEx.lists
       });
       this.sidebar = sidebar;
       this.addSubview('.sidebar', sidebar);
@@ -18,15 +19,13 @@ FoodEx.Views.ListsIndex = Backbone.CompositeView.extend(
 
     addThumbBox: function() {
       var thumbBox = new FoodEx.Views.ListThumbBox({
-        collection: this.collection,
-        parentView: this
+        collection: this.collection
       });
       this.addSubview('.thumb-box', thumbBox);
     },
 
     replaceSidebar: function() {
       this.removeSubview('.sidebar', this.sidebar);
-      this.collection.sort();
       this.addSidebar();
     }
   }));

@@ -29,8 +29,7 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend(
 
     addMapShow: function() {
       var mapShow = new FoodEx.Views.MapShow({
-        collection: this.model.restaurants(),
-        parentView: this
+        collection: this.model.restaurants()
       });
       this.addSubview('.map-container', mapShow);
       this.mapShow = mapShow;

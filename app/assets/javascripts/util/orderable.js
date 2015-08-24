@@ -40,5 +40,7 @@ FoodEx.Mixins.Orderable = {
         });
       }
     }.bind(this));
+
+    this.collection.sort();
   }
 };
