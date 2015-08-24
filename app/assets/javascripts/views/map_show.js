@@ -1,23 +1,22 @@
 FoodEx.Views.MapShow = Backbone.View.extend({
   className: 'map-show-container',
-  maxAutoZoom: 16,
+  maxZoom: 16,
 
   attributes: {
     id: 'map-canvas'
   },
 
   initialize: function() {
-    this._markers = {};
-    this._lastZ = 0;
-
-    if (this.collection) {
+    if (this.collection) { // list show
       this.listenTo(this.collection, 'add', this.addMarker);
       this.listenTo(this.collection, 'remove', this.removeMarker);
     }
 
-    if (this.model) {
+    if (this.model) { // restaurant show
       this.listenTo(this.model, 'sync', this.addMarker);
     }
+
+    $(window).on('resize', this.forceInitMap.bind(this));
   },
 
   addMarker: function(restaurant) {
@@ -35,17 +34,27 @@ FoodEx.Views.MapShow = Backbone.View.extend({
       title: restaurant.get('name'),
     });
 
+    this._markers[restaurant.id] = marker;
+    this.placeMarker(marker);
+
     google.maps.event.addListener(marker, 'mouseover', function() {
       FoodEx.pubsub.trigger('marker:hover', restaurant);
     });
+  },
 
-    this._markers[restaurant.id] = marker;
+  placeMarker: function (marker) {
     this._bounds.extend(marker.getPosition());
     this._map.fitBounds(this._bounds);
 
-    if(this._map.getZoom() > this.maxAutoZoom) {
-      this._map.setZoom(this.maxAutoZoom);
+    if(this._map.getZoom() > this.maxZoom) {
+      this._map.setZoom(this.maxZoom);
     }
+  },
+
+  removeMarker: function(restaurant) {
+    var marker = this._markers[restaurant.id];
+    marker.setMap(null);
+    delete this._markers[restaurant.id];
   },
 
   bounceMarker: function(id) {
@@ -56,12 +65,6 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     setTimeout(function() {
       marker.setAnimation(null);
     }, 700);
-  },
-
-  removeMarker: function(restaurant) {
-    var marker = this._markers[restaurant.id];
-    marker.setMap(null);
-    delete this._markers[restaurant.id];
   },
 
   initMap: function() {
@@ -75,8 +78,15 @@ FoodEx.Views.MapShow = Backbone.View.extend({
       zoom: 12
     };
 
+    this._markers = {};
     this._map = new google.maps.Map(this.el, mapOptions);
     this._bounds = new google.maps.LatLngBounds();
     this.collection.each(this.addMarker.bind(this));
+  },
+
+  forceInitMap: function () {
+    this._map = null;
+
+    this.initMap();
   }
 });
