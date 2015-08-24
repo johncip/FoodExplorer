@@ -28,7 +28,7 @@ module Resourceful
   end
 
   def create_model
-    instance_variable_set(ivar_name, self.class.model.new())
+    instance_variable_set(ivar_name, self.class.model.new)
   end
 
   # Returns the usual name for an instance variable for this controller/model.
