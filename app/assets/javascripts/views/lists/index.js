@@ -4,9 +4,8 @@ FoodEx.Views.ListsIndex = Backbone.CompositeView.extend(
     className: 'content-container clearfix',
 
     initialize: function() {
-      this.addSidebar();
+      this.sidebar = this.addSidebar();
       this.addThumbBox();
-      this.listenTo(this.collection, 'sort', this.replaceSidebar);
     },
 
     addThumbBox: function() {
@@ -14,10 +13,5 @@ FoodEx.Views.ListsIndex = Backbone.CompositeView.extend(
         collection: this.collection
       });
       this.addSubview('.thumb-box', thumbBox);
-    },
-
-    replaceSidebar: function() {
-      this.removeSubview('.sidebar', this.sidebar);
-      this.addSidebar();
     }
   }));

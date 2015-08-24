@@ -3,11 +3,11 @@
   (common stuff for persisting jQuery UI .sortable)
 
   It is assumed that models have an "ord" property, and that collections provide
-  getOrFetch. Decorated views must provide orderableOpts, e.g.:
+  getOrFetch. Decorated views must provide a few orderableOpts, e.g.:
 
   orderableOpts: {
    dataAttr: 'restaurant-id',
-   selector: 'li'
+   selector: 'li',
   },
 
   They can optionally override orderableModel(), if the model being ordered
@@ -23,7 +23,14 @@ FoodEx.Mixins.Orderable = {
   },
 
   orderableModel: function(id) {
-    return this.collection.get(id); // shouldn't need to fetch
+    return this.collection.get(id); // don't fetch
+  },
+
+  resortSubviews: function() {
+    var subviews = this.subviews('ul'); // ul assumed for now
+    subviews.sort(function(a, b) {
+      return a.model.get('ord') - b.model.get('ord');
+    });
   },
 
   saveOrds: function() {

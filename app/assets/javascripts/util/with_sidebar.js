@@ -15,5 +15,7 @@ FoodEx.Mixins.WithSidebar = {
     });
 
     this.addSubview('.sidebar', sidebar);
+
+    return sidebar;
   },
 };
