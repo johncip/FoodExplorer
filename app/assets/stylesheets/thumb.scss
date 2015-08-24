@@ -59,6 +59,10 @@
     margin: 0 auto 0.25em;
   }
 
+  .plus * {
+    opacity: 0.4;
+  }
+
   .plus::before {
     display: none;
   }
@@ -67,11 +71,11 @@
     content: '+';
     font-size: 250%;
     text-shadow: 1px 1px 0px darken($green, 50);
-    background-color: $green;
+    background-color: lighten($green, 10);
     color: lighten($green, 80);
     position: absolute;
-    top: -0.5em;
-    left: -0.25em;
+    top: 40px;
+    left: 48px;
     border-radius: 50%;
     width: 1em;
     height: 1em;
