@@ -1,15 +1,4 @@
-def favorite_list(title)
-  List.find_by_title(title).update!(favorite: true)
-end
-
-def dine_at(yelp_id, favorite, visited)
-  Dining.create!(
-    user_id: 1,
-    restaurant: Restaurant.find_by_yelp_id(yelp_id),
-    favorite: favorite,
-    visited: visited
-  )
-end
+# rubocop:disable all
 
 # ----------------------------------------------------------------------------
 # Data definitions
@@ -79,6 +68,7 @@ rest_ids = {
     'miyako-old-fashioned-ice-cream-san-francisco',
     'smitten-ice-cream-san-francisco-3',
     'st-francis-fountain-san-francisco',
+    'swensens-ice-cream-san-francisco'
   ]
 }
 
@@ -108,6 +98,23 @@ end
 
 list_descriptions.each do |title, description|
   List.find_by_title!(title).update!(description: description)
+end
+
+# ----------------------------------------------------------------------------
+# Set Booleans
+# ----------------------------------------------------------------------------
+
+def favorite_list(title)
+  List.find_by_title(title).update!(favorite: true)
+end
+
+def dine_at(yelp_id, favorite, visited)
+  Dining.create!(
+    user_id: 1,
+    restaurant: Restaurant.find_by_yelp_id(yelp_id),
+    favorite: favorite,
+    visited: visited
+  )
 end
 
 favorite_list 'Red Hill Favorites'

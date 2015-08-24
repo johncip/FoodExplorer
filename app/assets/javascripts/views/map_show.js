@@ -86,7 +86,6 @@ FoodEx.Views.MapShow = Backbone.View.extend({
 
   forceInitMap: function () {
     this._map = null;
-
     this.initMap();
   }
 });
