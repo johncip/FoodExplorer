@@ -5,6 +5,7 @@ module Resourceful
   include LoginRequired
 
   included do
+    before_action :create_model, only: [:new, :create]
     before_action :find_model, only: [:show, :update]
     before_action :assign_collection, only: [:index]
   end
@@ -24,6 +25,10 @@ module Resourceful
   # e.g. @restaurant = Restaurant.find(params[:id])
   def find_model
     instance_variable_set(ivar_name, self.class.model.find(params[:id]))
+  end
+
+  def create_model
+    instance_variable_set(ivar_name, self.class.model.new())
   end
 
   # Returns the usual name for an instance variable for this controller/model.

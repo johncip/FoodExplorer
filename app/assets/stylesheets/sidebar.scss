@@ -9,6 +9,11 @@ $marksize: 1.75em;
   .active {
     background-color: $selected;
   }
+
+  .drop-hover a {
+    background-color: $yellow;
+  }
+
   a {
     display: block;
     float: left;

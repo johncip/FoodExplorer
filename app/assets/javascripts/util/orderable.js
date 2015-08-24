@@ -23,7 +23,7 @@ FoodEx.Mixins.Orderable = {
   },
 
   orderableModel: function(id) {
-    return this.collection.getOrFetch(id);
+    return this.collection.get(id); // shouldn't need to fetch
   },
 
   saveOrds: function() {

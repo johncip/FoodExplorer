@@ -9,7 +9,7 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend(
 
     onMouseenter: function() {
       var $li = $(event.target).parents('li');
-      this.mapShow.bounceMarker($li.data('listing-id'));
+      this.mapShow.bounceMarker($li.data('restaurant-id'));
     },
 
     initialize: function() {

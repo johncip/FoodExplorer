@@ -6,6 +6,18 @@ class Api::ListingsController < ApplicationController
     Listing
   end
 
+  # TODO: move to resourceful & refactor
+  def create
+    @listing.contributor = current_user
+
+    if @listing.update(listing_params)
+      render json: @listing
+    else
+      render json: @listing.errors.full_messages, status: :unprocessable_entity
+    end
+  end
+
+  # TODO: move to resourceful & refactor
   def update
     if @listing.update(listing_params)
       render json: @listing
@@ -21,6 +33,6 @@ class Api::ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require(:listing).permit(:ord)
+    params.require(:listing).permit(:ord, :restaurant_id, :list_id)
   end
 end

@@ -7,7 +7,8 @@ FoodEx.Views.NavBar = Backbone.View.extend(
     },
 
     logout: function() {
-      $.ajax('/session', {
+      $.ajax({
+        url: '/session',
         method: 'delete',
 
         success: function() {

@@ -2,7 +2,6 @@
 - [x] Fix duplicate logging
 - [x] Reduce number of queries
 - [-] Restaurant show page
-- [ ] Draggable restaurants
 
 ### Feature: Google Maps
 - [x] {db} Promote latitude & longitude
@@ -58,10 +57,8 @@
   - [x] Don't make unnecessary PUT requests
 - [x] Sortable List thumbs
   - [x] Use generic sortable mixin
-- [ ] Draggable
-  - [ ] Change membership
-  - [ ] Sort lists & restaurants in views
-  - [ ] Put favorites first
+- [x] Draggable
+  - [x] Change membership
 
 ### Feature: Add Restaurants
 ###### (depends on drag and drop)
@@ -105,3 +102,4 @@
 - [ ] be explicit about containers
 - [ ] "be your own"
 - [ ] Reduce queries even more
+- [ ] Google maps markers resize bug

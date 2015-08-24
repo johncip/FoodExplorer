@@ -4,12 +4,14 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend(
     className: 'restaurant-thumb-box-container',
 
     orderableOpts: {
-      dataAttr: 'listing-id', // listings have ordering, not restaurants
+      // listings have ordering, not restaurants
+      // but we look them up from the restaurant model instance
+      dataAttr: 'restaurant-id',
       selector: 'li'
     },
 
     orderableModel: function(id) {
-      return this.collection.getOrFetch(id).listing();
+      return this.collection.get(id).listing(); // shouldn't need to fetch
     },
 
     initialize: function() {
