@@ -19,7 +19,7 @@ body,
   height: 100%;
 }
 body {
-  font-family: 'Lato';
+  font-family: 'Lato', 'Lucida Gothic', Helvetica, sans-serif;
   font-size: 12pt;
 }
 a {
@@ -44,7 +44,7 @@ input {
 }
 .logo,
 .logo * {
-  font-family: 'Courgette', cursive;
+  font-family: 'Courgette', fantasy, cursive, serif;
 }
 .center {
   position: absolute;

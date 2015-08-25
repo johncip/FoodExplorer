@@ -12,9 +12,11 @@
  */
 
 @import url("http://fonts.googleapis.com/css?family=Courgette");
-@import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,900,900italic,700italic,700");
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
 
 @import "_reset";
+
+@import "font-awesome";
 @import "global";
 
 @import "content";

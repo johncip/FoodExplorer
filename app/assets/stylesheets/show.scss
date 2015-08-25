@@ -24,34 +24,3 @@
     left: -0.4em;
   }
 }
-
-.badge {
-  margin-bottom: $spc;
-}
-
-.badge a {
-  margin: auto;
-  display: inline-block;
-  text-align: center;
-  background-color: #eee;
-  border-radius: 50%;
-  width: 1em;
-  height: 1em;
-  box-shadow: 0 1px 0 #ccc;
-  font-size: 32px;
-  transition: none;
-
-  &.visited {
-    color: $green;
-  }
-  &.favorite {
-    color: $red;
-  }
-  &:hover {
-    background-color: #ddd;
-  }
-  &:active {
-    background-color: #dfdfdf;
-    box-shadow: 0 -1px 0 #ccc;
-  }
-}
