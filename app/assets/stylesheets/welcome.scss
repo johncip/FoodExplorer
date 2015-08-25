@@ -1,0 +1,15 @@
+.welcome, .features {
+  font-size: 110%;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  color: lighten(black, 30);
+}
+
+.features {
+  list-style-type: square;
+  margin-left: 2em;
+}
+
+.em {
+  font-weight: 700;
+}

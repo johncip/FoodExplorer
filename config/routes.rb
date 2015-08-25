@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :restaurants, except: [:new, :edit]
     resources :lists, except: [:new, :edit]
     resources :listings, except: [:new, :edit]
+    resources :dinings, except: [:new, :edit]
 
     post '/restaurants/:id/favorite', to: 'restaurants#favorite'
     post '/restaurants/:id/visited', to: 'restaurants#visited'

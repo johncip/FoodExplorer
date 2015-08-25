@@ -55,3 +55,18 @@
     }
   }
 }
+
+textarea {
+  font: inherit;
+  border: none;
+  width: 100%;
+  padding: 1em;
+}
+
+.explain {
+  font-size: 85%;
+  font-style: italic;
+  width: 100%;
+  text-align: right;
+  margin-right: 1em;
+}

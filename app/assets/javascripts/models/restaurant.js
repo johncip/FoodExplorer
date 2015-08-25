@@ -19,6 +19,14 @@ FoodEx.Models.Restaurant = Backbone.Model.extend({
     return this._categories;
   },
 
+  dining: function() {
+    this._dining = this._dining ||
+      new FoodEx.Models.Dining({}, {
+        restaurant: this
+      });
+    return this._dining;
+  },
+
   parse: function(payload) {
     if (payload.categories) {
       this._categories = payload.categories;
@@ -28,6 +36,9 @@ FoodEx.Models.Restaurant = Backbone.Model.extend({
     }
     if (payload.listing) {
       this.listing().set(payload.listing);
+    }
+    if (payload.dining) {
+      this.dining().set(payload.dining);
     }
     return payload;
   }

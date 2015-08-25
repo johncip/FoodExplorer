@@ -124,5 +124,5 @@ Restaurant.create!([
   {yelp_id: "swensens-ice-cream-san-francisco", name: "Swensen's Ice Cream", city: "San Francisco", state: "CA", zip: "94109", address: "1999 Hyde St", hood: "Russian Hill", url: "http://www.yelp.com/biz/swensens-ice-cream-san-francisco", image_url: "http://s3-media4.fl.yelpcdn.com/bphoto/JL-nyN4HsWVhvxG0LwMOVQ/l.jpg", rating: 4.5, rating_img_url: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png", is_closed: false, lat: 37.799060176704, lng: -122.41916140154}
 ])
 User.create!([
-  {username: "admin", password_digest: "$2a$10$0j4A5Ylm3VUKKArBu7KvhueIp.cnuGzlRBn3Hen2DKadCdfZClHcW", session_token: "2Lm-7kJg_Z8-ppFesz_eEw", description: nil, location: nil, image_url: nil, guest: false}
+  {username: "admin", password_digest: "$2a$10$eTUq67CE6TXT3g.xi/bsK.UAqfz3iCoXWfPZFyL3jkNAFaiH7NXgC", session_token: "RG2RySBV36M-rjq06BtA1A", description: nil, location: nil, image_url: nil, guest: false}
 ])

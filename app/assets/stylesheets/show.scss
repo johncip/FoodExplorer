@@ -6,14 +6,14 @@
   z-index: 0;
   vertical-align: bottom;
 
-  p {
+  .notes {
     position: relative;
     top: 0.75em;
     left: 2em;
     z-index: 1;
   }
 
-  p:before {
+  .notes:before {
     content: '“';
     font-family: Georgia, serif;
     color: #ddd;

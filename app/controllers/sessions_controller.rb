@@ -1,5 +1,7 @@
 # Controller for sign in and out
 class SessionsController < ApplicationController
+  include Seedable
+
   before_action :redirect_if_logged_in, only: [:new, :create]
 
   def new
@@ -21,9 +23,8 @@ class SessionsController < ApplicationController
     render json: {}
   end
 
-  # Logs in a guest user. For now, just hard coded.
-  # TODO: create temporary users
   def guest
+    rake_db_seed
     user = User.find_by_username!('admin')
     log_in!(user)
     render json: {}

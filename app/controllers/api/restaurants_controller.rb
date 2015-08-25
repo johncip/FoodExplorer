@@ -12,30 +12,6 @@ class Api::RestaurantsController < ApplicationController
     :dinings
   end
 
-  def favorite
-    flag(:favorite)
-  end
-
-  def visited
-    flag(:visited)
-  end
-
-  def flag(name)
-    dining = Dining.find_or_create_by(restaurant: @restaurant,
-                                      diner: current_user)
-
-    if dining.update(name => params[name])
-      render json: @restaurant
-    else
-      render json: @restaurant.errors.full_messages, status: 422
-    end
-  end
-
-  def note
-    dining = Dining.find_or_create_by(restaurant: @restaurant,
-                                      diner: current_user)
-  end
-
   private
 
   def assign_collection

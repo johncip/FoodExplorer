@@ -16,9 +16,9 @@
   </div>
 
   <section class="description">
-    <p>
-      <% if (restaurant.escape("notes")) { %>
-        <%= restaurant.escape("notes") %>
+    <p class="notes">
+      <% if (restaurant.dining().escape("notes")) { %>
+        <%= restaurant.dining().escape("notes") %>
         <a href="javascript:void(0)">Edit this note.</a>
       <% } else { %>
         No note. <a href="javascript:void(0)">Add one!</a>
