@@ -85,6 +85,10 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     if (this.collection) {
       this.collection.each(this.addMarker.bind(this));
     }
+
+    if (this.model && this.model.escape('lat')) { // fetched
+      this.addMarker(this.model);
+    }
   },
 
   forceInitMap: function () {
