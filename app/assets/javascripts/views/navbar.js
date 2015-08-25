@@ -13,6 +13,10 @@ FoodEx.Views.NavBar = Backbone.View.extend(
 
         success: function() {
           window.location.assign('/');
+        },
+
+        error: function() {
+          window.location.assign('/');
         }
       });
     }
