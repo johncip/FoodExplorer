@@ -8,8 +8,10 @@ gem 'sass-rails', '~> 5.0'
 
 # Deployment
 gem 'figaro'
-gem 'rails_12factor', group: :production
-gem 'puma'
+group :production do
+  gem 'rails_12factor'
+  gem 'puma'
+end
 
 # Gimme gimme data
 gem 'yelp'

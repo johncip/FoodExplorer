@@ -25,6 +25,7 @@ rules:
   no-spaced-func: 1
   no-alert: 1
   curly: 1
+  no-trailing-spaces: 1
 
 env:
   browser: true
