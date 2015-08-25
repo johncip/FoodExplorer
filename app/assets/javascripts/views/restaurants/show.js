@@ -5,6 +5,7 @@ FoodEx.Views.RestaurantShow = Backbone.CompositeView.extend(
 
     events: {
       'click .content-panel .badge a': 'toggleBadge',
+      'click .description p a': 'editNote'
     },
 
     templateOpts: function() {
@@ -24,6 +25,16 @@ FoodEx.Views.RestaurantShow = Backbone.CompositeView.extend(
     onRender: function() {
       this.mapShow.initMap();
       this.updateBadges();
+    },
+
+    editNote: function (event) {
+      var $note = $(event.target.closest('p'));
+      var $parent = $note.parent();
+      var $textarea = $('<textarea>' + $note.text() + '</textarea>');
+
+
+      $note.remove();
+      $parent.append($textarea);
     },
 
     // ------------------------------------------------------------

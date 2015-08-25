@@ -2,7 +2,7 @@
 class Api::RestaurantsController < ApplicationController
   include Resourceful
 
-  before_action :find_model, only: [:show, :update, :favorite, :visited]
+  before_action :find_model, only: [:show, :update, :favorite, :visited, :note]
 
   def self.model
     Restaurant
@@ -29,6 +29,11 @@ class Api::RestaurantsController < ApplicationController
     else
       render json: @restaurant.errors.full_messages, status: 422
     end
+  end
+
+  def note
+    dining = Dining.find_or_create_by(restaurant: @restaurant,
+                                      diner: current_user)
   end
 
   private
