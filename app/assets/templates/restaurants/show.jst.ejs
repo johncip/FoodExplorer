@@ -1,18 +1,17 @@
 <div class="sidebar"></div>
 
 <div class="content-panel clearfix">
-
   <h2><%= restaurant.escape("name") %></h2>
 
   <div class="badge">
-    <a class="favorite">♥</a> I love this place!
-    <a class="visited">✓</a> I've eaten here!
+    <a class="visited nope">✓</a>
+    <p id='visited-text'>Haven't been.</p>
+    <a class="favorite nope">♥</a>
+    <p id='favorite-text'>Not my favorite.</p>
   </div>
 
   <div>
-    <img src='images/clear.png'
-         style="background-image: url(<%= restaurant.escape('image_url') %>)"
-         class="photo cover">
+    <img class="photo cover" src='images/clear.png' style="background-image: url(<%= restaurant.escape('image_url') %>)">
 
     <div class="map-container map-square"></div>
   </div>
@@ -25,17 +24,33 @@
     </section>
   <% } %>
 
-  <p class="address">
-    <%= restaurant.escape("address") %><br>
-    <%= restaurant.escape("city") %>
-    <%= restaurant.escape("state") %>
-    <%= restaurant.escape("zip") %>
-  </p>
-  <p>Categories: <%= restaurant.escape("categories") %></p>
-  <p>Neighborhoods: <%= restaurant.escape("neighborhoods") %></p>
+  <section class="stats">
+    <p class="address">
+      <i class="fa fa-fw fa-map-marker"></i>
+      <% if (restaurant.escape("address")) { %>
+        <%= restaurant.escape("address") %>,
+      <% } %>
+      <%= restaurant.escape("city") %>
+      <%= restaurant.escape("state") %>
+      <%= restaurant.escape("zip") %>
+    </p>
 
-  <p>In your lists: <%= restaurant.escape("lists") %></p>
+    <p>
+      <i class="fa fa-fw fa-list-ul"></i>
+      <%= restaurant.categories().join(', ') %>
+    </p>
 
-  <p>Yelp rating: <img src="<%= restaurant.escape('rating_img_url')%>" class="rating"></p>
+    <p>
+      <i class="fa fa-fw fa-home"></i>
+      <%= restaurant.escape("neighborhoods").replace(",", ", ") %>
+    </p>
 
+    <p>
+      <i class="fa fa-fw fa-yelp"></i>
+      <img class="rating" src="<%= restaurant.escape('rating_img_url')%>">
+    </p>
+  </section>
+
+  <h3>In your lists</h3>
+  <p><%= restaurant.lists().join(', ') %></p>
 </div>

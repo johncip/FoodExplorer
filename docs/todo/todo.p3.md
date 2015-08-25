@@ -1,7 +1,25 @@
 ### Next
-- [x] Fix duplicate logging
-- [x] Reduce number of queries
-- [-] Restaurant show page
+- [ ] Toggle visited
+- [ ] Toggle favorited
+- [ ] Center thumbs in padding
+- [ ] Search & add restaurants...
+- [ ] "Be your own" / welcome page
+- [ ] Phase 4 (Notifications)
+- [ ] Phase 5 (Friends)
+
+### Feature: Search & Add Restaurants
+- [ ] Play with Yelp search API
+- [ ] Search view
+- [ ] Results view
+- [ ] Pagination
+
+### Front End
+- [x] Fix thumb-box margin
+- [ ] Fix log out twice bug
+- [ ] Use Bootstrap
+- [ ] Random background for sign-in
+- [ ] Different thumbs for lists
+- [ ] Center thumbs in padding
 
 ### Feature: Google Maps
 - [x] {db} Promote latitude & longitude
@@ -21,8 +39,9 @@
 - [x] Factor out getOrFetch
 - [x] Refactor CSS (make selectors more generic)
 - [x] Factor out Dining + flag pattern
-- [ ] Make sidebar view a mixin (or extend compositeview)
-- [ ] Don't use #/ in links
+- [x] Google maps markers resize bug
+- [x] Make sidebar view a mixin
+- [x] Don't use #/ in links
 
 ### Feature: Restaurant show page
 - [x] Backbone view
@@ -31,9 +50,9 @@
 - [x] Fix thumbnail links
 - [x] Include map & add marker
 - [x] Display visited & favorited
+- [x] Include Yelp stuff
+- [x] Style
 - [ ] Toggle visited & favorited
-- [ ] Include Yelp stuff
-- [ ] Style
 
 ### Feature: Restaurant Notes
 - [ ] generate model & migration
@@ -60,24 +79,11 @@
 - [x] Draggable
   - [x] Change membership
 
-### Feature: Add Restaurants
-###### (depends on drag and drop)
-- [ ] Play with Yelp search API
-- [ ] Search view
-- [ ] Results view
-- [ ] Pagination
-
 ### Deployment & Code Quality
 - [x] Git hook for Rubocop
 - [x] Use rails cops
 - [x] Incorporate JS style checking
 - [x] Fix duplicate logging
-
-### Front End
-- [x] Fix thumb-box margin
-- [ ] Use Bootstrap
-- [ ] Random background for sign-in
-- [ ] Different thumbs for lists
 
 ### Back End
 - [x] Fix url-encoding issue (store yid unencoded & change lookup)
@@ -88,18 +94,5 @@
   - [x] Restaurants Index
   - [x] Restaurant Show
   - [x] Listing Show
-- [ ] Reduce number of renders
-
-### Later
-- [ ] Split index items & thumbs into favorites, non-favorites?
-- [ ] Have image placeholder for offline
-- [ ] Server config: don't expire assets, use gzip
-- [ ] Reduce number of requests
-- [ ] Loading throbber
-- [ ] Show/hide map
-- [ ] Fork marker icon (with shadows & proper z-index!)
-- [ ] redo border/padding on thumbs
-- [ ] be explicit about containers
-- [ ] "be your own"
-- [ ] Reduce queries even more
-- [ ] Google maps markers resize bug
+- [x] Reduce number of renders
+- [x] Fix 'ambiguous ord' bug

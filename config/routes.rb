@@ -5,9 +5,11 @@ Rails.application.routes.draw do
 
   get '/guest', to: 'sessions#guest'
 
-  namespace :api, defaults: {format: :json} do
+  namespace :api, defaults: { format: :json } do
     resources :restaurants, except: [:new, :edit]
     resources :lists, except: [:new, :edit]
     resources :listings, except: [:new, :edit]
+
+    post '/restaurants/:id/favorite', to: 'restaurants#favorite'
   end
 end

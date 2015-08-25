@@ -1,4 +1,14 @@
-### Comments
+### Front End
+- [ ] Show/hide map handle
+- [ ] "Be your own" / welcome page
+- [ ] Factor updateBadges
+- [ ] Remove CompositeView.prototype.onRender call
+
+### Back End
+- [ ] Reduce queries even more
+- [ ] Use dining model on front end (remove bare ajax calls)
+
+### Feature: Comments
 - [ ] generate model & migration
 - [ ] fix migration
 - [ ] generate api controller
@@ -15,4 +25,7 @@
 - [ ] Proper guest user
 - [ ] Util: get city and state by ZIP code?
 - [ ] New user seed data
-- [ ] User View with profile pic
+- [ ] User View with profile pic (cloudinary / gravatar)
+
+### Deploy
+- [ ] Server config: use compression & cache

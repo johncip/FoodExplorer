@@ -1,6 +1,7 @@
 # A single restaurant entry. Most attributes are dependent on the yelp_id.
 class Restaurant < ActiveRecord::Base
   has_many :listings, dependent: :destroy
+  has_many :lists, through: :listings
   has_many :dinings, dependent: :destroy
   has_many :diners, through: :dinings, source: :diner
 
@@ -54,21 +55,13 @@ class Restaurant < ActiveRecord::Base
 
   def user_favorite?(user)
     dining = dinings.find_by(diner: user)
-    dining && dining.favorite?
+    !!dining && dining.favorite?
   end
 
   def user_visited?(user)
     dining = dinings.find_by(diner: user)
-    dining && dining.visited?
+    !!dining && dining.visited?
   end
-
-  # def user_favorite?(user)
-  #   Dining.exists_with_flag(user.id, id, :favorite)
-  # end
-  #
-  # def user_visited?(user)
-  #   Dining.exists_with_flag(user.id, id, :visited)
-  # end
 
   # -------------------------------------------------------------------------
   # Dynamic attrs
