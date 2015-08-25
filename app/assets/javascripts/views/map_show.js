@@ -81,7 +81,10 @@ FoodEx.Views.MapShow = Backbone.View.extend({
     this._markers = {};
     this._map = new google.maps.Map(this.el, mapOptions);
     this._bounds = new google.maps.LatLngBounds();
-    this.collection.each(this.addMarker.bind(this));
+
+    if (this.collection) {
+      this.collection.each(this.addMarker.bind(this));
+    }
   },
 
   forceInitMap: function () {
