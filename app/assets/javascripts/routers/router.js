@@ -12,8 +12,10 @@ FoodEx.Routers.Router = Backbone.Router.extend({
 
     this.$content = this.$rootEl.find('#content');
     this.$nav = this.$rootEl.find('nav');
+    this.$footer = this.$rootEl.find('footer');
 
     this.showNav();
+    this.showFooter();
 
     Backbone.history.start();
   },
@@ -50,8 +52,13 @@ FoodEx.Routers.Router = Backbone.Router.extend({
   },
 
   showNav: function() {
-    var navBar = new FoodEx.Views.NavBar();
-    this.$nav.html(navBar.render().$el);
+    var navbar = new FoodEx.Views.NavBar();
+    this.$nav.html(navbar.render().$el);
+  },
+
+  showFooter: function() {
+    var footer = new FoodEx.Views.Footer();
+    this.$footer.html(footer.render().$el);
   },
 
   _swapContent: function(view) {

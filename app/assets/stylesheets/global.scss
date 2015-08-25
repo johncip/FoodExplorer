@@ -14,9 +14,11 @@ $sidebarwidth: 200px;
 }
 html,
 body,
-#root,
-#content {
+#root {
   height: 100%;
+}
+#content {
+  min-height: 100%;
 }
 body {
   font-family: 'Lato', 'Lucida Gothic', Helvetica, sans-serif;

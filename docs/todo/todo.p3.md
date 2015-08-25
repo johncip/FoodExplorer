@@ -1,9 +1,15 @@
 ### Next
-- [ ] Constrain list thumb dragging
+- [ ] Don't delete restaurants ever
 - [ ] Search & add restaurants...
 - [ ] "Be your own" / welcome page
 - [ ] Phase 4 (Notifications)
 - [ ] Phase 5 (Friends)
+
+### UX Fixes
+- [ ] Annotate site
+- [ ] Better welcome
+- [ ] Different thumbs for lists
+- [ ] Constrain list thumb dragging
 
 ### Feature: Restaurant Notes
 - [ ] generate model & migration
@@ -28,7 +34,6 @@
 - [x] Fix log out twice bug
 - [ ] Use Bootstrap
 - [ ] Random background for sign-in
-- [ ] Different thumbs for lists
 
 ### Feature: Google Maps
 - [x] {db} Promote latitude & longitude
@@ -93,3 +98,4 @@
   - [x] Listing Show
 - [x] Reduce number of renders
 - [x] Fix 'ambiguous ord' bug
+- [ ] Don't delete restaurants ever

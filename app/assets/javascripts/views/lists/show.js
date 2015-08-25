@@ -5,6 +5,47 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend(
 
     events: {
       'mouseenter .thumb-box li': 'onMouseenter',
+      'click .description p a': 'editNote'
+    },
+
+    editNote: function (event) {
+      var list = this.model;
+      var text = list.escape('description');
+
+      var $note = $(event.target.closest('p'));
+      var $parent = $note.parent();
+      var $link = $(event.target.closest('a'));
+      var $textarea = $('<textarea>').val(text);
+      var $explain = $('<p>').text('(Editing Note. Press Tab or click outside to save.)')
+                             .addClass('explain');
+
+      $note.remove();
+      $parent.append($explain);
+      $parent.append($textarea);
+
+      $textarea.on('blur', function () {
+        // persist
+
+        // list.save({ description: $textarea.val() });
+
+        var newList = new FoodEx.Models.List({
+          id: list.id,
+          description: $textarea.val()
+        });
+
+        // debugger;
+
+        newList.save();
+
+
+        this.model.fetch({ merge: true }); // merge true?
+
+        $textarea.remove();
+        $parent.empty();
+        $note.html($textarea.val());
+        $parent.append($note);
+        $note.append($link);
+      }.bind(this));
     },
 
     onMouseenter: function() {

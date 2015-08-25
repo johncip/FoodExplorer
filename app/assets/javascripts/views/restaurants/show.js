@@ -46,7 +46,7 @@ FoodEx.Views.RestaurantShow = Backbone.CompositeView.extend(
       var $parent = $note.parent();
       var $link = $(event.target.closest('a'));
       var $textarea = $('<textarea>').val(text);
-      var $explain = $('<p>').text('(Tab or click outside to save.)')
+      var $explain = $('<p>').text('(Editing Note. Press Tab or click outside to save.)')
                              .addClass('explain');
 
       $note.remove();

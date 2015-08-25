@@ -4,6 +4,7 @@
 - [ ] Factor updateBadges
 - [ ] Remove CompositeView.prototype.onRender call
 - [ ] Center thumbs in padding
+- [ ] Factor notebox?
 
 ### Back End
 - [ ] Reduce queries even more

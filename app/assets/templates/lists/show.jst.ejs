@@ -1,16 +1,26 @@
 <div class="sidebar"></div>
 
 <div class="content-panel clearfix">
+
+  <p class="tip">
+    <i class="fa fa-lightbulb-o"></i>
+    Tip: You can copy a restaurant to another list by dragging! Green means it worked.
+  </p>
+
   <h2><%= list.escape("title") %></h2>
   <div class="map-container"></div>
 
-  <% if (list.escape("description")) { %>
-    <section class="description">
-      <p class="notes">
+  <h3>Your notes</h3>
+  <section class="description">
+    <p class="notes">
+      <% if (list.escape("description")) { %>
         <%= list.escape("description") %>
-      </p>
-    </section>
-  <% } %>
+        <a href="javascript:void(0)">Edit this note.</a>
+      <% } else { %>
+        <a href="javascript:void(0)">Add a note!</a>
+      <% }  %>
+    </p>
+  </section>
 
   <div class="thumb-box clearfix"></div>
 

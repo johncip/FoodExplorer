@@ -1,26 +1,45 @@
-.description {
-  margin: 2em 0;
+%pill-box {
+  background-color: #fafafa;
+  border: solid 1px #eee;
   padding: 1em;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  z-index: 0;
+  border-radius: 2px;
+}
+.description {
+  @extend %pill-box;
   vertical-align: bottom;
-
-  .notes {
-    position: relative;
-    top: 0.75em;
-    left: 2em;
-    z-index: 1;
+  margin-bottom: 2em;
+  z-index: 0;
+  a {
+    color: white;
+    font-size: 80%;
+    margin-left: 1em;
+    display: inline-block;
+    background-color: $green;
+    border-radius: 2px;
+    padding: 0.5em;
   }
-
-  .notes:before {
-    content: '“';
-    font-family: Georgia, serif;
-    color: #ddd;
-    position: absolute;
-    font-size: 500%;
-    z-index: -1;
-    top: -0.2em;
-    left: -0.4em;
+}
+.tip {
+  @extend %pill-box;
+  i {
+    margin-right: 0.5em;
   }
+}
+textarea {
+  font: inherit;
+  border: dashed 1px white;
+  width: 100%;
+  padding: 1em;
+}
+.explain {
+  font-size: 85%;
+  font-style: italic;
+  width: 100%;
+  text-align: right;
+  margin-right: 1em;
+}
+.list-list {
+  list-style-type: square;
+  line-height: 150%;
+  margin-left: 1.1em;
 }

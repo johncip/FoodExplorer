@@ -1,6 +1,14 @@
 <div class="sidebar"></div>
 
 <div class="content-panel clearfix">
+  <p class="tip">
+    <i class="fa fa-lightbulb-o"></i>
+    Notes are great for reviewing a restaurant! Only you and your friends can see them.
+    <br><br>
+    <i class="fa fa-lightbulb-o"></i>
+    Is this your favorite restaurant? Have you visisted it? Try clicking the ✓ and ♥ badges!
+  </p>
+
   <h2><%= restaurant.escape("name") %></h2>
 
   <div class="badge">
@@ -14,17 +22,6 @@
     <img class="photo cover" src='images/clear.png' style="background-image: url(<%= restaurant.escape('image_url') %>)">
     <div class="map-container map-square"></div>
   </div>
-
-  <section class="description">
-    <p class="notes">
-      <% if (restaurant.dining().escape("notes")) { %>
-        <%= restaurant.dining().escape("notes") %>
-        <a href="javascript:void(0)">Edit this note.</a>
-      <% } else { %>
-        No note. <a href="javascript:void(0)">Add one!</a>
-      <% }  %>
-    </p>
-  </section>
 
   <section class="stats">
     <p class="address">
@@ -53,6 +50,22 @@
     </p>
   </section>
 
+  <h3>Your notes</h3>
+  <section class="description">
+    <p class="notes">
+      <% if (restaurant.dining().escape("notes")) { %>
+        <%= restaurant.dining().escape("notes") %>
+        <a href="javascript:void(0)">Add a note.</a>
+      <% } else { %>
+        No note. <a href="javascript:void(0)">Edit this note!</a>
+      <% }  %>
+    </p>
+  </section>
+
   <h3>In your lists</h3>
-  <p><%= restaurant.lists().join(', ') %></p>
+  <ul class="list-list">
+    <% restaurant.lists().forEach(function(list) { %>
+      <li><%= list %></li>
+    <% }) %>
+  </ul>
 </div>

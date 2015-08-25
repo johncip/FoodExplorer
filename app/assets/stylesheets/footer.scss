@@ -1,0 +1,19 @@
+footer {
+  background-color: darken($seafoam, 10);
+  height: 140px;
+  color: darken($seafoam, 30);
+  font-size: 80%;
+  text-align: center;
+  position: relative;
+  line-height: 1.5em;
+  margin-top: 100px;
+
+  .center {
+    width: 100%;
+  }
+
+  a {
+    color: darken($seafoam, 35);
+    font-weight: bold;
+  }
+}
