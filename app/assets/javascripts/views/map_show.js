@@ -1,6 +1,6 @@
 FoodEx.Views.MapShow = Backbone.View.extend({
   className: 'map-show-container',
-  maxZoom: 16,
+  maxZoom: 15,
 
   attributes: {
     id: 'map-canvas'

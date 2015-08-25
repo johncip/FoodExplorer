@@ -8,7 +8,6 @@
     text-align: center;
     position: relative;
     transition: background-color 0.5s, font-weight 0.5s;
-
     &.highlighted {
       background-color: #eaeffa;
       font-weight: bold;
@@ -44,33 +43,27 @@
   img.thumb {
     width: 120px;
     height: 120px;
-    display: block;
     margin-bottom: 0.5em;
     border: thin solid #bbc;
     border-radius: 3px 12px;
     margin-left: auto;
     margin-right: auto;
-    background-position: center;
-    background-size: cover;
   }
   img.rating {
     clear: both;
     display: block;
     margin: 0 auto 0.25em;
   }
-
   .plus * {
     opacity: 0.4;
   }
-
   .plus::before {
     display: none;
   }
-
   .plus::after {
     content: '+';
     font-size: 250%;
-    text-shadow: 1px 1px 0px darken($green, 50);
+    text-shadow: 1px 1px 0 darken($green, 50);
     background-color: lighten($green, 10);
     color: lighten($green, 80);
     position: absolute;
@@ -81,9 +74,4 @@
     height: 1em;
     box-shadow: none;
   }
-}
-
-img.rating {
-  width: 88px;
-  height: 15px;
 }

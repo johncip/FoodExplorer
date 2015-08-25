@@ -11,6 +11,9 @@
  * file per style scope.
  */
 
+@import url("http://fonts.googleapis.com/css?family=Courgette");
+@import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,900,900italic,700italic,700");
+
 @import "_reset";
 @import "global";
 
@@ -21,3 +24,4 @@
 @import "signin";
 @import "thumb";
 @import "map";
+@import "restaurant";

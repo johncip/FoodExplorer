@@ -3,10 +3,19 @@
 <div class="content-panel clearfix">
 
   <h2><%= restaurant.escape("name") %></h2>
-  <div class="map-container map-square"></div>
 
-  <img src="<%= restaurant.escape('image_url')%>" class="photo">
+  <div class="badge">
+    <a class="favorite">♥</a> I love this place!
+    <a class="visited">✓</a> I've eaten here!
+  </div>
 
+  <div>
+    <img src='images/clear.png'
+         style="background-image: url(<%= restaurant.escape('image_url') %>)"
+         class="photo cover">
+
+    <div class="map-container map-square"></div>
+  </div>
 
   <% if (restaurant.escape("notes")) { %>
     <section class="description">
@@ -16,17 +25,17 @@
     </section>
   <% } %>
 
+  <p class="address">
+    <%= restaurant.escape("address") %><br>
+    <%= restaurant.escape("city") %>
+    <%= restaurant.escape("state") %>
+    <%= restaurant.escape("zip") %>
+  </p>
+  <p>Categories: <%= restaurant.escape("categories") %></p>
+  <p>Neighborhoods: <%= restaurant.escape("neighborhoods") %></p>
+
+  <p>In your lists: <%= restaurant.escape("lists") %></p>
+
   <p>Yelp rating: <img src="<%= restaurant.escape('rating_img_url')%>" class="rating"></p>
-
-  In your lists: foo
-  <br>
-
-  <div class="badge">
-    <a href="#" class="favorite">♥</a> I love this place!
-  </div>
-
-  <div class="badge">
-    <a href="#" class="visited">✓</a> I've eaten here!
-  </div>
 
 </div>

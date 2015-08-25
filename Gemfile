@@ -11,14 +11,15 @@ gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'puma'
 
-# gimme data
+# Gimme gimme data
 gem 'yelp'
 
-# Javascript Gems
+# UI
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-ui-rails'
+gem 'font-awesome-rails'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -26,12 +27,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'serialize_json-rails'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   gem 'byebug'

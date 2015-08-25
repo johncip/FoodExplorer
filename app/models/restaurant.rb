@@ -1,7 +1,5 @@
 # A single restaurant entry. Most attributes are dependent on the yelp_id.
 class Restaurant < ActiveRecord::Base
-  delegate :categories, to: :yelp_data
-
   has_many :listings, dependent: :destroy
   has_many :dinings, dependent: :destroy
   has_many :diners, through: :dinings, source: :diner
@@ -77,6 +75,10 @@ class Restaurant < ActiveRecord::Base
   # -------------------------------------------------------------------------
 
   YELP_ATTRS = %w(categories neighborhoods)
+
+  def categories
+    yelp_data.categories.transpose.first
+  end
 
   def neighborhoods
     yelp_data.location.neighborhoods
