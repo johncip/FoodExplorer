@@ -1,6 +1,6 @@
 # A user-created list of restaurants. Ordered.
 class List < ActiveRecord::Base
-  default_scope { order('ord') }
+  default_scope { order('lists.ord') }
 
   alias_attribute :private?, :private
   alias_attribute :favorite?, :favorite

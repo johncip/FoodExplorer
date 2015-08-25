@@ -1,6 +1,6 @@
 # Joins restaurants to lists. Ordered.
 class Listing < ActiveRecord::Base
-  default_scope { order('ord') }
+  default_scope { order('listings.ord') }
 
   belongs_to :restaurant
   belongs_to :list
