@@ -22,7 +22,6 @@ FoodEx.Views.ListThumbBox = Backbone.CompositeView.extend(
     },
 
     onRender: function() {
-      Backbone.CompositeView.prototype.onRender.call(this);
       this.$('ul').sortable();
     }
   }));

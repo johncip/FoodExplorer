@@ -8,8 +8,17 @@ FoodEx.Mixins.Renderable = {
 
     // compositeView-specific
     if (this.attachSubviews) { this.attachSubviews(); }
-    if (this.onRender) { this.onRender(); }
 
+    if (FoodEx.debug) {
+      FoodEx.pubsub.trigger('render', {
+        view: this,
+        cid: this.cid,
+        className: this.className,
+        tagName: this.tagName
+      });
+    }
+
+    if (this.onRender) { this.onRender(); }
     return this;
   },
 

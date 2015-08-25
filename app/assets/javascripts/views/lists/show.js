@@ -43,7 +43,10 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend(
     },
 
     onRender: function() {
+      // needed for rest thumb dragging
+      // TODO: use events instead?
       Backbone.CompositeView.prototype.onRender.call(this);
+
       this.mapShow.initMap();
     }
   }));

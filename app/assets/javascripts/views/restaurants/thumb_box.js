@@ -1,3 +1,6 @@
+/*
+  Note: sortable() must be called after the children have rendered.
+*/
 FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend(
   _.extend({}, FoodEx.Mixins.Orderable, FoodEx.Mixins.Renderable, {
     template: JST['shared/thumb_box'],
@@ -41,7 +44,6 @@ FoodEx.Views.RestThumbBox = Backbone.CompositeView.extend(
     },
 
     onRender: function() {
-      Backbone.CompositeView.prototype.onRender.call(this);
       this.$('ul').sortable();
     }
   }));
