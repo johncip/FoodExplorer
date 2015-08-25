@@ -4,44 +4,7 @@ FoodEx.Views.RestaurantShow = Backbone.CompositeView.extend(
     className: 'content-container clearfix',
 
     events: {
-      'click .content-panel .favorite': 'toggleFave',
-    },
-
-    toggleFave: function() {
-      if (this.faveChanging) {
-        return;
-      }
-      this.faveChanging = true;
-
-      $.ajax({
-        url: this.model.url() + '/favorite',
-        method: 'post',
-        data: {
-          favorite: !this.model.get('favorite')
-        },
-        success: function() {
-          this.faveChanging = false;
-          this.model.fetch();
-        }.bind(this)
-      });
-    },
-
-    faveText: {
-      true: "It's one of my favorites!",
-      false: 'Not my favorite.'
-    },
-
-    visitText: {
-      true: "I've been there!",
-      false: "Haven't been."
-    },
-
-    initialize: function() {
-      this.listenTo(this.model, 'sync', this.render);
-      this.addSidebar();
-      this.addMapShow();
-
-      this.faveChanging = false;
+      'click .content-panel .badge a': 'toggleBadge',
     },
 
     templateOpts: function() {
@@ -61,6 +24,51 @@ FoodEx.Views.RestaurantShow = Backbone.CompositeView.extend(
     onRender: function() {
       this.mapShow.initMap();
       this.updateBadges();
+    },
+
+    // ------------------------------------------------------------
+    // Badges (split into another view?)
+    // ------------------------------------------------------------
+
+    toggleBadge: function(event) {
+      var name = event.target.classList[0];
+      if (this.changing[name]) {
+        return;
+      }
+      this.changing[name] = true;
+
+      var postData = {};
+      postData[name] = !this.model.get(name);
+
+      $.ajax({
+        url: this.model.url() + '/' + name,
+        method: 'post',
+        data: postData,
+        success: function() {
+          this.changing[name] = false;
+          this.model.fetch();
+        }.bind(this)
+      });
+    },
+
+    faveText: {
+      true: "It's one of my favorites!",
+      false: 'Not my favorite.'
+    },
+
+    visitText: {
+      true: "I've been there!",
+      false: "Haven't been."
+    },
+
+    initialize: function() {
+      this.listenTo(this.model, 'sync', this.render);
+      this.addSidebar();
+      this.addMapShow();
+      this.changing = {
+        favorite: false,
+        visited: false
+      };
     },
 
     updateBadges: function() {

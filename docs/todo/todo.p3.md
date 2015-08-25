@@ -1,11 +1,21 @@
 ### Next
-- [ ] Toggle visited
-- [ ] Toggle favorited
-- [ ] Center thumbs in padding
+- [ ] Constrain list thumb dragging
 - [ ] Search & add restaurants...
 - [ ] "Be your own" / welcome page
 - [ ] Phase 4 (Notifications)
 - [ ] Phase 5 (Friends)
+
+### Feature: Restaurant Notes
+- [ ] generate model & migration
+- [ ] fix migration
+- [ ] generate api controller
+- [ ] migrate
+- [ ] add model validations
+- [ ] add associations
+- [ ] create backbone model & collection
+- [ ] add to API & parse method
+- [ ] add to templates
+- [ ] editable
 
 ### Feature: Search & Add Restaurants
 - [ ] Play with Yelp search API
@@ -15,11 +25,10 @@
 
 ### Front End
 - [x] Fix thumb-box margin
-- [ ] Fix log out twice bug
+- [x] Fix log out twice bug
 - [ ] Use Bootstrap
 - [ ] Random background for sign-in
 - [ ] Different thumbs for lists
-- [ ] Center thumbs in padding
 
 ### Feature: Google Maps
 - [x] {db} Promote latitude & longitude
@@ -52,19 +61,7 @@
 - [x] Display visited & favorited
 - [x] Include Yelp stuff
 - [x] Style
-- [ ] Toggle visited & favorited
-
-### Feature: Restaurant Notes
-- [ ] generate model & migration
-- [ ] fix migration
-- [ ] generate api controller
-- [ ] migrate
-- [ ] add model validations
-- [ ] add associations
-- [ ] create backbone model & collection
-- [ ] add to API & parse method
-- [ ] add to templates
-- [ ] style
+- [x] Toggle visited & favorited
 
 ### Feature: Drag-and-drop
 - [x] Sortable Restaurant thumbs

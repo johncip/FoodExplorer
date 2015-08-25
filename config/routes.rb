@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resources :listings, except: [:new, :edit]
 
     post '/restaurants/:id/favorite', to: 'restaurants#favorite'
+    post '/restaurants/:id/visited', to: 'restaurants#visited'
   end
 end

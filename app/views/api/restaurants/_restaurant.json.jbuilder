@@ -6,6 +6,11 @@ json.extract!(
 
 if current_user
   json.lists restaurant.lists.where(author: current_user).pluck(:title)
-  json.favorite restaurant.user_favorite?(current_user)
-  json.visited restaurant.user_visited?(current_user)
+  dining = restaurant.dinings.find_by(diner: current_user)
+
+  if dining
+    json.favorite dining.favorite?
+    json.visited dining.visited?
+    json.notes dining.notes
+  end
 end

@@ -3,6 +3,7 @@
 - [ ] "Be your own" / welcome page
 - [ ] Factor updateBadges
 - [ ] Remove CompositeView.prototype.onRender call
+- [ ] Center thumbs in padding
 
 ### Back End
 - [ ] Reduce queries even more

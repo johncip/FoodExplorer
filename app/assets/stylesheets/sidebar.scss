@@ -1,5 +1,4 @@
 $marksize: 1.75em;
-
 .sidebar {
   height: 100%;
   background-color: $seafoam;
@@ -9,11 +8,15 @@ $marksize: 1.75em;
   .active {
     background-color: $selected;
   }
-
+  .success a {
+    background-color: lighten(green, 30) !important;
+  }
+  .error a {
+    background-color: lighten(red, 30) !important;
+  }
   .drop-hover a {
     background-color: $yellow;
   }
-
   a {
     display: block;
     float: left;

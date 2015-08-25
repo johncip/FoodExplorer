@@ -10,11 +10,11 @@ FoodEx.Views.SidebarItem = Backbone.View.extend(
       'dropdeactivate': 'removePlus'
     },
 
-    addPlus: function (a, b) {
+    addPlus: function(a, b) {
       $(b.draggable).addClass('plus');
     },
 
-    removePlus: function (a, b) {
+    removePlus: function(a, b) {
       $(b.draggable).removeClass('plus');
     },
 
@@ -30,27 +30,24 @@ FoodEx.Views.SidebarItem = Backbone.View.extend(
     },
 
     onDrop: function(event, ui) {
-      // 0. return if it's not a restaurant
-      //    TODO: constrain the list thumb dragging
-
-      // 1. get the restaurant-id
       var restId = ui.draggable.data('restaurant-id');
       var listId = this.model.id;
-
       var listing = new FoodEx.Models.Listing();
 
       listing.save({
         'list_id': listId,
         'restaurant_id': restId
       }, {
-        success: function() {
-          alert('copied!');
-        },
-        error: function (model, xhr) {
-          alert('whoops!');
-          console.log(xhr);
-        }
+        success: this.flashClass.bind(this, 'success'),
+        error: this.flashClass.bind(this, 'error'),
       });
+    },
+
+    flashClass: function(name) {
+      this.$el.addClass(name);
+      setTimeout(function() {
+        this.$el.removeClass(name);
+      }.bind(this), 500);
     },
 
     onRender: function() {

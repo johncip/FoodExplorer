@@ -12,17 +12,19 @@
 
   <div>
     <img class="photo cover" src='images/clear.png' style="background-image: url(<%= restaurant.escape('image_url') %>)">
-
     <div class="map-container map-square"></div>
   </div>
 
-  <% if (restaurant.escape("notes")) { %>
-    <section class="description">
-      <p>
+  <section class="description">
+    <p>
+      <% if (restaurant.escape("notes")) { %>
         <%= restaurant.escape("notes") %>
-      </p>
-    </section>
-  <% } %>
+        <a href="javascript:void(0)">Edit this note.</a>
+      <% } else { %>
+        No note. <a href="javascript:void(0)">Add one!</a>
+      <% }  %>
+    </p>
+  </section>
 
   <section class="stats">
     <p class="address">

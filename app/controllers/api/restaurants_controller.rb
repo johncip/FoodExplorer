@@ -2,7 +2,7 @@
 class Api::RestaurantsController < ApplicationController
   include Resourceful
 
-  before_action :find_model, only: [:show, :update, :favorite]
+  before_action :find_model, only: [:show, :update, :favorite, :visited]
 
   def self.model
     Restaurant
@@ -13,18 +13,22 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def favorite
+    flag(:favorite)
+  end
+
+  def visited
+    flag(:visited)
+  end
+
+  def flag(name)
     dining = Dining.find_or_create_by(restaurant: @restaurant,
                                       diner: current_user)
-    dining.favorite = true?(params[:favorite])
 
-    if dining.save
+    if dining.update(name => params[name])
       render json: @restaurant
     else
       render json: @restaurant.errors.full_messages, status: 422
     end
-
-    ActiveRecord::Base.connection.clear_query_cache
-    Dining.reset_column_information
   end
 
   private
