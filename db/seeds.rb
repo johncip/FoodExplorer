@@ -82,17 +82,23 @@ list_descriptions = {
 }
 
 admin = User.create!(username: 'admin', password: 'admin123')
+elton = User.create!(username: 'elton', password: 'password')
+michael = User.create!(username: 'michael', password: 'password')
+users = [admin, elton, michael]
 
 # ----------------------------------------------------------------------------
 # Load data
 # ----------------------------------------------------------------------------
 
-rest_ids.each do |group, yelp_ids|
-  lst = admin.lists.create!(title: group)
+users.each do |user|
+  rest_ids.each do |group, yelp_ids|
 
-  yelp_ids.each do |yelp_id|
-    rest = Restaurant.find_or_create_by_yelp_id(yelp_id)
-    lst.new_listing_by_author(restaurant: rest).save
+    lst = user.lists.create!(title: group)
+
+    yelp_ids.each do |yelp_id|
+      rest = Restaurant.find_or_create_by_yelp_id(yelp_id)
+      lst.new_listing_by_author(restaurant: rest).save
+    end
   end
 end
 
@@ -104,24 +110,26 @@ end
 # Set Booleans
 # ----------------------------------------------------------------------------
 
-def favorite_list(title)
-  List.find_by_title(title).update!(favorite: true)
+def favorite_list(user, title)
+  List.find_by_user_id_and_title(user.id, title).update!(favorite: true)
 end
 
-def dine_at(yelp_id, favorite, visited)
+def dine_at(user, yelp_id, favorite, visited)
   Dining.create!(
-    user_id: 1,
+    diner: user,
     restaurant: Restaurant.find_by_yelp_id(yelp_id),
     favorite: favorite,
     visited: visited
   )
 end
 
-favorite_list 'Red Hill Favorites'
-favorite_list 'Ice Cream'
+users.each do |user|
+  favorite_list(user, 'Red Hill Favorites')
+  favorite_list(user, 'Ice Cream')
 
-dine_at('easy-breezy-frozen-yogurt-san-francisco', true, true)
-dine_at('precita-park-cafe-san-francisco', true, true)
-dine_at('little-bee-baking-san-francisco', false, true)
-dine_at('progressive-grounds-san-francisco', true, false)
-dine_at('dosa-on-valencia-san-francisco', false, true)
+  dine_at(user, 'easy-breezy-frozen-yogurt-san-francisco', true, true)
+  dine_at(user, 'precita-park-cafe-san-francisco', true, true)
+  dine_at(user, 'little-bee-baking-san-francisco', false, true)
+  dine_at(user, 'progressive-grounds-san-francisco', true, false)
+  dine_at(user, 'dosa-on-valencia-san-francisco', false, true)
+end

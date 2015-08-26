@@ -10,6 +10,14 @@ class Api::ListsController < ApplicationController
     :restaurants
   end
 
+  def assign_collection
+    if current_user
+      @lists = List.where(author: current_user)
+    else
+      @lists = List.all
+    end
+  end
+
   def update
     if @list.update(list_params)
       render json: @list
