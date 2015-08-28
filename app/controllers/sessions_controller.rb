@@ -24,7 +24,6 @@ class SessionsController < ApplicationController
   end
 
   def guest
-    rake_db_seed
     user = User.find_by_username!('admin')
     log_in!(user)
     render json: {}

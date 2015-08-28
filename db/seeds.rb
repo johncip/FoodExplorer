@@ -82,23 +82,18 @@ list_descriptions = {
 }
 
 admin = User.create!(username: 'admin', password: 'admin123')
-elton = User.create!(username: 'elton', password: 'password')
-michael = User.create!(username: 'michael', password: 'password')
-users = [admin, elton, michael]
 
 # ----------------------------------------------------------------------------
 # Load data
 # ----------------------------------------------------------------------------
 
-users.each do |user|
-  rest_ids.each do |group, yelp_ids|
+rest_ids.each do |group, yelp_ids|
 
-    lst = user.lists.create!(title: group)
+  lst = admin.lists.create!(title: group)
 
-    yelp_ids.each do |yelp_id|
-      rest = Restaurant.find_or_create_by_yelp_id(yelp_id)
-      lst.new_listing_by_author(restaurant: rest).save
-    end
+  yelp_ids.each do |yelp_id|
+    rest = Restaurant.find_or_create_by_yelp_id(yelp_id)
+    lst.new_listing_by_author(restaurant: rest).save
   end
 end
 
@@ -123,13 +118,12 @@ def dine_at(user, yelp_id, favorite, visited)
   )
 end
 
-users.each do |user|
-  favorite_list(user, 'Red Hill Favorites')
-  favorite_list(user, 'Ice Cream')
 
-  dine_at(user, 'easy-breezy-frozen-yogurt-san-francisco', true, true)
-  dine_at(user, 'precita-park-cafe-san-francisco', true, true)
-  dine_at(user, 'little-bee-baking-san-francisco', false, true)
-  dine_at(user, 'progressive-grounds-san-francisco', true, false)
-  dine_at(user, 'dosa-on-valencia-san-francisco', false, true)
-end
+favorite_list(admin, 'Red Hill Favorites')
+favorite_list(admin, 'Ice Cream')
+
+dine_at(admin, 'easy-breezy-frozen-yogurt-san-francisco', true, true)
+dine_at(admin, 'precita-park-cafe-san-francisco', true, true)
+dine_at(admin, 'little-bee-baking-san-francisco', false, true)
+dine_at(admin, 'progressive-grounds-san-francisco', true, false)
+dine_at(admin, 'dosa-on-valencia-san-francisco', false, true)
