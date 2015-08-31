@@ -24,21 +24,14 @@ FoodEx.Views.ListShow = Backbone.CompositeView.extend(
       $parent.append($textarea);
 
       $textarea.on('blur', function () {
-        // persist
-
-        // list.save({ description: $textarea.val() });
 
         var newList = new FoodEx.Models.List({
           id: list.id,
           description: $textarea.val()
         });
 
-        // debugger;
-
         newList.save();
-
-
-        this.model.fetch({ merge: true }); // merge true?
+        this.model.fetch({ merge: true });
 
         $textarea.remove();
         $parent.empty();

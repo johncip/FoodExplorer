@@ -1,5 +1,4 @@
 .welcome, .features {
-  font-size: 110%;
   line-height: 1.5em;
   margin-bottom: 1.5em;
   color: lighten(black, 30);
@@ -7,9 +6,34 @@
 
 .features {
   list-style-type: square;
-  margin-left: 2em;
+  list-style-type:none;
+  margin-left:10px;
+
+  li {
+    height: 2em;
+  }
+
+  i {
+    color: $green;
+  }
 }
 
 .em {
   font-weight: 700;
+}
+
+.list-button {
+  background-color: $green;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: white;
+  border-radius: 2px;
+  position: relative;
+  bottom: 4px;
+  padding-bottom: 4px;
+  font-size: 90%;
+  width: 2.5em;
+  text-align: center;
 }
