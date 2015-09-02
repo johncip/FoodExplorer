@@ -5,6 +5,7 @@ gem 'rails', '4.2.1'
 gem 'backbone-on-rails'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
+gem 'rack-zippy'
 
 # Deployment
 gem 'figaro'
