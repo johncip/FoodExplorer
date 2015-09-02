@@ -1,33 +1,27 @@
-### Next
-- [ ] Don't delete restaurants ever
-- [ ] Search & add restaurants...
-- [ ] "Be your own" / welcome page
-- [ ] Phase 4 (Notifications)
-- [ ] Phase 5 (Friends)
+### Feature: Search & Add Restaurants
+- [ ] Search show view
+- [ ] Search results
+- [ ] Play with Yelp search API
+- [ ] Navbar search
+- [ ] Pagination
 
 ### UX Fixes
-- [ ] Annotate site
-- [ ] Better welcome
+- [x] Annotate site
+- [x] Welcome page
 - [ ] Different thumbs for lists
 - [ ] Constrain list thumb dragging
 
 ### Feature: Restaurant Notes
-- [ ] generate model & migration
-- [ ] fix migration
-- [ ] generate api controller
-- [ ] migrate
-- [ ] add model validations
-- [ ] add associations
-- [ ] create backbone model & collection
-- [ ] add to API & parse method
-- [ ] add to templates
-- [ ] editable
-
-### Feature: Search & Add Restaurants
-- [ ] Play with Yelp search API
-- [ ] Search view
-- [ ] Results view
-- [ ] Pagination
+- [x] generate model & migration
+- [x] fix migration
+- [x] generate api controller
+- [x] migrate
+- [x] add model validations
+- [x] add associations
+- [x] create backbone model & collection
+- [x] add to API & parse method
+- [x] add to templates
+- [x] editable
 
 ### Front End
 - [x] Fix thumb-box margin
@@ -98,4 +92,4 @@
   - [x] Listing Show
 - [x] Reduce number of renders
 - [x] Fix 'ambiguous ord' bug
-- [ ] Don't delete restaurants ever
+- [x] Don't delete restaurants ever

@@ -3,7 +3,8 @@ FoodEx.Routers.Router = Backbone.Router.extend({
     '': 'welcome',
     'lists': 'index',
     'lists/:id': 'show',
-    'restaurants/:id': 'restaurant'
+    'restaurants/:id': 'restaurant',
+    'search': 'search',
   },
 
   initialize: function(options) {
@@ -49,6 +50,12 @@ FoodEx.Routers.Router = Backbone.Router.extend({
       }));
 
     resta.fetch();
+  },
+
+  search: function() {
+    this._swapContent(
+      new FoodEx.Views.SearchShow({
+      }));
   },
 
   showNav: function() {

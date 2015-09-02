@@ -1,6 +1,5 @@
 ### Front End
 - [ ] Show/hide map handle
-- [ ] "Be your own" / welcome page
 - [ ] Factor updateBadges
 - [ ] Remove CompositeView.prototype.onRender call
 - [ ] Center thumbs in padding
@@ -23,11 +22,11 @@
 - [ ] style
 
 ### Users
+- [ ] User View with profile pic (cloudinary / gravatar)
 - [ ] Display errors in form
 - [ ] Proper guest user
 - [ ] Util: get city and state by ZIP code?
 - [ ] New user seed data
-- [ ] User View with profile pic (cloudinary / gravatar)
 
 ### Deploy
 - [ ] Server config: use compression & cache
