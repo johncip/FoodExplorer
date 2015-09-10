@@ -7,10 +7,10 @@
     margin: 0 2em 2em 0;
     text-align: center;
     position: relative;
-    transition: background-color 0.5s, font-weight 0.5s;
+    transition: background-color 0.5s, font-weight 0.5s, transform 0.2s;
+
     &.highlighted {
-      background-color: #eaeffa;
-      font-weight: bold;
+      transform: scale(1.2);
     }
   }
   .visited::before,

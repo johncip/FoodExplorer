@@ -13,7 +13,7 @@ FoodEx.Views.RestThumb = Backbone.View.extend(
 
       setTimeout(function() {
         this.$el.removeClass('highlighted');
-      }.bind(this), 500);
+      }.bind(this), 400);
     },
 
     addBadges: function() {
