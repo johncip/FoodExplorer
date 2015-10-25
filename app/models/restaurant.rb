@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: restaurants
+#
+#  id             :integer          not null, primary key
+#  yelp_id        :string           not null
+#  name           :string           not null
+#  city           :string           not null
+#  state          :string           not null
+#  zip            :string
+#  address        :string
+#  hood           :string
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  url            :string
+#  image_url      :string
+#  rating         :float
+#  rating_img_url :string
+#  is_closed      :boolean
+#  lat            :float
+#  lng            :float
+#
+
 # A single restaurant entry. Most attributes are dependent on the yelp_id.
 class Restaurant < ActiveRecord::Base
   has_many :listings, dependent: :destroy
